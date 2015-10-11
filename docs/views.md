@@ -29,6 +29,6 @@
 [root-homePage]: ./wireframes/root_homePage.png
 [root-searchBar]: ./wireframes/root_searchBar.png
 [root-houseShow]: ./wireframes/root_houseShow.png
-[professor-show]: ./wireframes/professor-show.png
+[professor-show]: ./wireframes/professor_show.png
 [review-form]: ./wireframes/review_form.png
-[component-heirarchy]: ./wireframes/component_heirarchy.png
+[component-heirarchy]: ./wireframes/component_hierarchy.png
