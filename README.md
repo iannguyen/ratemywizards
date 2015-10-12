@@ -47,7 +47,7 @@ Implement Search Bar on HomePage. Will function like AutoComplete. Create React 
 
 ### Phase 4: Professor Show Page React Views, Reviews CRUD (3 days)
 
-Create React Views for Professor Show Page: ReviewIndex, ReviewIndexItem, and ReviewDetail. Implement ReviewStore, ApiActions and ApiUtils. Show Page will include Professor information and a button to Rate, which will render new Review Page. Create new Review Page Form. Test CRUD.
+Create React Views for Professor Show Page: ReviewIndex, ReviewIndexItem, and ReviewDetail. Implement ProfessorRoute, ReviewStore, ApiActions and ApiUtils. Show Page will include Professor information and a button to Rate, which will render new Review Page. Create new ReviewForm. Test CRUD.
 
 [Details][phase-four]
 

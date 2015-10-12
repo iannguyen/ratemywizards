@@ -2,6 +2,9 @@
 ## Rails
 ### Models
 ### Controllers
+* api/houses_controller (show)
+* api/professors_controller (show)
+
 ### Views
 
 ## Flux

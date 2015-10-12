@@ -3,13 +3,15 @@
 ## Rails
 ### Models
 ### Controllers
+* api/reviews_controller (new, create, edit, delete)
+
 ### Views
-* reviews/new.html.erb
 
 ## Flux
 ### Views (React Components)
 * ReviewIndex
   - ReviewIndexItem
+    - ReviewForm
 
 ### Stores
 * ReviewStore

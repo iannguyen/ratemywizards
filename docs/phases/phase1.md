@@ -8,8 +8,9 @@
 * Houses
 
 ### Controllers
-* UsersController (create, new)
-* SessionsController (create, new, destroy)
+* users_controller (create, new)
+* sessions_controller (create, new, destroy)
+* static_pages_controller
 
 ### Views
 * users/new.html.erb

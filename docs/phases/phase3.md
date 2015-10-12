@@ -4,13 +4,13 @@
 ### Models
 ### Controllers
 ### Views
-* professors/show.html.erb
 
 ## Flux
 ### Views (React Components)
 * SearchBar
   - SearchBarItem (Professor)
     - ClickHandler
+* ProfessorShow
 
 ### Stores
 ### Actions
