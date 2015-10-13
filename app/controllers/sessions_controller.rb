@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  before_action :already_signed_in?, except: [:destroy]
+
   def new
   end
 
@@ -17,6 +19,6 @@ class SessionsController < ApplicationController
 
   def destroy
     sign_out!
-    redirect_to 'static_pages#root'
+    render json: {}
   end
 end
