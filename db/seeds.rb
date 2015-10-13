@@ -10,3 +10,5 @@ Gryffindor = House.create!(name: 'Gryffindor')
 Ravenclaw = House.create!(name: 'Ravenclaw')
 Hufflepuff = House.create!(name: 'Hufflepuff')
 Slytherin = House.create!(name: 'Slytherin')
+
+dumbledore = Professor.create!({name: 'dumbledore', house_id: 1})

@@ -8,6 +8,8 @@
 </head>
 <body>
 
+<%= flash[:errors].join("<br>").html_safe if flash[:errors] %>
+
 <%= yield %>
 
 </body>

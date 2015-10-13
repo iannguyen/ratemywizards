@@ -27,9 +27,9 @@ RateMyWizards allows users to:
 
 ## Implementation Timeline
 
-### Phase 1: User Authentication, Models, JSON API (1 day)
+### Phase 1: User Authentication, Models, JSON API (2 days)
 
-Begin with creating User Authentication and basic landing page. Landing page will contain the container for the root React Component. Afterwards, create all models and validations for Professors, Houses, and Reviews. Implement full JSON API to fetch professors.
+Begin with creating User Authentication and basic landing page. Landing page will contain the container for the root React Component. Afterwards, create all models and validations for Professors, Houses, and Reviews. Implement JSON API to fetch professors. Begin styling for Sign In / Sign Up pages.
 
 [Details][phase-one]
 
@@ -39,15 +39,15 @@ Implement React Router on HomePage. From Root path, users navigate to /House/id 
 
 [Details][phase-two]
 
-### Phase 3: Search Bar Implementation, Professor Show Page (1 day)
+### Phase 3: Search Bar Implementation, Professor Show Page (2 days)
 
-Implement Search Bar on HomePage. Will function like AutoComplete. Create React Views for SearchBar, and SearchBarItem (Professor). Create Professor Show Page. Update SearchBarItem and HouseIndexItem to include Click Handlers that render the Professor Show Page.
+Implement Search Bar on HomePage. Will function like AutoComplete. Create React Views for SearchBar, and SearchBarItem (Professor). Create Professor Show Page. Update SearchBarItem and HouseIndexItem to include Click Handlers that render the Professor Show Page. Work on CSS for all existing pages.
 
 [Details][phase-three]
 
 ### Phase 4: Professor Show Page React Views, Reviews CRUD (3 days)
 
-Create React Views for Professor Show Page: ReviewIndex, ReviewIndexItem, and ReviewDetail. Implement ProfessorRoute, ReviewStore, ApiActions and ApiUtils. Show Page will include Professor information and a button to Rate, which will render new Review Page. Create new ReviewForm. Test CRUD.
+Create React Views for Professor Show Page: ReviewIndex, ReviewIndexItem, and ReviewDetail. Implement ProfessorRoute, ReviewStore, ApiActions and ApiUtils. Show Page will include Professor information and a button to Rate, which will render new Review Page. Create new ReviewForm. Implement JSON API for Review. Test CRUD.
 
 [Details][phase-four]
 

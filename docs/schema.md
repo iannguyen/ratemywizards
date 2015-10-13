@@ -39,9 +39,6 @@ id                  | integer   | not null, primary key
 name                | string    | not null, indexed, unique
 house_id            | integer   | not null, indexed, unique
 image_file_name     | string    | not null
-image_content_type  | string    | not null
-image_file_size     | string    | not null
-image_updated_at    | string    | not null
 
 
 ## Users
@@ -56,6 +53,3 @@ password_digest     | string    | not null
 session_token       | string    | not null, indexed, unique
 student             | boolean   | not null, default, true
 image_file_name     | string    | not null
-image_content_type  | string    | not null
-image_file_size     | string    | not null
-image_updated_at    | string    | not null
