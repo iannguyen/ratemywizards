@@ -1,10 +1,13 @@
 (function(root) {
   'use strict';
 
-  var _houses = [];
-
-  root.House = React.createClass({
+  root.HouseDetail = React.createClass({
     render: function() {
+      return (
+        <div>
+          {this.props.house.name}
+        </div>
+      );
     }
   });
 

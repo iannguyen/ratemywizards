@@ -1,4 +1,3 @@
-var root = document.getElementById('root');
 var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
 var IndexRoute = ReactRouter.IndexRoute;
@@ -7,7 +6,7 @@ var App = React.createClass ({
   render: function() {
     return (
       <div id='app'>
-        <HouseTabs/>
+        <HouseTabs />
         {this.props.children}
       </div>
     );
@@ -21,6 +20,6 @@ var routes = (
 $(document)
   .ready(function() {
     if (root) {
-      React.render(<Router>{routes}</Router>, root);
+      React.render(<Router>{routes}</Router>, document.getElementById('root'));
     }
   });

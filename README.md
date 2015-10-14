@@ -2,7 +2,7 @@
 
 Not yet pushed to Heroku.
 [RateMyWizards][heroku]
-[heroku]: http://www.ratemywizards.herokuapp.com
+[heroku]: https://ratemywizards.herokuapp.com
 
 ## Minimum Viable Product
 

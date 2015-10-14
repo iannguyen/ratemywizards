@@ -7,7 +7,7 @@
         url: "/api/houses",
         method: "get",
         success: function(response) {
-
+          ApiActions.receiveHouses(response);
         }
       });
     },
