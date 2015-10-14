@@ -3,11 +3,12 @@
 
   root.HouseDetail = React.createClass({
     getStatefromStore: function() {
-      return { house: HouseStore.find(parseInt(this.props.params.houseId)) };
+      var house  = HouseStore.find(parseInt(this.props.params.houseId));
+      return { house: house };
     },
 
     getInitialState: function() {
-      return this.getStatefromStore();
+      return {};
     },
 
     _onChange: function() {
@@ -28,11 +29,17 @@
     },
 
     render: function() {
+      if (this.state.house === undefined) { return <div></div>; }
+
       return(
-        <div id='house-detail'>
-          <p>
-            //professors Index
-          </p>
+        <div className='house-detail'>
+          <ul>
+            {
+              this.state.house.professors.map(function(professor) {
+                return <li>{professor.name}</li>;
+              })
+            }
+          </ul>
         </div>
       );
     }
