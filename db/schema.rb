@@ -25,11 +25,11 @@ ActiveRecord::Schema.define(version: 20151013042529) do
   add_index "houses", ["name"], name: "index_houses_on_name", unique: true, using: :btree
 
   create_table "professors", force: :cascade do |t|
-    t.string   "name",            null: false
-    t.integer  "house_id",        null: false
-    t.string   "image_file_name"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.string   "name",       null: false
+    t.integer  "house_id",   null: false
+    t.string   "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_index "professors", ["house_id"], name: "index_professors_on_house_id", using: :btree
