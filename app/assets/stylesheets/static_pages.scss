@@ -3,6 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-  background-image: url('http://imagine.pics/images/999/99963.jpg');
-  background-color: black
+  background-image: url('http://res.cloudinary.com/dms46o1eu/image/upload/v1444806956/Dumbledores-Office_nifxrl.jpg');
+  background-size: cover;
+  background-position: top;
+  display: block;
 }
+
+.group:after {
+	visibility: hidden;
+	display: block;
+	content: "";
+	clear: both;
+	height: 0;
+	}

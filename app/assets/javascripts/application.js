@@ -12,12 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require bootstrap
 //= require react
 //= require react_ujs
+//= require reactrouter.min
 //= require components
 //= require flux
 //= require eventemitter
-//= require reactrouter.min
 //= require_tree .

@@ -11,6 +11,16 @@
         }
       });
     },
+    fetchHouse: function(id) {
+      $.ajax({
+        url: "/api/houses/" + id,
+        method: "get",
+        success: function(response) {
+          ApiActions.receiveHouse(response);
+          console.log(response);
+        }
+      });
+    },
     signIn: function() {
       $.ajax({
         success: function() {
