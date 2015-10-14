@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root to: 'static_pages#root'
 
   namespace :api, defaults: { format: :json } do
-    resources :houses, only: [:show]
+    resources :houses, only: [:index, :show]
     resources :professors, only: [:show]
   end
 

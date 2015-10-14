@@ -5,7 +5,7 @@
   var status;
 
   root.NavBar = React.createClass ({
-    getStatus: function () {
+    getStatus: function() {
       if (window.CURRENT_USER_ID === undefined) {
         status = 'Sign In';
         toggleStatus = ApiUtil.signIn;
@@ -21,10 +21,7 @@
           <div className="container-fluid">
 
             <div className="navbar-header">
-              <button type="button" className="navbar-toggle collapsed"
-                      data-toggle="collapse"
-                      data-target="#collapse-menu"
-                      aria-expanded="false">
+              <button aria-expanded="false" className="navbar-toggle collapsed" data-target="#collapse-menu" data-toggle="collapse" type="button">
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
@@ -33,22 +30,21 @@
 
             <div className="collapse navbar-collapse" id="collapse-menu">
               <ul className="nav navbar-nav pull-right">
-                <li><a href='#' onClick={toggleStatus}>{status}</a></li>
+                <li>
+                  <a href='#' onClick={toggleStatus}>{status}</a>
+                </li>
               </ul>
             </div>
 
           </div>
-          </nav>
+        </nav>
       );
     }
   });
 
-$(document)
-  .ready(function () {
-    React.render(
-      <NavBar/>,
-      document.getElementById('navbar')
-    );
-  });
+  $(document)
+    .ready(function() {
+      React.render(<NavBar/>, document.getElementById('navbar'));
+    });
 
 }(this));

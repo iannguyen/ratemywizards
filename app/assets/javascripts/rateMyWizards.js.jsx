@@ -7,6 +7,7 @@ var App = React.createClass ({
   render: function() {
     return (
       <div id='app'>
+        <HouseTabs/>
         {this.props.children}
       </div>
     );

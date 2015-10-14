@@ -1,4 +1,4 @@
 json.extract!(
-  @house,
+  @houses,
   :id, :name
 )

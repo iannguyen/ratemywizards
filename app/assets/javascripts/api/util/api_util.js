@@ -2,6 +2,15 @@
   'use strict';
 
   root.ApiUtil = {
+    fetchHouses: function() {
+      $.ajax({
+        url: "/api/houses",
+        method: "get",
+        success: function(response) {
+
+        }
+      });
+    },
     signIn: function() {
       $.ajax({
         success: function() {
