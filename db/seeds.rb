@@ -6,10 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Gryffindor = House.create!(name: 'Gryffindor')
-Ravenclaw = House.create!(name: 'Ravenclaw')
-Hufflepuff = House.create!(name: 'Hufflepuff')
-Slytherin = House.create!(name: 'Slytherin')
+Gryffindor = House.create!({name: 'Gryffindor', image_url: 'http://res.cloudinary.com/dms46o1eu/image/upload/v1444846401/Gryffindor_crest_jafkkr.png'})
+Ravenclaw = House.create!({name: 'Ravenclaw', image_url: 'http://res.cloudinary.com/dms46o1eu/image/upload/c_scale,w_299/v1444846401/Ravenclaw_Crest_1_qj108p.png'})
+Hufflepuff = House.create!({name: 'Hufflepuff', image_url: 'http://res.cloudinary.com/dms46o1eu/image/upload/v1444846401/Hufflepuff_crest_vdbtt9.png'})
+Slytherin = House.create!({name: 'Slytherin', image_url: 'http://res.cloudinary.com/dms46o1eu/image/upload/v1444846401/Slytherin_Crest_hlz4yr.png'})
 
 Professor.create!({name: 'Albus Dumbledore', house_id: 1, image_url: 'http://res.cloudinary.com/dms46o1eu/image/upload/v1444785684/ratemywizards/dumbledore_h2z9vq.jpg'})
 Professor.create!({name: 'Minerva McGonagall', house_id: 1, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/v1444785685/ratemywizards/mcgonagall_wgdx67.jpg'})
