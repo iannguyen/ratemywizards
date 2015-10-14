@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     resources :houses, only: [:index, :show]
-    resources :professors, only: [:show]
+    resources :professors, only: [:index, :show]
   end
 
   resources :users, only: [:new, :create]

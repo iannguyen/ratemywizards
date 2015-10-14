@@ -13,6 +13,18 @@
         actionType: HouseConstants.HOUSE_RECEIVED,
         house: house
       });
+    },
+    receiveProfessors: function(professors) {
+      AppDispatcher.dispatch({
+        actionType: ProfessorConstants.PROFESSORS_RECEIVED,
+        professors: professors
+      });
+    },
+    receiveProfessor: function(professor) {
+      AppDispatcher.dispatch({
+        actionType: ProfessorConstants.PROFESSOR_RECEIVED,
+        professor: professor
+      });
     }
   };
 

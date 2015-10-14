@@ -16,7 +16,7 @@
 
     componentDidMount: function() {
       HouseStore.addHouseChangeListener(this._onChange);
-      ApiUtil.fetchHouses();
+      ApiUtil.fetchAllHouses();
     },
 
     componentWillUnmount: function() {

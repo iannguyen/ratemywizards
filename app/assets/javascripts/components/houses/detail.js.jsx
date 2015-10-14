@@ -16,12 +16,12 @@
     },
 
     componentWillReceiveProps: function(newProps) {
-      ApiUtil.fetchHouse(parseInt(newProps.params.houseId));
+      ApiUtil.fetchSingleHouse(parseInt(newProps.params.houseId));
     },
 
     componentDidMount: function() {
       HouseStore.addHouseDetailChangeListener(this._onChange);
-      ApiUtil.fetchHouse(parseInt(this.props.params.houseId));
+      ApiUtil.fetchSingleHouse(parseInt(this.props.params.houseId));
     },
 
     componentWillUnmount: function() {
