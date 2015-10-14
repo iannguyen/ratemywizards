@@ -17,7 +17,7 @@
     render: function() {
       this.getStatus();
       return (
-        <nav className="navbar navbar-default">
+        <nav className="navbar navbar">
           <div className="container-fluid">
 
             <div className="navbar-header">
@@ -41,6 +41,14 @@
           </nav>
       );
     }
+  });
+
+$(document)
+  .ready(function () {
+    React.render(
+      <NavBar/>,
+      document.getElementById('navbar')
+    );
   });
 
 }(this));

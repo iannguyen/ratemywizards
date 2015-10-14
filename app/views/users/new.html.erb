@@ -2,28 +2,28 @@
 
   <h1>Create a New Account</h1>
 
-    <form action='<%= users_url %>' method="post">
-      <%= auth_token %>
+  <form action='<%= users_url %>' method="post">
+    <%= auth_token %>
 
-      <label for="username">
-        <input type="text" id="username" name="user[username]" placeholder="Username">
-      </label>
+    <label for="username">
+      <input id="username" name="user[username]" placeholder="Username" type="text">
+    </label>
 
-      <br />
+    <br/>
 
-      <label for="password">
-        <input type="password" id="password" name="user[password]" placeholder="Password">
-      </label>
+    <label for="password">
+      <input id="password" name="user[password]" placeholder="Password" type="password">
+    </label>
 
-      <br>
+    <br>
 
-      <label for="confirmation">
-        <input type="password" id="confirmation" name="user[confirmation]" placeholder="Confirm">
-      </label>
+    <label for="confirmation">
+      <input id="confirmation" name="user[confirmation]" placeholder="Confirm" type="password">
+    </label>
 
-      <br />
+    <br/>
 
-      <input type="submit" value="Sign Up!">
-    </form>
+    <input type="submit" value="Sign Up!">
+  </form>
 
 </div>

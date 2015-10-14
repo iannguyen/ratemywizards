@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>RateMyWizardsCapstone</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <head>
 
-  <% if current_user %>
-  <script type="text/javascript">
-    window.CURRENT_USER_ID = <%= current_user.id %>
-  </script>
-  <% end %>
-</head>
-<body>
+    <title>RateMyWizards</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
 
-<%= flash[:errors].join("<br>").html_safe if flash[:errors] %>
+    <% if current_user %>
+    <script type="text/javascript">
+      window.CURRENT_USER_ID = <%= current_user.id %>
+    </script>
+    <% end %>
 
-<div class="container">
- <%= yield %>
-</div>
+  </head>
 
-</body>
+  <body>
+    <div id="navbar"></div>
+
+    <%= flash[:errors].join("<br>").html_safe if flash[:errors] %>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
+  </body>
 </html>
