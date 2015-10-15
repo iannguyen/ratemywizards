@@ -17,26 +17,35 @@
     render: function() {
       this.getStatus();
       return (
-        <nav className="navbar navbar">
-          <div className="container-fluid">
+        <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div id="navbar-brand" className="container">
 
-            <div className="navbar-header">
-              <button aria-expanded="false" className="navbar-toggle collapsed" data-target="#collapse-menu" data-toggle="collapse" type="button">
-                <span className="icon-bar"></span>
-                <span className="icon-bar"></span>
-                <span className="icon-bar"></span>
-              </button>
+                <div className="navbar-header">
+                    <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span className="sr-only">Toggle navigation</span>
+                        <span className="icon-bar"></span>
+                        <span className="icon-bar"></span>
+                        <span className="icon-bar"></span>
+                    </button>
+                      <a className="navbar-brand" href="/">RateMyWizards</a>
+                </div>
+
+                <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul className="nav navbar-nav pull-right">
+                        <li>
+
+                        </li>
+                        <li>
+
+                        </li>
+                        <li>
+                            <a href="#" onClick={toggleStatus}>{status}</a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
 
-            <div className="collapse navbar-collapse" id="collapse-menu">
-              <ul className="nav navbar-nav pull-right">
-                <li>
-                  <a href='#' onClick={toggleStatus}>{status}</a>
-                </li>
-              </ul>
-            </div>
-
-          </div>
         </nav>
       );
     }

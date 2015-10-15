@@ -19,7 +19,28 @@
 @import "bootstrap";
 
 html {
-  height: 1500px;
+  min-height: 1500px;
   width: 100%;
   overflow-y: scroll;
 }
+
+body {
+  padding-top: 70px;
+  background-image: url('http://res.cloudinary.com/dms46o1eu/image/upload/v1444806956/Dumbledores-Office_nifxrl.jpg');
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  display: block;
+}
+
+span {
+  color: white;
+}
+
+.group:after {
+	visibility: hidden;
+	display: block;
+	content: "";
+	clear: both;
+	height: 0;
+	}

@@ -29,9 +29,9 @@
       this.setState({ inputValue: "" });
     },
 
-    handleBlur: function(e) {
-      this.setState({ inputValue: null });
-    },
+    // handleBlur: function(e) {
+    //   this.setState({ inputValue: null });
+    // },
 
     search: function() {
       var results = [];
@@ -60,7 +60,7 @@
             <ul id="search-results">
               {
                 searchResults.map(function(result) {
-                  return <li>{result.name}</li>;
+                  return <li><ProfessorItem key={result.id} professor={result}/></li>;
                 })
               }
             </ul>

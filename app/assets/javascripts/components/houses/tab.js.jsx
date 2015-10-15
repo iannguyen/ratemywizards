@@ -1,6 +1,8 @@
 (function(root) {
   'use strict';
 
+  root.Link = ReactRouter.Link;
+
   root.HouseTab = React.createClass({
     mixins: [ReactRouter.History],
 
@@ -12,7 +14,10 @@
     render: function() {
       return (
         <div className="house-tab" onClick={this.showDetail}>
+          <a href="#house-index">
+
           <img className="crest" src={this.props.house.image_url}></img>
+          </a>
         </div>
       );
     }

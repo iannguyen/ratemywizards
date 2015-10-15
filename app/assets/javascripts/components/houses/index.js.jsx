@@ -25,7 +25,7 @@
 
     render: function() {
       return (
-        <div className="house-index">
+        <div id="house-index">
           {
             this.state.houses.map(function (house) {
               return <HouseTab house={house} key={house.id}/>;

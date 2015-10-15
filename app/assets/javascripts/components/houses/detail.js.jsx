@@ -15,6 +15,11 @@
       this.setState(this.getStatefromStore());
     },
 
+    showProfessor: function(id) {
+      debugger;
+      this.props.history.pushState(null, "/professors/" + id);
+    },
+
     componentWillReceiveProps: function(newProps) {
       ApiUtil.fetchSingleHouse(parseInt(newProps.params.houseId));
     },
@@ -36,8 +41,15 @@
           <ul id="house-detail-list">
             {
               this.state.house.professors.map(function(professor) {
-                return <li>{professor.name}</li>;
-              })
+                return (
+                  <li>
+                    <ProfessorItem
+                      className="professor-item"
+                      key={professor.id}
+                      professor={professor} />
+                  </li>
+                );
+              }.bind(this))
             }
           </ul>
         </div>

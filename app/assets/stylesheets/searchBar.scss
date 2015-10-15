@@ -15,6 +15,11 @@
   outline-color: black;
 }
 
+#search-bar input:focus {
+  outline-style: inherit;
+   box-shadow: 0 0 1pt 1pt white;
+}
+
 // #search-bar > li {
 //   padding-top: 10px;
 //   padding-bottom: 10px;

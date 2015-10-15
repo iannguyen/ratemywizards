@@ -18,6 +18,8 @@
     <Route path="/" component={App}>
       <IndexRoute component={Main}/>
       <Route path="houses/:houseId" components={{main: Main, house: HouseDetail}}/>
+      <Route path="professors/:professorId" component={ProfessorShow}/>
+      <Route path="professors/:professorId/new" component={ReviewForm}/>
     </Route>
   );
 

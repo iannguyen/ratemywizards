@@ -2,6 +2,16 @@
   'use strict';
 
   root.ApiUtil = {
+    createReview: function(data, callback) {
+      $.ajax({
+        url: "/api/reviews",
+        method: "post",
+        data: {data: data},
+        success: function(response) {
+          console.log(response);
+        }
+      });
+    },
     fetchAllHouses: function() {
       $.ajax({
         url: "/api/houses",
@@ -34,9 +44,10 @@
     },
     fetchSingleProfessor: function(id) {
       $.ajax({
-        url: "api/professors/" + id,
+        url: "/api/professors/" + id,
         method: "get",
         success: function(response) {
+          ApiActions.receiveProfessor(response);
           console.log(response);
         }
       });
