@@ -7,6 +7,7 @@ img.crest {
 }
 
 .house-index {
+  padding-top: 10%;
   margin: auto;
   text-align: center;
 }
@@ -15,10 +16,15 @@ img.crest {
   display: inline-block;
 }
 
-.house-detail {
+#house-detail {
   margin: auto;
   text-align: center;
   color: white;
+}
+
+#house-detail-list {
+  list-style-type: none;
+  padding: 0px;
 }
 
 span {

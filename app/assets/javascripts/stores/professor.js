@@ -1,6 +1,8 @@
 (function(root) {
   'use strict';
 
+  var PROFESSORS_CHANGED = 'PROFESSORS_CHANGED';
+
   var _professors = [];
 
   var resetProfessors = function(professors) {
@@ -32,9 +34,10 @@
 
     dispatcherID: AppDispatcher.register(function(payload) {
       switch (payload.actionType) {
-        case ProfessorStore.PROFESSORS_RECEIVED:
+        case ProfessorConstants.PROFESSORS_RECEIVED:
           resetProfessors(payload.professors);
           ProfessorStore.emit(PROFESSORS_CHANGED);
+          break;
       }
     })
   });

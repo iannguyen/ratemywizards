@@ -27,6 +27,7 @@
         url: "/api/professors",
         method: "get",
         success:function(response) {
+          ApiActions.receiveProfessors(response);
           console.log(response);
         }
       });

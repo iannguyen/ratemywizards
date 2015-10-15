@@ -16,8 +16,8 @@
 
   var routes = (
     <Route path="/" component={App}>
-      <IndexRoute component={HouseIndex}/>
-      <Route path="houses/:houseId" components={{houses: HouseIndex, house: HouseDetail}}/>
+      <IndexRoute component={Main}/>
+      <Route path="houses/:houseId" components={{main: Main, house: HouseDetail}}/>
     </Route>
   );
 

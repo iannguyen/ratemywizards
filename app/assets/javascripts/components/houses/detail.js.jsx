@@ -32,8 +32,8 @@
       if (this.state.house === undefined) { return <div></div>; }
 
       return(
-        <div className='house-detail'>
-          <ul>
+        <div id="house-detail">
+          <ul id="house-detail-list">
             {
               this.state.house.professors.map(function(professor) {
                 return <li>{professor.name}</li>;

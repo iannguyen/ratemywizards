@@ -8,4 +8,6 @@ class Api::HousesController < ApplicationController
     @house = House.find(params[:id])
     render :show
   end
+
+  # House.average(:ratings)
 end
