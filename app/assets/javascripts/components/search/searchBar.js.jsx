@@ -29,9 +29,9 @@
       this.setState({ inputValue: "" });
     },
 
-    // handleBlur: function(e) {
-    //   this.setState({ inputValue: null });
-    // },
+    handleBlur: function(e) {
+      this.setState({ inputValue: null });
+    },
 
     search: function() {
       var results = [];
@@ -57,13 +57,13 @@
       return (
         <div id="search-bar">
           <input type="text" onBlur={this.handleBlur} onFocus={this.handleFocus} onChange={this.handleInput} value={this.state.inputValue} />
-          <ul id="search-results">
-            {
-              searchResults.map(function(result) {
-                return <li>{result.name}</li>;
-              })
-            }
-          </ul>
+            <ul id="search-results">
+              {
+                searchResults.map(function(result) {
+                  return <li>{result.name}</li>;
+                })
+              }
+            </ul>
         </div>
       );
     }

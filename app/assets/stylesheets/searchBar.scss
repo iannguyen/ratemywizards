@@ -1,19 +1,40 @@
 #search-bar {
   text-align: center;
+  width: 100%;
+  margin: auto;
 }
 
+#search-bar input {
+  height: 50px;
+  width: 30%;
+  border-radius: 25px;
+  background-color: rgba(0,0,0,0.5);
+  text-align: center;
+  color: white;
+  font-size: 18px;
+}
+
+// #search-bar > li {
+//   padding-top: 10px;
+//   padding-bottom: 10px;
+// }
+
 #search-results {
+  display: block;
+  width: 90%;
   margin: auto;
   text-align: center;
   color: white;
-  background-color: gray;
+  background-color: rgba(0,0,0,0.5);
   position: absolute;
   list-style-type: none;
   padding-left: 0px;
 }
 
 #search-results li {
-  display: flex;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: block;
   text-align: center;
   margin: auto;
 }
