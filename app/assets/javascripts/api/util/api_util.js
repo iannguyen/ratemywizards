@@ -3,13 +3,11 @@
 
   root.ApiUtil = {
     createReview: function(data, callback) {
-      debugger;
       $.ajax({
         url: "/api/reviews",
         method: "post",
         data: {review: data},
         success: function(data) {
-          debugger;
           ApiActions.receiveProfessor(data);
           callback && callback(data.id);
         },

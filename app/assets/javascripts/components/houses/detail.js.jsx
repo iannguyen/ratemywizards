@@ -16,7 +16,6 @@
     },
 
     showProfessor: function(id) {
-      debugger;
       this.props.history.pushState(null, "/professors/" + id);
     },
 
