@@ -3,17 +3,31 @@
 
   var toggleStatus;
   var status;
+  var welcome;
+  var back;
 
   root.NavBar = React.createClass ({
+    mixins: [ReactRouter.History],
+
     getStatus: function() {
       if (window.CURRENT_USER_ID === undefined) {
         status = 'Sign In';
         toggleStatus = ApiUtil.signIn;
+        welcome = "Create an account, squib!";
       } else {
         status = 'Sign Out';
         toggleStatus = ApiUtil.signOut;
+        welcome = 'Welcome Back! ' + window.CURRENT_USER;
       }
     },
+
+    getLocation: function() {
+
+    },
+
+    goHome: function() {
+    },
+
     render: function() {
       this.getStatus();
       return (
@@ -27,16 +41,16 @@
                         <span className="icon-bar"></span>
                         <span className="icon-bar"></span>
                     </button>
-                      <a className="navbar-brand" href="/">RateMyWizards</a>
+                      <a className="navbar-brand" href="/" onClick={this.goHome}>RateMyWizards</a>
                 </div>
-
                 <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
                     <ul className="nav navbar-nav pull-right">
                         <li>
-
+                          
                         </li>
                         <li>
-
+                            <a href="/users/new">{welcome}</a>
                         </li>
                         <li>
                             <a href="#" onClick={toggleStatus}>{status}</a>
