@@ -6,6 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+# Users
+
 User.create!({
   username: 'HarryP',
   password: 'pusheen',
@@ -70,7 +72,7 @@ User.create!({
   username: 'ian',
   password: 'password'})
 
-
+# House
 
 Gryffindor = House.create!({
   name: 'Gryffindor',
@@ -89,7 +91,7 @@ Slytherin = House.create!({
   image_url: 'http://res.cloudinary.com/dms46o1eu/image/upload/v1444846401/Slytherin_Crest_hlz4yr.png'
   })
 
-
+# Professors
 
 Professor.create!({
   name: 'Albus Dumbledore',
@@ -167,4 +169,117 @@ Professor.create!({
 Professor.create!({
   name: 'Irma Pince',
   house_id: 2, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/v1444785687/ratemywizards/pince_pmci4e.png'
+  })
+
+# Reviews
+
+Review.create!({
+  anonymous: false,
+  user_id: 1,
+  professor_id: 1,
+  ability: 5,
+  easiness: 5,
+  helpfulness: 5,
+  body: "Professor Dumbledore is the greatest sorcerer in the world, and I am lucky to call him my friend. Although he did ignore me during my 5th year. Oh and he told me to destroy horcruxes but didn't tell me how or where they were. Might have to reconsider his helpfulness..."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 2,
+  professor_id: 1,
+  ability: 5,
+  easiness: 5,
+  helpfulness: 5,
+  body: "Professor Dumbledore is highly intelligent and one of the greatest wizards of our time. He has fought for equality of all students and ensured the safety of our school."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 3,
+  professor_id: 1,
+  ability: 5,
+  easiness: 5,
+  helpfulness: 5,
+  body: "Awarded 50 points to Gryffindor for my chest skills during our first year. Shot Gryffindor up to first place. Awesome headmaster!"
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 4,
+  professor_id: 1,
+  ability: 5,
+  easiness: 1,
+  helpfulness: 1,
+  body: "Father's always said that Dumbledore was the worst thing that's ever happened to this place."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 5,
+  professor_id: 1,
+  ability: 5,
+  easiness: 2,
+  helpfulness: 5,
+  body: "He's very friendly and patient. He's saved me a couple times from Professor Snape, although he's very hard to get a hold of - doesn't have office hours."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 6,
+  professor_id: 1,
+  ability: 5,
+  easiness: 2,
+  helpfulness: 5,
+  body: "Great man, Dumbledore"
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 7,
+  professor_id: 1,
+  ability: 5,
+  easiness: 1,
+  helpfulness: 4,
+  body: "I thought help will always be given at Hogwarts to those who ask for it? Can't even find his office."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 8,
+  professor_id: 1,
+  ability: 5,
+  easiness: 5,
+  helpfulness: 5,
+  body: "I am giving Professor Dumbledore a 5 for ability, easiness, and helpfulness. He has abilities that most of us can only dream of. He is very easy-going as well, and is always available to help."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 10,
+  professor_id: 1,
+  ability: 5,
+  easiness: 5,
+  helpfulness: 5,
+  body: "The only one You-Know-Who ever feared, so five stars."
+  })
+
+
+Review.create!({
+  anonymous: false,
+  user_id: 13,
+  professor_id: 1,
+  ability: 4,
+  easiness: 1,
+  helpfulness: 1,
+  body: "vary biased headmastr n im pretty shur his abilitys are exaggerated. favors u if ur friends wit potter."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 14,
+  professor_id: 1,
+  ability: 1,
+  easiness: 1,
+  helpfulness: 1,
+  body: "sux"
   })

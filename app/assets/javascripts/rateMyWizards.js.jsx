@@ -23,10 +23,14 @@
     </Route>
   );
 
+
   $(document)
     .ready(function() {
+      var root = document.getElementById('root');
       if (root) {
-        React.render(<Router>{routes}</Router>, document.getElementById('root'));
+        React.render(
+          <Router>{routes}</Router>,
+          document.getElementById('root'));
       }
     });
 }());

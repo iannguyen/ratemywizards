@@ -1,6 +1,6 @@
 class Api::ProfessorsController < ApplicationController
   def index
-    @professors = Professor.all
+    @professors = Professor.includes(:reviews)
     render json: @professors
   end
 

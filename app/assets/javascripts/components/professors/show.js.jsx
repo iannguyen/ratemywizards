@@ -25,7 +25,7 @@
     },
 
     componentWillUnmount: function() {
-      ProfessorStore.removeProfessorsChangeListener(this.__onChange);
+      ProfessorStore.removeProfessorsChangeListener(this._onChange);
     },
 
     render: function() {

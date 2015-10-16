@@ -1,7 +1,7 @@
 class Api::HousesController < ApplicationController
   def index
-    @houses = House.all
-    render json: @houses
+    @houses = House.includes(:professors).includes(:reviews)
+    render :index
   end
 
   def show

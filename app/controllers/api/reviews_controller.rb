@@ -15,7 +15,7 @@ class Api::ReviewsController < ApplicationController
   end
 
   def index
-    @reviews = Review.all
+    @reviews = Reviews.all
     render json: @reviews
   end
 
