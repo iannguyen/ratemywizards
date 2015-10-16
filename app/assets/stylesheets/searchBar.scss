@@ -2,6 +2,7 @@
   text-align: center;
   width: 100%;
   margin: auto;
+  z-index: 2;
 }
 
 #search-bar input {
@@ -25,16 +26,18 @@
 //   padding-bottom: 10px;
 // }
 
-#search-results {
-  display: block;
-  width: 90%;
-  margin: auto;
+ul#search-results {
+  display: inherit;
+  width: 70%;
   text-align: center;
   color: white;
-  background-color: rgba(0,0,0,0.5);
-  position: absolute;
+  background-color: rgba(0,0,0,0.8);
   list-style-type: none;
-  padding-left: 0px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 }
 
 #search-results li {

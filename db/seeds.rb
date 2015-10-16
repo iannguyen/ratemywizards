@@ -168,3 +168,13 @@ Professor.create!({
   name: 'Irma Pince',
   house_id: 2, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/v1444785687/ratemywizards/pince_pmci4e.png'
   })
+
+Review.create!({
+  anonymous: false,
+  user_id: #,
+  professor_id: #,
+  ability: #,
+  easiness: #,
+  helpfulness: #,
+  body: ''
+  })

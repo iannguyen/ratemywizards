@@ -25,9 +25,9 @@
       this.setState({ inputValue: e.currentTarget.value });
     },
 
-    handleFocus: function(e) {
-      this.setState({ inputValue: "" });
-    },
+    // handleFocus: function(e) {
+    //   this.setState({ inputValue: "" });
+    // },
 
     // handleBlur: function(e) {
     //   this.setState({ inputValue: null });
@@ -38,7 +38,7 @@
       if(this.state.inputValue === null) {
         return results;
       } else if(this.state.inputValue.length === 0) {
-        return this.state.professors;
+        return results;
       }
       var current = this.state.inputValue.toLowerCase();
       this.state.professors.forEach(function(prof) {

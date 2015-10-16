@@ -7,7 +7,8 @@ class Api::ReviewsController < ApplicationController
   def create
     @review = current_user.reviews.new(review_params)
     if @review.save
-      flash.now[:errors] = ["Review created successfully"]
+      flash[:errors] = ["Review created successfully"]
+      render json: @review
     else
       render json: @review.errors.full_messages, status: 422
     end
@@ -25,7 +26,7 @@ class Api::ReviewsController < ApplicationController
   def destroy
     @review = Review.find(params[:id])
     @review.destroy
-    flash.now[:errors] = ["Review Deleted successfully"]
+    flash[:errors] = ["Review Deleted successfully"]
     render :root
   end
 

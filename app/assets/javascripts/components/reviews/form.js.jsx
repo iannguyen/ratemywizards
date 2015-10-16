@@ -18,32 +18,47 @@
 
     createReview: function(e) {
       e.preventDefault();
+      var review = {};
+      review.professor_id = parseInt(this.props.params.professorId);
+      Object.keys(this.state).forEach(function(key) {
+        if(key === 'anonymous') {
+          review[key] = JSON.parse(this.state[key]);
+        } else if(key !== 'body') {
+          review[key] = parseInt(this.state[key]);
+        } else {
+          review[key] = this.state[key];
+        }
+      }.bind(this));
+        ApiUtil.createReview(review, function(id) {
+          this.props.history.pushState(null, '/professors/' + id, {});
+        }.bind(this));
+        this.setState(this.defaultAttributes);
     },
 
     render: function() {
       return(
-        <div class="review-form">
+        <div className="review-form">
           <h3>Create a Review</h3>
-          <form onSumbit={this.createReview}>
+          <form onSubmit={this.createReview}>
 
             <div>
               <label htmlFor="review-anonymous">
                 Anonymous Review?
                 <br/>
-                <select id="anonymous" name="anonymous">
-                  <option value="true">I want to be hidden...</option>
+                <select id="anonymous" name="anonymous" valueLink={this.linkState('anonymous')}>
+                  <option value='true'>I want to be hidden...</option>
                   <option value="false">I don't care who sees!</option>
                 </select>
               </label>
             </div>
 
             <br/>
-            
-            <ul>
+
+            <ul className="ratings">
             <div>
               <label htmlFor="review-ability">
                 Ability Rating:
-                <select id="ability" name="ability">
+                <select id="ability" name="ability" valueLink={this.linkState('ability')}>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -58,7 +73,7 @@
             <div>
               <label htmlFor="review-easiness">
                 Easiness Rating:
-                <select id="easiness" name="easiness">
+                <select id="easiness" name="easiness" valueLink={this.linkState('easiness')}>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -72,7 +87,7 @@
             <div>
               <label htmlFor="review-helpfulness">
                 Helpfulness Rating:
-                <select id="helpfulness" name="helpfulness">
+                <select id="helpfulness" name="helpfulness" valueLink={this.linkState('helpfulness')}>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -86,7 +101,7 @@
             <br/>
             <div>
               <label htmlFor="review-body">
-                <textarea id="review-body" placeholder="Write your review here..."></textarea>
+                <textarea id="review-body" placeholder="Write your review here..." valueLink={this.linkState('body')}></textarea>
               </label>
             </div>
 

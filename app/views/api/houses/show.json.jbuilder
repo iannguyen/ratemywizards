@@ -1,13 +1,13 @@
 json.extract!(
   @house,
-  :id, :name
+  :id, :name, :image_url
 )
 
 json.professors do
   json.array!(@house.professors) do |professor|
     json.extract!(
       professor,
-      :id, :name
+      :id, :name, :house_id
     )
   end
 end
