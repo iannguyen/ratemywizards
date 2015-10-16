@@ -7,3 +7,12 @@ div#professor-show {
   margin-top: 10px;
   color: white;
 }
+
+ul#averages {
+  padding: inherit;
+}
+
+ul#averages li {
+  display: inline-block;
+  padding: 10px;
+}

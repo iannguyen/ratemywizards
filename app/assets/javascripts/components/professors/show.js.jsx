@@ -4,20 +4,20 @@
   root.ProfessorShow = React.createClass({
     getStateFromStore: function() {
       var prof  = ProfessorStore.find(parseInt(this.props.params.professorId));
-      return { prof: prof };
+      return { prof: prof, reviews: prof.reviews };
     },
 
     getInitialState: function() {
-      return {prof: {}};
+      return {prof: {}, reviews: []};
     },
 
     _onChange: function() {
       this.setState(this.getStateFromStore());
     },
 
-    componentWillReceiveProps: function(newProps) {
-      ApiUtil.fetchSingleProfessor(parseInt(newProps.params.professorId));
-    },
+    // componentWillReceiveProps: function(newProps) {
+    //   ApiUtil.fetchSingleProfessor(parseInt(newProps.params.professorId));
+    // },
 
     componentDidMount: function() {
       ProfessorStore.addProfessorChangeListener(this._onChange);
@@ -60,6 +60,17 @@
                   return <li>Average {attr}: {averages[attr]}</li>;
                 })
               }
+          </ul>
+          <ul>
+            {
+              this.state.reviews.map(function(review) {
+                return(
+                  <li>
+                    <ReviewDetail key={review.id} review={review}/>
+                  </li>
+                );
+              })
+            }
           </ul>
         </div>
       );
