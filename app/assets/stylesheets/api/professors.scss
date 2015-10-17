@@ -10,15 +10,19 @@ div#professor-show {
 }
 
 div#professor-bio {
+  top: 50px;
   height: 200px;
   width: 100%;
   border-bottom: #d3d3d3 solid 1px;
-  position: static;
+  position: fixed;
   text-align: center;
   margin: 0 auto;
   left: 0;
   right: 0;
   z-index: 2;
+  background-image: url('http://res.cloudinary.com/dms46o1eu/image/upload/v1445047628/Hogwarts-Professors-banner-hogwarts-professors-16096805-800-100_hm1s0j.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 ul#averages {
