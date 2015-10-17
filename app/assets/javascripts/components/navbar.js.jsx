@@ -17,7 +17,7 @@
       } else {
         status = 'Sign Out';
         toggleStatus = ApiUtil.signOut;
-        welcome = 'Welcome Back! ' + window.CURRENT_USER;
+        welcome = "You're a wizard,  " + window.CURRENT_USER + " ! ";
       }
     },
 

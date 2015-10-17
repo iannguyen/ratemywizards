@@ -15,10 +15,6 @@
       this.setState(this.getStateFromStore());
     },
 
-    // componentWillReceiveProps: function(newProps) {
-    //   ApiUtil.fetchSingleProfessor(parseInt(newProps.params.professorId));
-    // },
-
     componentDidMount: function() {
       ProfessorStore.addProfessorChangeListener(this._onChange);
       ApiUtil.fetchSingleProfessor(parseInt(this.props.params.professorId));
@@ -49,6 +45,12 @@
       return average;
     },
 
+    getHouseBanner: function() {
+      if(this.state.prof.house) {
+        return this.state.prof.house.name.toLowerCase();
+      }
+    },
+
     averages: function() {
       if (averages.ability === 0) {
         return (<div></div>);
@@ -62,7 +64,7 @@
       var averages = this.getProfAverage();
       return (
         <div id="professor-show">
-          <div id="professor-bio">
+          <div id="professor-bio" className={this.getHouseBanner()}>
             <h2>ALLL HAIL PROFESSOR SHOW PAGE</h2>
             <ul id="averages">
                 {

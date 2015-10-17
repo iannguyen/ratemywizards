@@ -1,7 +1,9 @@
 json.extract!(
   @professor,
-  :id, :name, :image_url, :house_id
+  :id, :name, :image_url, :house_id,
 )
+
+json.house @professor.house, :name
 
 json.reviews do
   json.array!(@professor.reviews) do |review|
