@@ -15,12 +15,13 @@ class Api::ReviewsController < ApplicationController
   end
 
   def index
-    @reviews = Reviews.all
+    @reviews = Review.all
     render json: @reviews
   end
 
   def show
     @review = Review.find(params[:id])
+    render :show
   end
 
   def destroy

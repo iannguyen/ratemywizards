@@ -5,7 +5,7 @@ class Api::ProfessorsController < ApplicationController
   end
 
   def show
-    @professor = Professor.find(params[:id])
+    @professor = Professor.includes(reviews: :user).find(params[:id])
     render :show
   end
 end

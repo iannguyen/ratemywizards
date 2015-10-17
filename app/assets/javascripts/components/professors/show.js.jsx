@@ -53,15 +53,18 @@
       var averages = this.getProfAverage();
       return (
         <div id="professor-show">
-          <h2>ALLL HAIL PROFESSOR SHOW PAGE</h2>
-          <ul id="averages">
-              {
-                Object.keys(averages).map(function(attr) {
-                  return <li>Average {attr}: {averages[attr]}</li>;
-                })
-              }
-          </ul>
-          <ul>
+          <div id="professor-bio">
+            <h2>ALLL HAIL PROFESSOR SHOW PAGE</h2>
+            <ul id="averages">
+                {
+                  Object.keys(averages).map(function(attr) {
+                    return <li>Average {attr}: {averages[attr]}</li>;
+                  })
+                }
+            </ul>
+
+          </div>
+          <ul id="review-list">
             {
               this.state.reviews.map(function(review) {
                 return(

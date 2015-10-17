@@ -56,6 +56,7 @@
       var searchResults = this.search();
       return (
         <div id="search-bar">
+          <h1 id="search-heading">Search for a Wizard</h1>
           <input type="text" onBlur={this.handleBlur} onFocus={this.handleFocus} onChange={this.handleInput} value={this.state.inputValue} />
             <ul id="search-results">
               {

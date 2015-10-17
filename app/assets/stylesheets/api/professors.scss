@@ -6,6 +6,19 @@ div#professor-show {
   text-align: center;
   margin-top: 10px;
   color: white;
+  height: 100%;
+}
+
+div#professor-bio {
+  height: 200px;
+  width: 100%;
+  border-bottom: #d3d3d3 solid 1px;
+  position: static;
+  text-align: center;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  z-index: 2;
 }
 
 ul#averages {

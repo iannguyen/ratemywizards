@@ -11,5 +11,6 @@ json.reviews do
       :ability, :easiness, :helpfulness,
       :body
     )
+  json.user review.user, :username, :image_url
   end
 end
