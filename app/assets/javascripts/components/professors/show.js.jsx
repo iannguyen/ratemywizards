@@ -35,7 +35,7 @@
         easiness: 0,
         helpfulness: 0
       };
-      if (this.state.prof.reviews && this.state.prof.reviews !== 0) {
+      if (this.state.prof.reviews && this.state.prof.reviews.length !== 0) {
         reviews = this.state.prof.reviews;
         reviews.forEach(function(review) {
           average.ability += review.ability;
@@ -47,6 +47,15 @@
       });
       }
       return average;
+    },
+
+    averages: function() {
+      if (averages.ability === 0) {
+        return (<div></div>);
+      }
+      else {
+        return averages;
+      }
     },
 
     render: function() {
@@ -62,9 +71,9 @@
                   })
                 }
             </ul>
-
           </div>
-          <ul id="review-list">
+          averages.ability === 0 ?
+          <ul id={averages.ability === 0 ? 'blank' : 'review-list'}>
             {
               this.state.reviews.map(function(review) {
                 return(

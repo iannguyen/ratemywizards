@@ -172,6 +172,7 @@ Professor.create!({
   })
 
 # Reviews
+#Dumbledore ID1 11
 
 Review.create!({
   anonymous: false,
@@ -200,7 +201,7 @@ Review.create!({
   ability: 5,
   easiness: 5,
   helpfulness: 5,
-  body: "Awarded 50 points to Gryffindor for my chest skills during our first year. Shot Gryffindor up to first place. Awesome headmaster!"
+  body: "Awarded 50 points to Gryffindor for my chess skills during our first year. Shot Gryffindor up to first place. Awesome headmaster!"
   })
 
 Review.create!({
@@ -282,4 +283,280 @@ Review.create!({
   easiness: 1,
   helpfulness: 1,
   body: "sux"
+  })
+
+# McGonagall ID2 12
+
+Review.create!({
+  anonymous: false,
+  user_id: 1,
+  professor_id: 2,
+  ability: 5,
+  easiness: 4,
+  helpfulness: 4,
+  body: "She is very strict, but you will learn a lot in her class. Took off a point for helpfulness because she wouldn't sign my Hogsmeade permission form during my third year."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 2,
+  professor_id: 2,
+  ability: 5,
+  easiness: 5,
+  helpfulness: 5,
+  body: "Professor McGonagall goes above and beyond to make sure her students succeed. She gave me a time-turner during my third year so that I could take extra classes."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 3,
+  professor_id: 2,
+  ability: 5,
+  easiness: 4,
+  helpfulness: 4,
+  body: "A word of advice to first years: don't mess around just because she's not in the classroom. She transforms into a cat and watches you."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 4,
+  professor_id: 2,
+  ability: 4,
+  easiness: 2,
+  helpfulness: 3,
+  body: "Gave me detention just because I reported Potter and his friends for vising that great oaf after hours. Wait till my father hears about this."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 5,
+  professor_id: 2,
+  ability: 5,
+  easiness: 1,
+  helpfulness: 4,
+  body: "Be prepared to put in many hours a week for this class. She does not curve. She won't show any mercy even if you go to office hours."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 6,
+  professor_id: 2,
+  ability: 5,
+  easiness: 4,
+  helpfulness: 5,
+  body: "Brilliant"
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 7,
+  professor_id: 2,
+  ability: 5,
+  easiness: 5,
+  helpfulness: 5,
+  body: "She intimidates first years but all the older kids know that she's a softy."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 8,
+  professor_id: 2,
+  ability: 5,
+  easiness: 5,
+  helpfulness: 5,
+  body: "Very interesting class. First years start out with simple transfiguration, like transforming animals into water goblets."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 9,
+  professor_id: 2,
+  ability: 5,
+  easiness: 3,
+  helpfulness: 5,
+  body: "A lot of people get the wrong impression of McGonagall because she is very tough, but she really cares about her students."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 10,
+  professor_id: 2,
+  ability: 5,
+  easiness: 2,
+  helpfulness: 4,
+  body: "Watch out she deducts points from her own house."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 14,
+  professor_id: 2,
+  ability: 3,
+  easiness: 1,
+  helpfulness: 1,
+  body: "failed her class my first year cuz i didn't know how to read"
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 15,
+  professor_id: 2,
+  ability: 5,
+  easiness: 3,
+  helpfulness: 5,
+  body: "This class is very hard, you must purchase the textbook. But she is very helpful and very smart."
+  })
+
+#Snape ID3 9
+
+Review.create!({
+  anonymous: false,
+  user_id: 1,
+  professor_id: 3,
+  ability: 4,
+  easiness: 1,
+  helpfulness: 1,
+  body: "Wow where do I even start. Snape has been giving me dirty looks since he first laid eyes on me. He singled me out in class and embarassed me my first year, tried to frame me for killing Filtch's cat my second year, stuck his nose where it didn't belong in my 3rd year, accused me of stealing from his storage in my 4th year, and called me lazy and arrogant and insulted my father in my 5th year."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 2,
+  professor_id: 3,
+  ability: 5,
+  easiness: 4,
+  helpfulness: 3,
+  body: "I'm sure Professor Snape is very brilliant, but I struggle to get an A in his class. I always try to participate in his class by raising my hand but he doesn't call on me for some reason."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 3,
+  professor_id: 3,
+  ability: 1,
+  easiness: 1,
+  helpfulness: 1,
+  body: "Page three hundred and ninety-four"
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 4,
+  professor_id: 3,
+  ability: 5,
+  easiness: 4,
+  helpfulness: 5,
+  body: "Snape is one of the few decent professors in this school."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 5,
+  professor_id: 3,
+  ability: 3,
+  easiness: 1,
+  helpfulness: 1,
+  body: "Professor Snape really scares me. Instead of helping me when my potion burned, he punishes me by making me drink it and then takes points from Gryffindor."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 6,
+  professor_id: 3,
+  ability: 3,
+  easiness: 2,
+  helpfulness: 1,
+  body: "There is no foolish wand-waving or silly incantations in this class."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 10,
+  professor_id: 3,
+  ability: 4,
+  easiness: 1,
+  helpfulness: 1,
+  body: "Favors his own students. You pretty much have no chance of scoring higher than a C on your exams if you aren't in Slytherin."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 13,
+  professor_id: 3,
+  ability: 5,
+  easiness: 5,
+  helpfulness: 5,
+  body: "snapes awesum! tryed 2 kill potter durin qidich one yr"
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 14,
+  professor_id: 3,
+  ability: 5,
+  easiness: 4,
+  helpfulness: 5,
+  body: "Prof Snape is pretty cool... I was about to fail Potions my second year but he gave me extra credit and let me pass."
+  })
+
+#Moody ID10 6
+
+Review.create!({
+  anonymous: false,
+  user_id: 1,
+  professor_id: 10,
+  ability: 4,
+  easiness: 5,
+  helpfulness: 5,
+  body: "Moody is an ex-auror, so he knows his stuff. He is very helpful and made sure I passed the Triwizard Tournament. Oh wait that was Barty Crouch, Jr."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 3,
+  professor_id: 10,
+  ability: 4,
+  easiness: 4,
+  helpfulness: 4,
+  body: "Completely mad, but brilliant. You can tell that he's been there - looked evil in the eye."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 10,
+  professor_id: 10,
+  ability: 5,
+  easiness: 4,
+  helpfulness: 4,
+  body: "Has eyes on the back of his head or something. Saw me put gum under my desk while he had his back turned. Also has a temper, threw stuff at me."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 4,
+  professor_id: 10,
+  ability: 1,
+  easiness: 1,
+  helpfulness: 1,
+  body: "My father will hear about this."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 13,
+  professor_id: 10,
+  ability: 2,
+  easiness: 1,
+  helpfulness: 1,
+  body: "dis guy is bloody mad. turned ma best friend to a ferret and put him in ma pants"
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 5,
+  professor_id: 10,
+  ability: 4,
+  easiness: 3,
+  helpfulness: 5,
+  body: "Professor Moody is scary but he's alright once you get to know him. He really inspired me to pursue my interest in herbology."
   })

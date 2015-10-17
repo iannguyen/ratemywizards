@@ -21,6 +21,19 @@
       }
     },
 
+    playMusic: function () {
+      var tune = new Audio();
+
+      var myAudio = document.getElementById("hpmusic");
+      myAudio.volume = 0.3;
+    },
+
+    componentDidMount: function() {
+      var myAudio = document.getElementById("hpmusic");
+      myAudio.volume = 0.3;
+      myAudio.autoplay = true;
+    },
+
     getLocation: function() {
 
     },
@@ -47,7 +60,11 @@
 
                     <ul className="nav navbar-nav pull-right">
                         <li>
-                          
+                          <a href="#" className="audio"><audio id="hpmusic" controls>
+                            <source  src="http://res.cloudinary.com/dms46o1eu/video/upload/v1445058621/hptheme_ac7dzk.mp3">
+                            </source>
+                          </audio>
+                        </a>
                         </li>
                         <li>
                             <a href="/users/new">{welcome}</a>

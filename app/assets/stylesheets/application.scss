@@ -18,8 +18,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-html {
-  min-height: 1300px;
+body {
+  height: 120vh;
   width: 100%;
   overflow-y: scroll;
 }

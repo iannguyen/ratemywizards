@@ -6,7 +6,7 @@
 
     defaultAttributes: {
       anonymous: false,
-      body: '',
+      body: "",
       ability: 1,
       easiness: 1,
       helpfulness: 1
