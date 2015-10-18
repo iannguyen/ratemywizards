@@ -43,7 +43,6 @@
                 return (
                   <li>
                     <ProfessorItem
-                      className="professor-item"
                       key={professor.id}
                       professor={professor} />
                   </li>

@@ -28,22 +28,24 @@
 
 ul#search-results {
   display: inherit;
-  width: 70%;
+  width: 50%;
   text-align: center;
   color: white;
-  background-color: rgba(0,0,0,0.8);
   list-style-type: none;
   position: absolute;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
+  z-index: 10;
 }
 
-#search-results li {
-  padding-top: 5px;
-  padding-bottom: 5px;
+#search-results li.search-result{
+  height: 100px;
+  padding: 5px;
   display: block;
   text-align: center;
   margin: auto;
+  border-radius: 10px;
+  text-align: center;
 }

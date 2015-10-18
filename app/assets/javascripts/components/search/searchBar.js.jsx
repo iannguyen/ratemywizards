@@ -56,7 +56,11 @@
                   if (typeof result === "string") {
                     return <li>{result}</li>;
                   } else {
-                    return <li><ProfessorItem key={result.id} professor={result}/></li>;
+                    return <li className={result.house.name.toLowerCase() + " search-result"}>
+                              <ProfessorItem
+                                key={result.id}
+                                professor={result}/>
+                            </li>;
                   }
                 })
               }
