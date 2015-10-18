@@ -39,7 +39,7 @@
         }
       });
       if(results.length === 0) {
-        results.push("No Wizards found..Perhaps you'd like to add this Wizard? :(");
+        results.push("No Wizards found..Perhaps you'd like to add this Wizard?");
       }
       return results;
     },
@@ -53,7 +53,11 @@
             <ul id="search-results">
               {
                 searchResults.map(function(result) {
-                  return <li><ProfessorItem key={result.id} professor={result}/></li>;
+                  if (typeof result === "string") {
+                    return <li>{result}</li>;
+                  } else {
+                    return <li><ProfessorItem key={result.id} professor={result}/></li>;
+                  }
                 })
               }
             </ul>

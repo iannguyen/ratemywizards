@@ -45,8 +45,9 @@ div.professor-description{
 }
 img.professor-pic {
   object-fit: cover; /* Center the image within the element */
-  height: 100%;
-  width: auto;
+  object-position: top;
+  height: 200px;
+  width: 200px;
   border: 1px solid #2e2d2d;
   border-radius: 10px;
   top: 50%;
@@ -55,10 +56,22 @@ img.professor-pic {
   left: 0;
   right: 0;
   margin: auto;
-  // float: left;
-  // margin-left: 15%;
-
+  -webkit-transition: all 1s ease; /* Safari and Chrome */
+  -moz-transition: all 1s ease; /* Firefox */
+  -ms-transition: all 1s ease; /* IE 9 */
+  -o-transition: all 1s ease; /* Opera */
+  transition: all 1s ease;;
 }
+
+img.professor-pic:hover {
+  border-radius: 100%;
+  -webkit-filter: brightness(200%);
+  -moz-filter:brightness(200%); /* Firefox */
+  -ms-filter:brightness(200%); /* IE 9 */
+  -o-filter:brightness(200%); /* Opera */
+  filter:brightness(200%);
+}
+
 div.gryffindor {
   background-image: url("http://res.cloudinary.com/dms46o1eu/image/upload/v1445107448/house_banner_wallpaper_by_avalonsart-d47f9af_bvijta.png");
   background-size: contain;

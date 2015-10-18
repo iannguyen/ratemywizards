@@ -17,10 +17,10 @@
 
   </head>
 
-  <body>
+  <body class="<%= ['office', 'great-hall', 'book', 'portraits', 'great-hall-day'].sample %>">
     <div id="navbar"></div>
+      <div class="errors"><%= flash[:errors].join("<br>").html_safe if flash[:errors] %></div>
 
-    <%= flash[:errors].join("<br>").html_safe if flash[:errors] %>
 
     <div class="container">
       <%= yield %>

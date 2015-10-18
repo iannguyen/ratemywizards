@@ -18,29 +18,48 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+div#main {
+  text-shadow: 1px 1px 3px black;
+}
+div.errors {
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 3px red;
+  font-size: 18px;
+  z-index: 999;
+}
 body {
-  height: 120vh;
+  height: 100%;
   width: 100%;
   overflow-y: scroll;
-}
-
-body {
-  padding-top: 70px;
-  background-image: url('http://res.cloudinary.com/dms46o1eu/image/upload/v1444806956/Dumbledores-Office_nifxrl.jpg');
   background-size: cover;
   background-position: bottom;
   background-attachment: fixed;
   display: block;
+  padding-top: 70px;
 }
-
+body.office {
+  background-image: url('http://res.cloudinary.com/dms46o1eu/image/upload/v1444806956/Dumbledores-Office_nifxrl.jpg');
+}
+body.great-hall {
+  background-image: url('http://res.cloudinary.com/dms46o1eu/image/upload/v1445107556/B1-background_qs5ebt.jpg');
+}
+body.book {
+  background-image: url('http://res.cloudinary.com/dms46o1eu/image/upload/v1444808512/Hogwarts_Library_khibcw.png');
+}
+body.portraits {
+  background-image: url('http://res.cloudinary.com/dms46o1eu/image/upload/v1445139843/Portrait-Gallery_b7luou.jpg');
+}
+body.great-hall-day {
+  background-image: url('http://res.cloudinary.com/dms46o1eu/image/upload/v1445139843/Great_hall_tnhaif.jpg');
+}
 span {
   color: white;
 }
-
 .group:after {
 	visibility: hidden;
 	display: block;
 	content: "";
 	clear: both;
 	height: 0;
-	}
+}

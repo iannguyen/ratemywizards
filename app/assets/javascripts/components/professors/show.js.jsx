@@ -77,6 +77,7 @@
 
             <div className="professor-description">
               <p></p>
+            Rate {this.state.prof.name} by casting lumos on his face.
             </div>
 
           </div>

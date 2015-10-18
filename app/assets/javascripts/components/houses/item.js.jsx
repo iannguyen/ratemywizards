@@ -11,10 +11,10 @@
 
     render: function() {
       return(
-        <div onClick={this.showProfessor}>
-          {this.props.professor.name}
-        </div>
-      );
+          <div onClick={this.showProfessor}>
+            {this.props.professor.name}
+          </div>
+        );
     }
   });
 

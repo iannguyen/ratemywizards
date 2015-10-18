@@ -7,6 +7,7 @@
     mixins: [ReactRouter.History],
 
     showDetail: function() {
+      window.scrollTo(0, 350);
       var url = '/houses/' + this.props.house.id;
       this.history.pushState(null, '/houses/' + this.props.house.id, {});
     },
@@ -14,10 +15,8 @@
     render: function() {
       return (
         <div className="house-tab" onClick={this.showDetail}>
-          <a href="#house-index">
 
           <img className="crest" src={this.props.house.image_url}></img>
-          </a>
         </div>
       );
     }

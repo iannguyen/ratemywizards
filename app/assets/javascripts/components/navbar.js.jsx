@@ -65,7 +65,7 @@
                             <a href="/users/new">{welcome}</a>
                         </li>
                         <li>
-                            <a href="#" onClick={toggleStatus}>{status}</a>
+                            <a href="" onClick={toggleStatus}>{status}</a>
                         </li>
                     </ul>
                 </div>
