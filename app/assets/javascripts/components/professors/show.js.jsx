@@ -52,7 +52,11 @@
     },
 
     createReview: function() {
-      this.props.history.pushState(null, "/professors/" + this.state.prof.id + "/new");
+      if (window.CURRENT_USER) {
+        this.props.history.pushState(null, "/professors/" + this.state.prof.id + "/new");
+      } else {
+        window.location.href = "/session/new";
+      }
     },
 
     render: function() {
@@ -77,7 +81,7 @@
 
             <div className="professor-description">
               <p></p>
-            Rate {this.state.prof.name} by casting lumos on his face.
+            Rate {this.state.prof.name} by casting lumos on their face.
             </div>
 
           </div>

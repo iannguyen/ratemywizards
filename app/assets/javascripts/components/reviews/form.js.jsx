@@ -35,87 +35,102 @@
         this.setState(this.defaultAttributes);
     },
 
+    _onChange: function() {
+      this.setState({prof: ProfessorStore.find(parseInt(this.props.params.professorId))});
+    },
+
     componentDidMount: function() {
+      ProfessorStore.addProfessorChangeListener(this._onChange);
       ApiUtil.fetchSingleProfessor(parseInt(this.props.params.professorId));
     },
 
-    getProfName: function() {
-      return ProfessorStore.find(parseInt(this.props.params.professorId)).name;
+    componentWillReceiveProps: function(newProps) {
+      this.setState({prof: ProfessorStore.find(parseInt(this.props.params.professorId))});
+      ApiUtil.fetchSingleProfessor(parseInt(this.props.params.professorId));
     },
 
     render: function() {
+      if (this.state.prof === undefined) { return <div></div>; }
       return(
-        <div className="review-form">
-          <h3>Create a Review for {this.getProfName()}</h3>
-          <form onSubmit={this.createReview}>
-
-            <div>
-              <label htmlFor="review-anonymous">
-                Anonymous Review?
-                <br/>
-                <select id="anonymous" name="anonymous" valueLink={this.linkState('anonymous')}>
-                  <option value='true'>I want to be hidden...</option>
-                  <option value="false">I don't care who sees!</option>
-                </select>
-              </label>
-            </div>
+        <div className="review-new">
+          <div className="review-form">
+            <h3>Create a Review for {this.state.prof.name}</h3>
 
             <br/>
 
-            <ul className="ratings">
-            <div>
-              <label htmlFor="review-ability">
-                Ability Rating:
-                <select id="ability" name="ability" valueLink={this.linkState('ability')}>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                </select>
-              </label>
-            </div>
+            <form onSubmit={this.createReview}>
 
-            <br/>
+              <div>
+                <label htmlFor="review-anonymous">
+                  Anonymous Review?
+                  <br/>
+                  <select id="anonymous" name="anonymous" valueLink={this.linkState('anonymous')}>
+                    <option value='true'>I want to be hidden...</option>
+                    <option value="false">I don't care who sees!</option>
+                  </select>
+                </label>
+              </div>
 
-            <div>
-              <label htmlFor="review-easiness">
-                Easiness Rating:
-                <select id="easiness" name="easiness" valueLink={this.linkState('easiness')}>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                </select>
-              </label>
-            </div>
+              <br/>
 
-            <br/>
-            <div>
-              <label htmlFor="review-helpfulness">
-                Helpfulness Rating:
-                <select id="helpfulness" name="helpfulness" valueLink={this.linkState('helpfulness')}>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                </select>
-              </label>
-            </div>
-            </ul>
+              <ul className="ratings">
+              <li>
+                <label htmlFor="review-ability">
+                  Ability Rating:
+                  <select id="ability" name="ability" valueLink={this.linkState('ability')}>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </label>
+              </li>
 
-            <br/>
-            <div>
-              <label htmlFor="review-body">
-                <textarea id="review-body" placeholder="Write your review here..." valueLink={this.linkState('body')}></textarea>
-              </label>
-            </div>
+              <br/>
 
-            <button>I'm Finished!</button>
+              <li>
+                <label htmlFor="review-easiness">
+                  Easiness Rating:
+                  <select id="easiness" name="easiness" valueLink={this.linkState('easiness')}>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </label>
+              </li>
 
-          </form>
+              <br/>
+              <li>
+                <label htmlFor="review-helpfulness">
+                  Helpfulness Rating:
+                  <select id="helpfulness" name="helpfulness" valueLink={this.linkState('helpfulness')}>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </label>
+              </li>
+              </ul>
+
+              <br/>
+              <div>
+                <label id="review-body" htmlFor="review-body">
+                  <textarea id="review-body" placeholder="Write your review here..." valueLink={this.linkState('body')}></textarea>
+                </label>
+              </div>
+
+              <br/>
+              <br/>
+
+              <button>I'm Finished!</button>
+
+            </form>
+          </div>
         </div>
       );
     }

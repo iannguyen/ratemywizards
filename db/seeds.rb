@@ -499,6 +499,193 @@ Review.create!({
   body: "Prof Snape is pretty cool... I was about to fail Potions my second year but he gave me extra credit and let me pass."
   })
 
+
+# Sprout ID4 3
+
+Review.create!({
+  anonymous: false,
+  user_id: 2,
+  professor_id: 4,
+  ability: 4,
+  easiness: 5,
+  helpfulness: 4,
+  body: "Professor Sprout is very talented and puts together an enjoyable curriculum. She contributed to the mandrake draught that saved many students during our second year."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 5,
+  professor_id: 4,
+  ability: 4,
+  easiness: 2,
+  helpfulness: 3,
+  body: "Herbology is my favorite subject, but Professor Sprout's class is not easy. I fainted during our first lecture and missed the entire lesson."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 10,
+  professor_id: 4,
+  ability: 3,
+  easiness: 4,
+  helpfulness: 3,
+  body: "She's quite loud and bubbly, but not sure about helpfulness. Longbottom fainted because of her mandrakes and she told me to just leave him there."
+  })
+
+
+#Hooch ID 5 2
+
+Review.create!({
+  anonymous: false,
+  user_id: 1,
+  professor_id: 5,
+  ability: 4,
+  easiness: 5,
+  helpfulness: 4,
+  body: "I'll always remember my first day in Madame Hooch's class - it was the first time I ever rode a broomstick. She's a great teacher and Quidditch instructor."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 5,
+  professor_id: 5,
+  ability: 4,
+  easiness: 1,
+  helpfulness: 3,
+  body: "Lost control of my broom on our first day of class. I felt like she could have rode her own broomstick up to save me rather than just standing on the ground yelling."
+  })
+
+
+#quirrel id6 3
+
+Review.create!({
+  anonymous: false,
+  user_id: 1,
+  professor_id: 6,
+  ability: 1,
+  easiness: 3,
+  helpfulness: 1,
+  body: "Professor Quirrel jumps when you approach his desk and stutters a lot... I don't understand how he got a Defense Against the Dark Arts position."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 3,
+  professor_id: 6,
+  ability: 1,
+  easiness: 2,
+  helpfulness: 1,
+  body: "Guess we all know who the real troll is."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 6,
+  professor_id: 6,
+  ability: 1,
+  easiness: 1,
+  helpfulness: 1,
+  body: "Not sure what holding an iguana did for a Defense Against the Dark Arts lesson."
+  })
+
+
+
+#flitwick id7 3
+
+Review.create!({
+  anonymous: false,
+  user_id: 2,
+  professor_id: 7,
+  ability: 5,
+  easiness: 5,
+  helpfulness: 5,
+  body: "Professor Flitwick is very smart and very nice. First years start off with levitation."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 4,
+  professor_id: 7,
+  ability: 4,
+  easiness: 3,
+  helpfulness: 4,
+  body: "Let's just say you won't see me wasting my time in Charms class next year."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 14,
+  professor_id: 7,
+  ability: 4,
+  easiness: 4,
+  helpfulness: 4,
+  body: "Can't see him if u sit in the back"
+  })
+
+#lockhart id8 4
+
+Review.create!({
+  anonymous: false,
+  user_id: 1,
+  professor_id: 8,
+  ability: 1,
+  easiness: 4,
+  helpfulness: 1,
+  body: "Professor Lockhart is full of himself. All of his textbooks and exam questions are about himself. I did not learn a thing about Defense Against the Dark Arts in his class."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 2,
+  professor_id: 8,
+  ability: 5,
+  easiness: 5,
+  helpfulness: 5,
+  body: "Professor Lockhart is brilliant - he has multiple publications and is winner of Witch Weekly's Most Charming Smile award. His autobiography 'Magical Me' is a best seller and is a required reading for this class."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 3,
+  professor_id: 8,
+  ability: 1,
+  easiness: 1,
+  helpfulness: 1,
+  body: "useless git"
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 9,
+  professor_id: 8,
+  ability: 5,
+  easiness: 4,
+  helpfulness: 5,
+  body: "Easy on the eyes. Even when his lectures are boring (which they rarely are), I enjoy staring at the countless paintings of him in his classroom. Really knows his stuff!"
+  })
+
+#lupin id9 2
+
+Review.create!({
+  anonymous: false,
+  user_id: 1,
+  professor_id: 9,
+  ability: 4,
+  easiness: 3,
+  helpfulness: 5,
+  body: "Professor Lupin is by far one of the best Defense Against the Dark Arts teachers we've had. He has put together a fantastic curiculum that is not only fun, but very educational."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 5,
+  professor_id: 9,
+  ability: 5,
+  easiness: 3,
+  helpfulness: 5,
+  body: "I actually enjoyed third year DADA because of Professor Lupin. I'm not much for dark arts, but Lupin helped me face my fears with a fantastic lesson on Boggarts."
+  })
+
 #Moody ID10 6
 
 Review.create!({
@@ -559,4 +746,238 @@ Review.create!({
   easiness: 3,
   helpfulness: 5,
   body: "Professor Moody is scary but he's alright once you get to know him. He really inspired me to pursue my interest in herbology."
+  })
+
+#filch id11 2
+
+Review.create!({
+  anonymous: false,
+  user_id: 1,
+  professor_id: 11,
+  ability: 1,
+  easiness: 1,
+  helpfulness: 1,
+  body: "Mr. Filch always catches me at the wrong place at the wrong time. He also has an annoying cat that spies on students for him."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 4,
+  professor_id: 11,
+  ability: 1,
+  easiness: 1,
+  helpfulness: 1,
+  body: "Filthy squib"
+  })
+
+#umbridge id12 3
+
+Review.create!({
+  anonymous: false,
+  user_id: 1,
+  professor_id: 12,
+  ability: 1,
+  easiness: 1,
+  helpfulness: 1,
+  body: "Avoid at all cost. She does not care about the safety or education of students, and is only at Hogwarts for her own selfish agenda. She will not hesitate to give out detentions."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 7,
+  professor_id: 12,
+  ability: 1,
+  easiness: 1,
+  helpfulness: 1,
+  body: "Absolutely vile woman"
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 13,
+  professor_id: 12,
+  ability: 2,
+  easiness: 1,
+  helpfulness: 1,
+  body: "her class is hard but she aight cuz i got picked 2 b on da inqisitorial squad"
+  })
+
+
+
+#slughorn id13 2
+
+Review.create!({
+  anonymous: false,
+  user_id: 1,
+  professor_id: 13,
+  ability: 4,
+  easiness: 5,
+  helpfulness: 3,
+  body: "Professor Slughorn favors students, but is one of the few teachers that does not just favor students in his own house. He selects students that stand out to him to be in his Slug Club. Overall, he is very nice and does not have a negative view on muggles that most Slytherins have."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 3,
+  professor_id: 13,
+  ability: 4,
+  easiness: 3,
+  helpfulness: 2,
+  body: "He won't pay any attention to you unless you are 1. rich, 2. famous, or 3. brilliant. Didn't get into the Slug Club and he called me Wallenby once."
+  })
+
+#trelawny id14 3
+
+Review.create!({
+  anonymous: false,
+  user_id: 1,
+  professor_id: 14,
+  ability: 2,
+  easiness: 5,
+  helpfulness: 1,
+  body: "Her class is actually not that hard. Most students struggle because they cannot 'read' her tea leaves. The trick is to just make up something absurd and she will be impressed. I gave her an extra point for ability as she did predict the return of the dark lord."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 2,
+  professor_id: 14,
+  ability: 1,
+  easiness: 1,
+  helpfulness: 1,
+  body: "What a load of rubbish."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 4,
+  professor_id: 14,
+  ability: 1,
+  easiness: 1,
+  helpfulness: 1,
+  body: "What a pathetic excuse for a teacher. I'd pitch myself off the Astronomy Tower if I had to continue for another 2 years."
+  })
+
+#hagrid id15 3
+
+Review.create!({
+  anonymous: false,
+  user_id: 1,
+  professor_id: 15,
+  ability: 5,
+  easiness: 5,
+  helpfulness: 5,
+  body: "There's no Hogwarts without Hagrid."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 2,
+  professor_id: 15,
+  ability: 5,
+  easiness: 5,
+  helpfulness: 5,
+  body: "Hagrid's passion is magical creatures, so he is perfect for this class. He has a ton of experience in taking care of and training dragons, three-headed dogs, and hippogriffs, just to name a few."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 4,
+  professor_id: 15,
+  ability: 1,
+  easiness: 1,
+  helpfulness: 1,
+  body: "God this place has gone to the dogs. Wait until Father hears that Dumbledore's got this oaf teaching classes."
+  })
+
+#burbage 16 1
+
+
+Review.create!({
+  anonymous: false,
+  user_id: 12,
+  professor_id: 16,
+  ability: 3,
+  easiness: 5,
+  helpfulness: 5,
+  body: "Has anyone actually seen a Slytherin take this class?"
+  })
+
+
+#pomfrety17 3
+
+Review.create!({
+  anonymous: false,
+  user_id: 1,
+  professor_id: 17,
+  ability: 5,
+  easiness: 4,
+  helpfulness: 5,
+  body: "Madame Pomfrey is a life saver. She's helped me get better after several Quidditch accidents, and also helped me grow my bones back."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 2,
+  professor_id: 17,
+  ability: 5,
+  easiness: 5,
+  helpfulness: 5,
+  body: "I love Madame Pomfrey, she really cares about all students. I recovered very well after I accidentally turned myself into a cat from a badly brewed polyjuice potion. She also took great care of me when I got petrified."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 3,
+  professor_id: 17,
+  ability: 5,
+  easiness: 2,
+  helpfulness: 4,
+  body: "Quite stubborn... wouldn't let me visit Harry when he was in the hospital wing."
+  })
+
+#vector18 1
+
+Review.create!({
+  anonymous: false,
+  user_id: 15,
+  professor_id: 18,
+  ability: 3,
+  easiness: 4,
+  helpfulness: 4,
+  body: "This professor makes math less boring. Not a lot of people take her class."
+  })
+
+#sinistra19 1
+
+Review.create!({
+  anonymous: false,
+  user_id: 13,
+  professor_id: 19,
+  ability: 1,
+  easiness: 1,
+  helpfulness: 1,
+  body: "who is dis?"
+  })
+
+#pince20 2
+
+Review.create!({
+  anonymous: false,
+  user_id: 1,
+  professor_id: 20,
+  ability: 2,
+  easiness: 3,
+  helpfulness: 3,
+  body: "Not very helpful. She wouldn't let me access the restricted section without a note."
+  })
+
+Review.create!({
+  anonymous: false,
+  user_id: 2,
+  professor_id: 20,
+  ability: 4,
+  easiness: 5,
+  helpfulness: 5,
+  body: "Madame Pince is very helpful whenever I need to find books for research."
   })

@@ -12,7 +12,6 @@
     getStatus: function() {
       if (window.CURRENT_USER_ID === undefined) {
         status = 'Sign In';
-        toggleStatus = ApiUtil.signIn;
         welcome = "Create an account, squib!";
       } else {
         status = 'Sign Out';
@@ -47,7 +46,7 @@
                         <span className="icon-bar"></span>
                         <span className="icon-bar"></span>
                     </button>
-                      <a className="navbar-brand" href="/" onClick={this.goHome}>RateMyWizards</a>
+                      <a className="navbar-brand" href="/#">RateMyWizards</a>
                 </div>
                 <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
@@ -65,7 +64,7 @@
                             <a href="/users/new">{welcome}</a>
                         </li>
                         <li>
-                            <a href="" onClick={toggleStatus}>{status}</a>
+                            <a href="/session/new" onClick={toggleStatus}>{status}</a>
                         </li>
                     </ul>
                 </div>
