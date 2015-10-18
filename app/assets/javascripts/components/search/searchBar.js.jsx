@@ -25,14 +25,6 @@
       this.setState({ inputValue: e.currentTarget.value });
     },
 
-    // handleFocus: function(e) {
-    //   this.setState({ inputValue: "" });
-    // },
-
-    // handleBlur: function(e) {
-    //   this.setState({ inputValue: null });
-    // },
-
     search: function() {
       var results = [];
       if(this.state.inputValue === null) {

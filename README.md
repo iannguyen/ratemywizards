@@ -1,6 +1,5 @@
 # RateMyWizards
 
-Not yet pushed to Heroku.
 [RateMyWizards][heroku]
 [heroku]: https://ratemywizards.herokuapp.com
 

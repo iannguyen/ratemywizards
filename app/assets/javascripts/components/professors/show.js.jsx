@@ -29,7 +29,7 @@
       var average = {
         ability: 0,
         easiness: 0,
-        helpfulness: 0
+        helpfulness: 0,
       };
       if (this.state.prof.reviews && this.state.prof.reviews.length !== 0) {
         reviews = this.state.prof.reviews;
@@ -51,13 +51,8 @@
       }
     },
 
-    averages: function() {
-      if (averages.ability === 0) {
-        return (<div></div>);
-      }
-      else {
-        return averages;
-      }
+    createReview: function() {
+      this.props.history.pushState(null, "/professors/" + this.state.prof.id + "/new");
     },
 
     render: function() {
@@ -65,16 +60,26 @@
       return (
         <div id="professor-show">
           <div id="professor-bio" className={this.getHouseBanner()}>
-            <h2>ALLL HAIL PROFESSOR SHOW PAGE</h2>
-            <ul id="averages">
-                {
-                  Object.keys(averages).map(function(attr) {
-                    return <li>Average {attr}: {averages[attr]}</li>;
-                  })
-                }
-            </ul>
+
+            <img className="professor-pic" src={this.state.prof.image_url} onClick={this.createReview}></img>
+
+            <div className="professor-info">
+              <h2>{this.state.prof.name}</h2>
+              <ul id="averages">
+                  {
+                    Object.keys(averages).map(function(attr) {
+                      return <li>Average {attr}: {averages[attr]}</li>;
+                    })
+                  }
+                  Total Reviews: {this.state.reviews.length}
+              </ul>
+            </div>
+
+            <div className="professor-description">
+              <p></p>
+            </div>
+
           </div>
-          averages.ability === 0 ?
           <ul id={averages.ability === 0 ? 'blank' : 'review-list'}>
             {
               this.state.reviews.map(function(review) {

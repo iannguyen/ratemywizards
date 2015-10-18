@@ -23,7 +23,42 @@ div#professor-bio {
   z-index: 2;
   // background-image: url('http://res.cloudinary.com/dms46o1eu/image/upload/v1445047628/Hogwarts-Professors-banner-hogwarts-professors-16096805-800-100_hm1s0j.jpg');
 }
+div.professor-info{
+  // width: 100%;
+  // position: absolute;
+  height: 100%;
+  position: relative;
+  float: left;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 8%;
+  text-shadow: 1px 1px 3px black;
+}
+div.professor-description{
+  height: 100%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 8%;
+  float: right;
+  text-shadow: 1px 1px 3px black;
+}
+img.professor-pic {
+  object-fit: cover; /* Center the image within the element */
+  height: 100%;
+  width: auto;
+  border: 1px solid #2e2d2d;
+  border-radius: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  // float: left;
+  // margin-left: 15%;
 
+}
 div.gryffindor {
   background-image: url("http://res.cloudinary.com/dms46o1eu/image/upload/v1445107448/house_banner_wallpaper_by_avalonsart-d47f9af_bvijta.png");
   background-size: contain;

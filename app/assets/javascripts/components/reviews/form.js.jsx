@@ -29,16 +29,24 @@
           review[key] = this.state[key];
         }
       }.bind(this));
-        ApiUtil.createReview(review, function(id) {
-          this.props.history.pushState(null, '/professors/' + id, {});
+        ApiUtil.createReview(review, function() {
+          this.props.history.pushState(null, '/professors/' + this.props.params.professorId, {});
         }.bind(this));
         this.setState(this.defaultAttributes);
+    },
+
+    componentDidMount: function() {
+      ApiUtil.fetchSingleProfessor(parseInt(this.props.params.professorId));
+    },
+
+    getProfName: function() {
+      return ProfessorStore.find(parseInt(this.props.params.professorId)).name;
     },
 
     render: function() {
       return(
         <div className="review-form">
-          <h3>Create a Review</h3>
+          <h3>Create a Review for {this.getProfName()}</h3>
           <form onSubmit={this.createReview}>
 
             <div>

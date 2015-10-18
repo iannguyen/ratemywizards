@@ -34,13 +34,6 @@
       myAudio.autoplay = true;
     },
 
-    getLocation: function() {
-
-    },
-
-    goHome: function() {
-    },
-
     render: function() {
       this.getStatus();
       return (
@@ -59,6 +52,8 @@
                 <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                     <ul className="nav navbar-nav pull-right">
+                        <li>
+                        </li>
                         <li>
                           <a href="#" className="audio"><audio id="hpmusic" controls>
                             <source  src="http://res.cloudinary.com/dms46o1eu/video/upload/v1445058621/hptheme_ac7dzk.mp3">

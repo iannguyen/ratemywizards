@@ -5,13 +5,14 @@ div.review-bio {
   float: left;
   position: relative;
   height: 200%;
+  width: 5%;
 }
 img.review-thumb {
-  object-position: center; /* Center the image within the element */
+  object-fit: cover; /* Center the image within the element */
   height: 75px;
   width: 75px;
-  border: 3px solid #2e2d2d;
-  border-radius: 25px;
+  border: 1px solid #2e2d2d;
+  border-radius: 100px;
   margin: 0;
   top: 50%;
   transform: translateY(-50%);
@@ -19,13 +20,13 @@ img.review-thumb {
 }
 
 ul#review-list {
-  font-size: 15px;
+  font-size: 16px;
   font-style: italic;
   position: relative;
   width: 90%;
   text-align: center;
   margin: 200px auto;
-  border: #2b2b2b solid 3px;
+  border: #2b2b2b solid 1px;
   border-radius: 25px;
   height: 75%;
   background-color: rgba(43,43,43,0.9);
