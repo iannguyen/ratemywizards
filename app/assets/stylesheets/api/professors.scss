@@ -12,7 +12,7 @@ div#professor-bio {
   top: 50px;
   height: 200px;
   width: 100%;
-  border-radius: 10px;
+  // border-radius: 10px;
   border: #2b2b2b solid 1px;
   box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.5);
   position: fixed;
@@ -20,8 +20,9 @@ div#professor-bio {
   margin: 0 auto;
   left: 0;
   right: 0;
-  z-index: 2;
-  // background-image: url('http://res.cloudinary.com/dms46o1eu/image/upload/v1445047628/Hogwarts-Professors-banner-hogwarts-professors-16096805-800-100_hm1s0j.jpg');
+  border-bottom-left-radius: 100px 50px;
+  border-bottom-right-radius: 100px 50px;
+  z-index: 3;
 }
 div.professor-info{
   // width: 100%;
