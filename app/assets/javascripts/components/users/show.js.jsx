@@ -25,9 +25,18 @@
     },
 
     render: function() {
-      debugger;
+      var user = this.state.user;
       return(
-        <div>{this.state.user.username}</div>
+        <div className="user-show">
+          <div className="user-bio">
+
+            <img className="user-pic" src={user.image_url}></img>
+            <h1>{user.username}</h1>
+            <h2>Total Reviews: {this.state.reviews.length}</h2>
+
+          </div>
+          <ReviewList reviews={this.state.reviews}/>
+        </div>
       );
     }
   });
