@@ -25,6 +25,12 @@
         actionType: ProfessorConstants.PROFESSOR_RECEIVED,
         professor: professor
       });
+    },
+    receiveUser: function(user) {
+      AppDispatcher.dispatch({
+        actionType: UserConstants.USER_RECEIVED,
+        user: user
+      });
     }
   };
 

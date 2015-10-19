@@ -4,6 +4,7 @@
   var toggleStatus;
   var status;
   var welcome;
+  var userShow;
   var back;
 
   root.NavBar = React.createClass ({
@@ -11,18 +12,20 @@
 
     getStatus: function() {
       if (window.CURRENT_USER_ID === undefined) {
-        status = 'Sign In';
         welcome = "Create an account, squib!";
+        userShow = "/users/new";
+        status = 'Sign In';
+        toggleStatus = ApiUtil.signIn;
       } else {
+        welcome = "You're a wizard,  " + window.CURRENT_USER + " ! ";
+        userShow = "/#/users/" + window.CURRENT_USER_ID;
         status = 'Sign Out';
         toggleStatus = ApiUtil.signOut;
-        welcome = "You're a wizard,  " + window.CURRENT_USER + " ! ";
       }
     },
 
     playMusic: function () {
       var tune = new Audio();
-
       var myAudio = document.getElementById("hpmusic");
       myAudio.volume = 0.3;
     },
@@ -61,10 +64,10 @@
                         </a>
                         </li>
                         <li>
-                            <a href="/users/new">{welcome}</a>
+                            <a href={userShow}>{welcome}</a>
                         </li>
                         <li>
-                            <a href="/session/new" onClick={toggleStatus}>{status}</a>
+                            <a href="" onClick={toggleStatus}>{status}</a>
                         </li>
                     </ul>
                 </div>

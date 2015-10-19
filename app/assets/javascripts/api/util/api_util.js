@@ -43,6 +43,16 @@
         }
       });
     },
+    fetchSingleUser: function(id) {
+      $.ajax({
+        url: "api/users/" + id,
+        method: "get",
+        success: function(response) {
+          ApiActions.receiveUser(response);
+          console.log(response);
+        }
+      });
+    },
     fetchSingleProfessor: function(id) {
       $.ajax({
         url: "/api/professors/" + id,

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :professors, only: [:index, :show]
     resources :reviews, only: [:new, :create, :index, :show, :destroy]
     resource :session, only: [:new, :create, :destroy]
+    resources :users, only: [:show]
   end
   resources :users, only: [:new, :create]
   resource :session, only: [:new, :create, :destroy]

@@ -20,6 +20,7 @@
       <Route path="houses/:houseId" components={{main: Main, house: HouseDetail}}/>
       <Route path="professors/:professorId" component={ProfessorShow}/>
       <Route path="professors/:professorId/new" component={ReviewForm}/>
+      <Route path="users/:userId" component={UserShow} />
     </Route>
   );
 
