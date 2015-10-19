@@ -80,8 +80,10 @@
             </div>
 
             <div className="professor-description">
-              <p></p>
-            Rate {this.state.prof.name} by casting lumos on their face.
+              <ul>
+                <li className="description">{this.state.prof.description}</li>
+                <li className="rate-this">Rate {this.state.prof.name} by casting lumos on their face.</li>
+              </ul>
             </div>
 
           </div>

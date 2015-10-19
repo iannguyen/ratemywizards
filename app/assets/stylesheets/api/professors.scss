@@ -37,12 +37,22 @@ div.professor-info{
 }
 div.professor-description{
   height: 100%;
+  width: 30%;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   margin-right: 8%;
   float: right;
   text-shadow: 1px 1px 3px black;
+}
+
+div.professor-description ul {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+div.professor-description li {
+  padding: 10px;
 }
 
 div.professor-item {
@@ -73,8 +83,6 @@ div.professor-item ul.professor-overall{
   transform: translateY(-50%);
   position: relative;
   float: right;
-  top: 50%;
-  transform: translateY(-50%);
 }
 div.professor-item ul.professor-overall li{
   padding: 5px;
@@ -89,6 +97,9 @@ img.professor-thumbnail {
   border: 1px solid #2e2d2d;
   border-radius: 100%;
   float: left;
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
 }
 
 img.professor-pic {

@@ -49,3 +49,9 @@ ul#search-results {
   border-radius: 10px;
   text-align: center;
 }
+
+p.no-results {
+  font-size: 16px;
+  padding: 5%;
+  text-shadow: 1px 1px 3px red;
+}

@@ -1,6 +1,6 @@
 json.extract!(
   @professor,
-  :id, :name, :image_url, :house_id,
+  :id, :name, :image_url, :house_id, :description
 )
 
 json.house @professor.house, :name

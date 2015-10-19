@@ -25,11 +25,15 @@ img.crest {
   color: white;
 }
 
-#house-detail-list {
+ul#house-detail-list {
+  background-image: url();
+  width: 80%;
+  margin: auto;
   list-style-type: none;
 }
 
 #house-detail-list li {
+  height: 100px;
   padding: 5px;
 }
 

@@ -41,7 +41,7 @@
             {
               this.state.house.professors.map(function(professor) {
                 return (
-                  <li>
+                  <li className="search-result">
                     <ProfessorItem
                       key={professor.id}
                       professor={professor} />

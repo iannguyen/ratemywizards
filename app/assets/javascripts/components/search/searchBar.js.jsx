@@ -54,7 +54,7 @@
               {
                 searchResults.map(function(result) {
                   if (typeof result === "string") {
-                    return <li>{result}</li>;
+                    return <p className="no-results">{result}</p>;
                   } else {
                     return <li className={result.house.name.toLowerCase() + " search-result"}>
                               <ProfessorItem
