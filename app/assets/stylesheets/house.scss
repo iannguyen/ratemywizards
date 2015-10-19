@@ -26,15 +26,26 @@ img.crest {
 }
 
 ul#house-detail-list {
-  background-image: url();
-  width: 80%;
-  margin: auto;
+  display: inherit;
+  width: 50%;
+  text-align: center;
+  color: white;
   list-style-type: none;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  z-index: 5;
 }
 
-#house-detail-list li {
+#house-detail-list li.search-result{
   height: 100px;
   padding: 5px;
+  text-align: center;
+  margin: auto;
+  border-radius: 10px;
+  text-align: center;
 }
 
 span {
