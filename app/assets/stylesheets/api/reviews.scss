@@ -38,6 +38,9 @@ div.review-detail {
   box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.5);
   vertical-align: inherit;
 }
+div.review-detail:hover {
+  background-color: rgba(255,255,255,0.25);
+}
 div.review-ratings {
   height: 40%;
 }
