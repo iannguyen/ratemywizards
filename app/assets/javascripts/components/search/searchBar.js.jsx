@@ -3,12 +3,12 @@
 
   root.SearchBar = React.createClass({
     getInitialState: function() {
-      return { professors: root.ProfessorStore.all(), inputValue: null };
+      return { professors: root.ProfessorStore.all(), inputValue: "", focused: false };
     },
 
     _onChange: function() {
       this.setState({
-        professors: ProfessorStore.all(), inputValue: null
+        professors: ProfessorStore.all(), inputValue: ""
       });
     },
 
@@ -22,24 +22,30 @@
     },
 
     handleInput: function(e) {
-      this.setState({ inputValue: e.currentTarget.value });
+      this.setState({ inputValue: e.currentTarget.value, focused: true });
+    },
+
+    focusedFalse: function(e) {
+      this.setState({ focused: false });
+    },
+
+    focusedTrue: function() {
+      this.setState({ focused: true });
     },
 
     search: function() {
       var results = [];
-      if(this.state.inputValue === null) {
-        return results;
-      } else if(this.state.inputValue.length === 0) {
-        return results;
-      }
-      var current = this.state.inputValue.toLowerCase();
-      this.state.professors.forEach(function(prof) {
-        if (prof.name.toLowerCase().indexOf(current) !== -1) {
-          results.push(prof);
+      if(this.state.focused) {
+        if(this.state.inputValue === "" || this.state.inputValue === null) { return results; }
+        var current = this.state.inputValue.toLowerCase();
+        this.state.professors.forEach(function(prof) {
+          if (prof.name.toLowerCase().indexOf(current) !== -1) {
+            results.push(prof);
+          }
+        });
+        if(results.length === 0) {
+          results.push("No Wizards found..Perhaps you'd like to add this Wizard?");
         }
-      });
-      if(results.length === 0) {
-        results.push("No Wizards found..Perhaps you'd like to add this Wizard?");
       }
       return results;
     },
@@ -49,7 +55,7 @@
       return (
         <div id="search-bar">
           <h1 id="search-heading">Search for a Wizard</h1>
-          <input type="text" onBlur={this.handleBlur} onFocus={this.handleFocus} onChange={this.handleInput} value={this.state.inputValue} />
+          <input type="text" onFocus={this.focusedTrue}  onBlur={this.focusedFalse} onChange={this.handleInput} value={this.state.inputValue} />
             <ul id="search-results">
               {
                 searchResults.map(function(result) {

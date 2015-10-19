@@ -18,6 +18,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+div.container {
+  width: 95%;
+}
+
 div#main {
   text-shadow: 1px 1px 3px black;
 }
@@ -29,9 +33,9 @@ div.errors {
   z-index: 999;
 }
 body {
-  height: 100vh;
+  height: 91vh;
   width: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
   background-size: cover;
   background-position: bottom;
   background-attachment: fixed;

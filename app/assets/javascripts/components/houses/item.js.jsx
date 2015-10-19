@@ -4,6 +4,10 @@
   root.ProfessorItem = React.createClass({
     mixins: [ReactRouter.History],
 
+    getInitialState: function() {
+      return {overallRatings: this.overallRating()};
+    },
+
     showProfessor: function() {
       window.scrollTo(0,0);
       this.history.pushState(null, "/professors/" + this.props.professor.id);
@@ -28,14 +32,13 @@
     },
 
     render: function() {
-      var overallRatings = this.overallRating();
       return(
-          <div className="professor-item" onClick={this.showProfessor}>
+          <div className="professor-item" onMouseDown={this.showProfessor}>
               <img className="professor-thumbnail" src={this.props.professor.image_url}></img>
             <h3>{this.props.professor.name}</h3>
             <ul className="professor-overall">
-              <li>Overall Rating: {overallRatings.overall}</li>
-              <li>Total Reviews: {overallRatings.count}</li>
+              <li>Overall Rating: {this.state.overallRatings.overall}</li>
+              <li>Total Reviews: {this.state.overallRatings.count}</li>
             </ul>
           </div>
         );
