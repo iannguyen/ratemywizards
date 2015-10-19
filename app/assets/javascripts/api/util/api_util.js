@@ -13,6 +13,16 @@
         },
       });
     },
+    editReview: function(id, data, callback) {
+      $.ajax({
+        url: "/api/reviews/" + id + "/edit",
+        method: "patch",
+        data: {review: data},
+        success: function(data) {
+          console.log(data);
+        }
+      });
+    },
     fetchAllHouses: function() {
       $.ajax({
         url: "/api/houses",

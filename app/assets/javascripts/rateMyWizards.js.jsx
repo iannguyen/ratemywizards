@@ -21,6 +21,7 @@
       <Route path="professors/:professorId" component={ProfessorShow}/>
       <Route path="professors/:professorId/new" component={ReviewForm}/>
       <Route path="users/:userId" component={UserShow} />
+      <Route path="professors/:professorId/edit" component={ReviewForm} />
     </Route>
   );
 
