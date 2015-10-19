@@ -9,5 +9,14 @@ json.professors do
       professor,
       :id, :name, :house_id, :image_url
     )
+    
+  json.reviews do
+    json.array!(professor.reviews) do |review|
+      json.extract!(
+        review,
+        :ability, :easiness, :helpfulness
+      )
+      end
+    end
   end
 end
