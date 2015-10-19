@@ -37,9 +37,20 @@ div.review-detail {
   border-radius: 10px;
   box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.5);
   vertical-align: inherit;
+  -webkit-transition: all 1s ease; /* Safari and Chrome */
+  -moz-transition: all 1s ease; /* Firefox */
+  -ms-transition: all 1s ease; /* IE 9 */
+  -o-transition: all 1s ease; /* Opera */
+  transition: all 1s ease;;
 }
+
 div.review-detail:hover {
-  background-color: rgba(255,255,255,0.25);
+  background-color: rgba(255,255,255,0.05);
+  -webkit-filter: brightness(200%);
+  -moz-filter:brightness(200%); /* Firefox */
+  -ms-filter:brightness(200%); /* IE 9 */
+  -o-filter:brightness(200%); /* Opera */
+  filter:brightness(200%);
 }
 div.review-ratings {
   height: 40%;
