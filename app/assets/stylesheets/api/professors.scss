@@ -25,14 +25,13 @@ div#professor-bio {
   z-index: 3;
 }
 div.professor-info{
-  // width: 100%;
-  // position: absolute;
+  width: 30%;
   height: 100%;
   position: relative;
   float: left;
   top: 50%;
   transform: translateY(-50%);
-  margin-left: 8%;
+  margin-left: 10px;
   text-shadow: 1px 1px 3px black;
 }
 div.professor-description{
@@ -41,7 +40,7 @@ div.professor-description{
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-  margin-right: 8%;
+  margin-right: 10px;
   float: right;
   text-shadow: 1px 1px 3px black;
 }
