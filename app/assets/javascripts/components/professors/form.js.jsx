@@ -7,7 +7,7 @@
     defaultAttributes: {
       name: "",
       description: "",
-      house: "",
+      house_id: "",
     },
 
     getInitialState: function() {
@@ -16,6 +16,20 @@
 
     createProfessor: function(e) {
       e.preventDefault();
+      var that = this;
+      var prof = {};
+      Object.keys(this.state).forEach(function(key) {
+      debugger;
+        if (key === "house_id") {
+          prof[key] = parseInt(this.state[key]);
+        } else {
+          prof[key] = this.state[key];
+        }
+      }.bind(this));
+        debugger;
+      ApiUtil.createProfessor(prof, function(id) {
+        that.history.pushState(null, "/professors/" + id);
+      });
     },
 
     render: function() {
@@ -46,7 +60,7 @@
               <label htmlFor="professor-house">
                 Which House does thy wizard preside over?
                 <br/>
-                <select id="house" name="house" valueLink={this.linkState("house")}>
+                <select id="house_id" name="house_id" valueLink={this.linkState("house_id")}>
                   <option value="1">Gryffindoor</option>
                   <option value="2">Ravenclaw</option>
                   <option value="3">Hufflepuff</option>

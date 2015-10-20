@@ -12,7 +12,7 @@ class Api::ReviewsController < ApplicationController
       render json: @review
     else
       flash[:errors] = @review.errors.full_messages
-      render json: :unprocessable_entity
+      render json: :unprocessable_entity, status: 422
     end
   end
 

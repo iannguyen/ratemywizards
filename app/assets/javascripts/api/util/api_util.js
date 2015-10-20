@@ -52,10 +52,10 @@
         method: "post",
         data: {professor: data},
         success: function(response) {
+          debugger;
           ApiActions.receiveProfessor(response);
           console.log(data);
-          debugger;
-          callback && callback(data);
+          callback && callback(response.id);
         }
       });
     },
