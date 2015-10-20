@@ -132,7 +132,7 @@ Professor.create!({
 Professor.create!({
   name: 'Gilderoy Lockhart',
   house_id: 2, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/v1444785685/ratemywizards/lockhart_tpaxhh.jpg',
-  description: "Gilderoy Lockhart was a professor of Defense Against the Dark Arts at Hogwarts School of Witchcraft and Wizardry. He has authored many books, most of which are autobiographies. Lockhart has also received many prestigious awards, such as Order of Merlin: Third Class, Honorary Member of the Dark Force Defense League, and five-time winnder of Witch Weekly's Most Charming Smile Award. His favorite color is lilac."
+  description: "Gilderoy Lockhart was a professor of Defense Against the Dark Arts at Hogwarts School of Witchcraft and Wizardry. He has authored many books, most of which are autobiographies. Lockhart has also received many prestigious awards, such as Order of Merlin: Third Class, Honorary Member of the Dark Force Defense League, and five-time winner of Witch Weekly's Most Charming Smile Award. His favorite color is lilac."
   })
 Professor.create!({
   name: 'Remus Lupin',

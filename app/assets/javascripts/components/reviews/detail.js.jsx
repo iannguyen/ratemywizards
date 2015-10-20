@@ -6,7 +6,7 @@
       var hidden = {};
       if (this.props.review.anonymous) {
         hidden.username = "";
-        hidden.image_url = "http://res.cloudinary.com/dms46o1eu/image/upload/v1445156629/Sorting_Hat_mihhnq.jpg";
+        hidden.image_url = "http://res.cloudinary.com/dms46o1eu/image/upload/v1445329304/800px-Dementor_Prisoner_of_Azkaban_kouje2.jpg";
       } else if (this.props.review.user.image_url === null) {
         hidden.username = this.props.review.user.username;
         hidden.image_url = "http://res.cloudinary.com/dms46o1eu/image/upload/v1445156629/Sorting_Hat_mihhnq.jpg";

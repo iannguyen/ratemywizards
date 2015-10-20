@@ -19,7 +19,8 @@
 @import "bootstrap";
 
 html *{
-  font-family: Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times New Roman”, serif;}
+  font-family: Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times New Roman”, serif;
+}
 
 div.container {
   width: 95%;
@@ -30,7 +31,6 @@ div#root {
 }
 
 div#main {
-  height: 88vh;
   overflow-y: hidden;
   text-shadow: 1px 1px 3px black;
   padding-top: 3%;

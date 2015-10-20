@@ -2,6 +2,7 @@ class Api::ReviewsController < ApplicationController
   before_action :require_sign_in!
 
   def new
+    @review = current_user.reviews.new(review_params)
   end
 
   def create
@@ -10,7 +11,8 @@ class Api::ReviewsController < ApplicationController
       flash[:errors] = ["Review created successfully"]
       render json: @review
     else
-      render json: @review.errors.full_messages, status: 422
+      flash[:errors] = @review.errors.full_messages
+      render json: :unprocessable_entity
     end
   end
 
@@ -30,6 +32,7 @@ class Api::ReviewsController < ApplicationController
       render json: @review
     else
       flash[:errors] = @review.errors.full_messages
+      render json: :unprocessable_entity
     end
   end
 

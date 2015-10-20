@@ -25,8 +25,8 @@ div#professor-bio {
   z-index: 3;
 }
 div.professor-info{
-  left: 5%;
-  width: 30%;
+  left: 1%;
+  width: 40%;
   height: 100%;
   position: relative;
   float: left;
@@ -36,9 +36,9 @@ div.professor-info{
   text-shadow: 1px 1px 3px black;
 }
 div.professor-description{
-  right: 5%;
+  right: 1%;
   height: 100%;
-  width: 30%;
+  width: 40%;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -68,11 +68,11 @@ div.professor-item {
   background-color: rgba(0,0,0,0.5);
   text-shadow: 1px 1px 3px black;
   color: antiquewhite;
-  -webkit-transition: all 1s ease; /* Safari and Chrome */
-  -moz-transition: all 1s ease; /* Firefox */
-  -ms-transition: all 1s ease; /* IE 9 */
-  -o-transition: all 1s ease; /* Opera */
-  transition: all 1s ease;;
+  -webkit-transition: all 0.75s ease; /* Safari and Chrome */
+  -moz-transition: all 0.75s ease; /* Firefox */
+  -ms-transition: all 0.75s ease; /* IE 9 */
+  -o-transition: all 0.75s ease; /* Opera */
+  transition: all 0.75s ease;;
 }
 
 div.professor-item:hover {
@@ -132,11 +132,11 @@ img.professor-pic {
   left: 0;
   right: 0;
   margin: auto;
-  -webkit-transition: all 1s ease; /* Safari and Chrome */
-  -moz-transition: all 1s ease; /* Firefox */
-  -ms-transition: all 1s ease; /* IE 9 */
-  -o-transition: all 1s ease; /* Opera */
-  transition: all 1s ease;;
+  -webkit-transition: all 0.75s ease; /* Safari and Chrome */
+  -moz-transition: all 0.75s ease; /* Firefox */
+  -ms-transition: all 0.75s ease; /* IE 9 */
+  -o-transition: all 0.75s ease; /* Opera */
+  transition: all 0.75s ease;;
 }
 
 img.professor-pic:hover {

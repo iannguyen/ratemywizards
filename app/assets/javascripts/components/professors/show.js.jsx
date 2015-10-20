@@ -75,6 +75,7 @@
                       return <li>Average {attr}: {averages[attr]}</li>;
                     })
                   }
+                  <br />
                   <li>Total Reviews: {this.state.reviews.length}</li>
               </ul>
             </div>
