@@ -10,7 +10,7 @@
   };
 
   root.UserStore = $.extend({}, EventEmitter.prototype, {
-    find: function(id) {
+    find: function() {
       return _user;
     },
 

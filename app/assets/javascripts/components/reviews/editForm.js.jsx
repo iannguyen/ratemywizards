@@ -1,25 +1,21 @@
 (function(root) {
   'use strict';
 
-  root.ReviewForm = React.createClass({
+  root.EditReviewForm = React.createClass({
     mixins: [React.addons.LinkedStateMixin, ReactRouter.History],
 
-    defaultAttributes: {
-      anonymous: false,
-      body: "",
-      ability: 1,
-      easiness: 1,
-      helpfulness: 1
+    getStateFromStore: function() {
+      var review = ReviewStore.find(parseInt(this.props.paramsiewId));
+      return review;
     },
 
     getInitialState: function() {
-      return this.defaultAttributes;
+      return {};
     },
 
-    createReview: function(e) {
+    editReview: function(e) {
       e.preventDefault();
       var review = {};
-      review.professor_id = parseInt(this.props.params.professorId);
       Object.keys(this.state).forEach(function(key) {
         if(key === 'anonymous') {
           review[key] = JSON.parse(this.state[key]);
@@ -29,36 +25,35 @@
           review[key] = this.state[key];
         }
       }.bind(this));
-        ApiUtil.createReview(review, function() {
-          this.props.history.pushState(null, '/professors/' + this.props.params.professorId, {});
+        ApiUtil.editReview(this.state.user.id, review, function() {
+          this.props.history.pushState(null, 'users/' + this.state.user.id, {});
         }.bind(this));
-        this.setState(this.defaultAttributes);
     },
 
     _onChange: function() {
-      this.setState({prof: ProfessorStore.find(parseInt(this.props.params.professorId))});
+      this.setState(this.getStateFromStore());
     },
 
     componentDidMount: function() {
-      ProfessorStore.addProfessorChangeListener(this._onChange);
-      ApiUtil.fetchSingleProfessor(parseInt(this.props.params.professorId));
+      ReviewStore.addReviewChangeListener(this._onChange);
+      ApiUtil.fetchSingleReview(parseInt(this.props.params.reviewId));
     },
 
     componentWillReceiveProps: function(newProps) {
-      this.setState({prof: ProfessorStore.find(parseInt(this.props.params.professorId))});
-      ApiUtil.fetchSingleProfessor(parseInt(this.props.params.professorId));
+      this.setState({rev: ReviewStore.find(parseInt(this.props.params.reviewId))});
+      ApiUtil.fetchSingleReview(parseInt(this.props.params.reviewId));
     },
 
     render: function() {
-      if (this.state.prof === undefined) { return <div></div>; }
+      if (this.state.professor === undefined) { return <div></div>; }
       return(
         <div className="review-new">
           <div className="review-form">
-            <h3>Create a Review for {this.state.prof.name}</h3>
+            <h3>Edit Your Review for {this.state.professor.name}</h3>
 
             <br/>
 
-            <form onSubmit={this.createReview}>
+            <form onSubmit={this.editReview}>
 
               <div>
                 <label htmlFor="review-anonymous">
@@ -66,7 +61,7 @@
                   <br/>
                   <select id="anonymous" name="anonymous" valueLink={this.linkState('anonymous')}>
                     <option value="false">I don't care who sees!</option>
-                    <option value='true'>I want to be hidden...</option>
+                    <option value="true">I want to be hidden...</option>
                   </select>
                 </label>
               </div>
@@ -78,6 +73,7 @@
                 <label htmlFor="review-ability">
                   Ability Rating:
                   <select id="ability" name="ability" valueLink={this.linkState('ability')}>
+                    <option selected="selected">{this.state.ability}</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -93,6 +89,7 @@
                 <label htmlFor="review-easiness">
                   Easiness Rating:
                   <select id="easiness" name="easiness" valueLink={this.linkState('easiness')}>
+                    <option selected="selected">{this.state.easiness}</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -107,6 +104,7 @@
                 <label htmlFor="review-helpfulness">
                   Helpfulness Rating:
                   <select id="helpfulness" name="helpfulness" valueLink={this.linkState('helpfulness')}>
+                    <option selected="selected">{this.state.helpfulness}</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -120,7 +118,7 @@
               <br/>
               <div>
                 <label id="review-body" htmlFor="review-body">
-                  <textarea id="review-body" placeholder="Write your review here..." valueLink={this.linkState('body')}></textarea>
+                  <textarea id="review-body" placeholder="Write your review here..." valueLink={this.linkState('body')}>{this.state.body}</textarea>
                 </label>
               </div>
 

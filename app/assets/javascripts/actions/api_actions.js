@@ -20,6 +20,12 @@
         professors: professors
       });
     },
+    receiveReview: function(review) {
+      AppDispatcher.dispatch({
+        actionType: ReviewConstants.REVIEW_RECEIVED,
+        review: review
+      });
+    },
     receiveProfessor: function(professor) {
       AppDispatcher.dispatch({
         actionType: ProfessorConstants.PROFESSOR_RECEIVED,

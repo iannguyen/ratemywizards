@@ -2,6 +2,17 @@
   'use strict';
 
   root.ApiUtil = {
+    fetchSingleReview: function(id) {
+      $.ajax({
+        url: "/api/reviews/" + id,
+        method: "get",
+        success: function(response) {
+          ApiActions.receiveReview(response);
+          console.log(response);
+          debugger;
+        }
+      });
+    },
     createReview: function(data, callback) {
       $.ajax({
         url: "/api/reviews",
@@ -15,11 +26,15 @@
     },
     editReview: function(id, data, callback) {
       $.ajax({
-        url: "/api/reviews/" + id + "/edit",
+        url: "/api/reviews/" + id,
         method: "patch",
+        dataType: "json",
         data: {review: data},
         success: function(data) {
+          debugger;
+          ApiActions.receiveReview(data);
           console.log(data);
+          callback && callback(data.user_id)
         }
       });
     },
