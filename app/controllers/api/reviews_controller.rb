@@ -21,13 +21,12 @@ class Api::ReviewsController < ApplicationController
 
   def edit
     @review = Review.includes(:user).find(params[:id])
-    render json: @review
   end
 
   def update
     @review = Review.includes(:user).find(params[:id])
     if @review.update(review_params)
-      flash[:errors] = ["Review created successfully"]
+      flash[:errors] = ["Review Edited successfully"]
       render json: @review
     else
       flash[:errors] = @review.errors.full_messages
