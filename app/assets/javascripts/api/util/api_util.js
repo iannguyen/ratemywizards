@@ -31,10 +31,19 @@
         dataType: "json",
         data: {review: data},
         success: function(data) {
-          debugger;
           ApiActions.receiveReview(data);
           console.log(data);
-          callback && callback(data.user_id)
+          callback && callback(data.user_id);
+        }
+      });
+    },
+    deleteReview: function(id, callback) {
+      $.ajax({
+        url: "/api/reviews" + id,
+        method: "delete",
+        success: function(data) {
+          console.log(data);
+          callback && callback(data.user_id);
         }
       });
     },

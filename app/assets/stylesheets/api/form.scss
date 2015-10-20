@@ -1,11 +1,12 @@
 div.review-new {
   height: 80vh;
   width: auto;
-  color: white;
+  color: ivory;
   text-shadow: 1px 1px 3px black;
   border-radius: 10px;
   background-color: rgba(25,25,25,0.5);
   font-size: 18px;
+  box-shadow: 5px 5px 5px 5px black;
 }
 div.review-new h3 {
   font-size: 40px;
@@ -46,7 +47,7 @@ div.review-form textarea#review-body {
 div.review-form button {
   background-color: rgba(0,0,0,0.9);
   border-bottom: none;
-  box-shadow: 0 0 1pt 1pt gray;
+  box-shadow: 1px 1px 1px 1px black;
   width: 25%;
   height: 35px;
   font-size: 18px;

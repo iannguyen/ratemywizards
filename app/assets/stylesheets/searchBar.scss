@@ -11,14 +11,14 @@
   border-radius: 25px;
   background-color: rgba(0,0,0,0.5);
   text-align: center;
-  color: white;
+  color: ivory;
   font-size: 18px;
   outline-color: black;
 }
 
 #search-bar input:focus {
   outline-style: inherit;
-  box-shadow: 0 0 1pt 1pt white;
+  box-shadow: 1px 1px 1px 1px white;
 }
 
 // #search-bar > li {
@@ -30,7 +30,7 @@ ul#search-results {
   display: inherit;
   width: 50%;
   text-align: center;
-  color: white;
+  color: ivory;
   list-style-type: none;
   position: absolute;
   margin-left: auto;

@@ -29,7 +29,7 @@ ul#review-list {
   border-radius: 10px;
   border: #2b2b2b solid 1px;
   height: 75%;
-  background-color: rgba(43,43,43,0.9);
+  background-color: rgba(43,43,43,0.75);
 }
 div.review-detail {
   padding: 10px;
@@ -73,6 +73,7 @@ div.review-description {
   width: 80%;
 }
 div.review-description p{
+  padding: 5px;
   top: 50%;
   transform: translateY(-50%);
   position: relative;

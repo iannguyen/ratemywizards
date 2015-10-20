@@ -32,6 +32,7 @@
 
             <img className="user-pic" src={user.image_url}></img>
             <h1>{user.username}</h1>
+            <br/>
             <h2>Total Reviews: {this.state.reviews.length}</h2>
 
           </div>

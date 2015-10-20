@@ -5,11 +5,12 @@
 div.signin {
   height: 80vh;
   text-align: center;
-  color: white;
+  color: ivory;
   text-shadow: 1px 1px 3px black;
   border-radius: 10px;
   background-color: rgba(25,25,25,0.5);
   font-size: 18px;
+  box-shadow: 5px 5px 5px 5px black;
 }
 div.signin h1 {
   font-size: 50px;
@@ -38,7 +39,6 @@ div.signin input {
 div.signin input:focus {
   outline: 0;
   background-color: rgba(0,0,0,0.1);
-  // box-shadow: 1 1 1pt 1pt gray;
 }
 div.signin input.btn {
   background-color: rgba(0,0,0,0.9);
