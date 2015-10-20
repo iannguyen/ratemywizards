@@ -5,11 +5,11 @@
     mixins: [React.addons.LinkedStateMixin, ReactRouter.History],
 
     defaultAttributes: {
-      anonymous: false,
+      anonymous: null,
       body: "",
-      ability: 1,
-      easiness: 1,
-      helpfulness: 1
+      ability: null,
+      easiness: null,
+      helpfulness: null
     },
 
     getInitialState: function() {
@@ -65,6 +65,7 @@
                   Anonymous Review?
                   <br/>
                   <select id="anonymous" name="anonymous" valueLink={this.linkState('anonymous')}>
+                    <option selected disabled hidden value=''></option>
                     <option value="false">I don't care who sees!</option>
                     <option value='true'>Put on Invisibility Cloak.</option>
                   </select>
@@ -78,6 +79,7 @@
                 <label htmlFor="review-ability">
                   Ability Rating:
                   <select id="ability" name="ability" valueLink={this.linkState('ability')}>
+                    <option selected disabled hidden value=''></option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -93,6 +95,7 @@
                 <label htmlFor="review-easiness">
                   Easiness Rating:
                   <select id="easiness" name="easiness" valueLink={this.linkState('easiness')}>
+                    <option selected disabled hidden value=''></option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -107,6 +110,7 @@
                 <label htmlFor="review-helpfulness">
                   Helpfulness Rating:
                   <select id="helpfulness" name="helpfulness" valueLink={this.linkState('helpfulness')}>
+                    <option selected disabled hidden value=''></option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>

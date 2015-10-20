@@ -1,6 +1,6 @@
 class Api::ProfessorsController < ApplicationController
   def index
-    @professors = Professor.includes(:house).includes(:reviews)
+    @professors = Professor.includes(:house).includes(:reviews).all
     render :index
   end
 
@@ -27,6 +27,6 @@ class Api::ProfessorsController < ApplicationController
   private
 
   def professor_params
-    params.require(:professor).permit(:house_id, :description, :name)
+    params.require(:professor).permit(:name, :house_id, :description)
   end
 end

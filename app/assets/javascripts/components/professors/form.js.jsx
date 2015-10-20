@@ -7,7 +7,7 @@
     defaultAttributes: {
       name: "",
       description: "",
-      house_id: "",
+      house_id: null,
     },
 
     getInitialState: function() {
@@ -61,7 +61,8 @@
                 Which House does thy wizard preside over?
                 <br/>
                 <select id="house_id" name="house_id" valueLink={this.linkState("house_id")}>
-                  <option value="1">Gryffindoor</option>
+                  <option selected disabled hidden value=''></option>
+                  <option value="1">Gryffindor</option>
                   <option value="2">Ravenclaw</option>
                   <option value="3">Hufflepuff</option>
                   <option value="4">Slytherin</option>
