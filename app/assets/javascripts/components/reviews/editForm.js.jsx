@@ -49,7 +49,6 @@
         if (this.state.user.id != window.CURRENT_USER_ID) {
         return <div></div>;
       }
-      debugger;
       return(
         <div className="review-new">
           <div className="review-form">

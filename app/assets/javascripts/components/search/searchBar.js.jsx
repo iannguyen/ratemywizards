@@ -55,18 +55,22 @@
       return (
         <div id="search-bar">
           <h1 id="search-heading">Search for a Wizard</h1>
+
           <input type="text" onFocus={this.focusedTrue}  onBlur={this.focusedFalse} onChange={this.handleInput} value={this.state.inputValue} />
+
             <ul id="search-results">
               {
                 searchResults.map(function(result) {
-                  if (typeof result === "string") {
+                  if (typeof result === "string")
+                  {
                     return <p className="no-results">{result}</p>;
-                  } else {
-                    return <li className={result.house.name.toLowerCase() + " search-result"}>
-                              <ProfessorItem
-                                key={result.id}
-                                professor={result}/>
-                            </li>;
+                  } else
+                  {
+                    return (
+                      <li className={result.house.name.toLowerCase() + " search-result"}>
+                        <ProfessorItem key={result.id} professor={result}/>
+                      </li>
+                    );
                   }
                 })
               }

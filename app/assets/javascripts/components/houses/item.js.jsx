@@ -34,8 +34,10 @@
     render: function() {
       return(
           <div className="professor-item" onMouseDown={this.showProfessor}>
-              <img className="professor-thumbnail" src={this.props.professor.image_url}></img>
+            <img className="professor-thumbnail" src={this.props.professor.image_url}></img>
+
             <h3>{this.props.professor.name}</h3>
+
             <ul className="professor-overall">
               <li>Overall Rating: {this.state.overallRatings.overall}</li>
               <li>Total Reviews: {this.state.overallRatings.count}</li>

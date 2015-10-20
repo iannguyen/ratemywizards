@@ -39,11 +39,13 @@
           <div className="user-bio">
 
             <img className="user-pic" src={this.checkUserImage()}></img>
+
             <h1>{user.username}</h1>
-            <br/>
+              <br/>
             <h2>Total Reviews: {this.state.reviews.length}</h2>
 
           </div>
+
           <ReviewList reviews={this.state.reviews}/>
         </div>
       );

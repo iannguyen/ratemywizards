@@ -42,9 +42,7 @@
               this.state.house.professors.map(function(professor) {
                 return (
                   <li className="search-result">
-                    <ProfessorItem
-                      key={professor.id}
-                      professor={professor} />
+                    <ProfessorItem key={professor.id} professor={professor} />
                   </li>
                 );
               }.bind(this))
