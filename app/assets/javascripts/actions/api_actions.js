@@ -14,16 +14,16 @@
         house: house
       });
     },
-    receiveProfessors: function(professors) {
-      AppDispatcher.dispatch({
-        actionType: ProfessorConstants.PROFESSORS_RECEIVED,
-        professors: professors
-      });
-    },
     receiveReview: function(review) {
       AppDispatcher.dispatch({
         actionType: ReviewConstants.REVIEW_RECEIVED,
         review: review
+      });
+    },
+    receiveProfessors: function(professors) {
+      AppDispatcher.dispatch({
+        actionType: ProfessorConstants.PROFESSORS_RECEIVED,
+        professors: professors
       });
     },
     receiveProfessor: function(professor) {

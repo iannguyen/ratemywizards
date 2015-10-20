@@ -9,7 +9,6 @@
         success: function(response) {
           ApiActions.receiveReview(response);
           console.log(response);
-          debugger;
         }
       });
     },
@@ -44,6 +43,19 @@
         success: function(data) {
           console.log(data);
           callback && callback(data.user_id);
+        }
+      });
+    },
+    createProfessor :function(data, callback) {
+      $.ajax({
+        url: "/api/professors",
+        method: "post",
+        data: {professor: data},
+        success: function(response) {
+          ApiActions.receiveProfessor(response);
+          console.log(data);
+          debugger;
+          callback && callback(data);
         }
       });
     },

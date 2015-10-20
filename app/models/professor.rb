@@ -1,6 +1,5 @@
 class Professor < ActiveRecord::Base
-  validates :name, :house_id, presence: true
-  has_attached_file :image
+  validates :name, :house_id, :description, presence: true
 
   belongs_to :house
   has_many :reviews
