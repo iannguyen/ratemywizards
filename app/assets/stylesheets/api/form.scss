@@ -57,3 +57,76 @@ div.review-form button:hover {
   border-bottom: none;
   color: black;
 }
+
+// Professor Form
+div.professor-create {
+  height: 80vh;
+  width: auto;
+  color: ivory;
+  text-shadow: 1px 1px 3px black;
+  border-radius: 10px;
+  background-color: rgba(25,25,25,0.5);
+  font-size: 18px;
+  box-shadow: 5px 5px 5px 5px black;
+  text-align: center;
+}
+div.professor-create h3 {
+  font-size: 40px;
+}
+div.form-contents {
+  text-align: center;
+  text-shadow: 1px 1px 3px black;
+  padding: 10px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+div.professor-form{
+  text-align: center;
+}
+
+input#professor-name {
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0,0,0,0);
+  border: none;
+  border-bottom: 1px solid gray;
+}
+input#professor-name:focus {
+  outline: 0;
+  background-color: rgba(0,0,0,0.1);
+}
+div.professor-create input.btn {
+  background-color: rgba(0,0,0,0.9);
+  border-bottom: none;
+  box-shadow: 0 0 1pt 1pt gray;
+  width: 25%;
+  height: 35px;
+  font-size: 18px;
+}
+div.professor-create input.btn:hover {
+  background-color: rgba(255,255,255,1);
+  border-bottom: none;
+  color: black;
+}
+label.professor-description {
+  width: 50%;
+}
+textarea.professor-description {
+  width: 100%;
+  height: 150px;
+  background-color: rgba(25, 25, 25, 0.25);
+}
+select#house {
+  background-color: rgba(25,25,25,0.5);
+  padding: 5px;
+  margin: 10px;
+}
+div.professor-create button {
+  background-color: rgba(0,0,0,0.9);
+  border-bottom: none;
+  box-shadow: 1px 1px 1px 1px black;
+  width: 25%;
+  height: 35px;
+  font-size: 18px;
+}
