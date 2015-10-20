@@ -29,13 +29,15 @@ ul#review-list {
   border-radius: 10px;
   border: #2b2b2b solid 1px;
   height: 75%;
-  background-color: rgba(43,43,43,0.75);
+  text-shadow: 1px 1px 3px black;
+  // background-color: rgba(43,43,43,0.75);
 }
 div.review-detail {
   padding: 10px;
   height: 150px;
   border-radius: 10px;
-  box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.5);
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.75);
   vertical-align: inherit;
   -webkit-transition: all 1s ease; /* Safari and Chrome */
   -moz-transition: all 1s ease; /* Firefox */
@@ -77,4 +79,8 @@ div.review-description p{
   top: 50%;
   transform: translateY(-50%);
   position: relative;
+}
+div.blur-text *{
+  color: transparent;
+  text-shadow: 0 0 5px ivory;
 }

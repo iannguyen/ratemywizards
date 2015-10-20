@@ -24,13 +24,21 @@
       UserStore.removeUserChangeListener(this._onChange);
     },
 
+    checkUserImage: function() {
+      if (this.state.user.image_url === null) {
+        return ("http://res.cloudinary.com/dms46o1eu/image/upload/v1445156629/Sorting_Hat_mihhnq.jpg");
+      } else {
+        return this.state.user.image_url;
+      }
+    },
+
     render: function() {
       var user = this.state.user;
       return(
         <div className="user-show">
           <div className="user-bio">
 
-            <img className="user-pic" src={user.image_url}></img>
+            <img className="user-pic" src={this.checkUserImage()}></img>
             <h1>{user.username}</h1>
             <br/>
             <h2>Total Reviews: {this.state.reviews.length}</h2>

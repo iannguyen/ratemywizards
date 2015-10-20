@@ -2,11 +2,15 @@
   'use strict';
 
   root.ReviewItem = React.createClass({
+    anonymousCheck: function() {
+      var cloak = this.props.review.anonymous ? "blur-text" : "";
+      return cloak;
+    },
+
     render: function() {
-      debugger;
       return(
         <li className="review-item">
-          <div className="review-content">
+          <div className={this.anonymousCheck() + " review-content"}>
             <div className="professor-thumb">
               <img src={this.props.review.professor.image_url}></img>
             </div>

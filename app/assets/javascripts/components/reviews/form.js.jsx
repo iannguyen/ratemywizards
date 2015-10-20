@@ -66,7 +66,7 @@
                   <br/>
                   <select id="anonymous" name="anonymous" valueLink={this.linkState('anonymous')}>
                     <option value="false">I don't care who sees!</option>
-                    <option value='true'>I want to be hidden...</option>
+                    <option value='true'>Put on Invisibility Cloak.</option>
                   </select>
                 </label>
               </div>
