@@ -18,7 +18,7 @@
         overall: 0,
         count: 0,
       };
-      if (this.props.professor.reviews) {
+      if (this.props.professor.reviews.length !== 0) {
         var reviews = this.props.professor.reviews;
         average.count = reviews.length;
         reviews.forEach(function(review) {
