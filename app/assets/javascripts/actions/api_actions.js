@@ -27,7 +27,6 @@
       });
     },
     receiveProfessor: function(professor) {
-      debugger;
       AppDispatcher.dispatch({
         actionType: ProfessorConstants.PROFESSOR_RECEIVED,
         professor: professor

@@ -9,5 +9,6 @@ Rails.application.routes.draw do
     resources :users, only: [:edit, :update, :show]
   end
   resources :users, only: [:new, :create]
-  resource :session, only: [:new, :create, :destroy]
+  resource :session, only: [:demo, :new, :create, :destroy]
+  get "session/demo" => "sessions#demo"
 end

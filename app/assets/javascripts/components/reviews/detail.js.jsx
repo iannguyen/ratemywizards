@@ -17,11 +17,15 @@
       return hidden;
     },
 
+    handleClick: function() {
+      window.location = "/#/users/" + this.props.review.user_id;
+    },
+
     render: function() {
       var review = this.props.review;
       var showOrHide = this.anonymousCheck();
         return(
-          <div className="review-detail">
+          <div className="review-detail" onClick={this.handleClick}>
             <div className="review-ratings">
               <div className="review-bio">
                 {showOrHide.username}

@@ -1,7 +1,12 @@
 class SessionsController < ApplicationController
-  before_action :already_signed_in?, except: [:destroy]
+  before_action :already_signed_in?, except: [:demo, :destroy]
 
   def new
+  end
+
+  def demo
+    @user = User.find(1)
+    sign_in!(@user)
   end
 
   def create

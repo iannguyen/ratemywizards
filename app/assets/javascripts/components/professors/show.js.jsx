@@ -80,7 +80,7 @@
                   <br />
                   <li>Total Reviews: {this.state.reviews.length}</li>
               </ul>
-              <CLWProf professor={this.state.prof}/>
+              { window.CURRENT_USER_ID ? <CLWProf professor={this.state.prof}/> : <div></div>}
             </div>
 
             <div className="professor-description">

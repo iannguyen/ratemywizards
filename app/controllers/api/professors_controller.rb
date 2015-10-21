@@ -1,4 +1,5 @@
 class Api::ProfessorsController < ApplicationController
+  before_action :require_sign_in!, only: [:new, :create, :edit, :update]
   def index
     @professors = Professor.includes(:house).includes(:reviews).all
     render :index

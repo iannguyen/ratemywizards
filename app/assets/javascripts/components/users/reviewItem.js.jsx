@@ -8,12 +8,17 @@
       return cloak;
     },
 
+    showProfessor: function() {
+      window.location = "/#/professors/" + this.props.review.professor_id;
+    },
+
     render: function() {
       return(
         <li className="review-item">
           <div className={this.anonymousCheck() + " review-content"}>
             <div className="professor-thumb">
-              <img src={this.props.review.professor.image_url}></img>
+              <img onClick={this.showProfessor}src={this.props.review.professor.image_url}>
+              </img>
             </div>
 
             <div className="review-ratings">

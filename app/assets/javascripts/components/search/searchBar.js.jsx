@@ -53,7 +53,11 @@
     },
 
     createProfessor: function() {
-      this.history.pushState(null, "/professors/new");
+      if (window.CURRENT_USER_ID === undefined) {
+        window.location = "/session/new";
+      } else {
+        this.history.pushState(null, "/professors/new");
+      }
     },
 
     render: function() {
