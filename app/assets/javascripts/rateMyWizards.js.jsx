@@ -26,7 +26,6 @@
     </Route>
   );
 
-
   $(document)
     .ready(function() {
       var root = document.getElementById('root');
