@@ -8,7 +8,6 @@
         method: "get",
         success: function(response) {
           ApiActions.receiveReview(response);
-          console.log(response);
         }
       });
     },
@@ -24,7 +23,6 @@
         // error: function(errors) {
         //   debugger;
         //   ApiActions.receiveErrors(errors.responseJSON.failures);
-        //   console.log(errors.responseJSON.failures);
         // }
       });
     },
@@ -36,7 +34,6 @@
         data: {review: data},
         success: function(user) {
           ApiActions.receiveUser(user);
-          console.log(user);
           window.location = "/#/users/" + user.id;
         }
       });
@@ -47,11 +44,9 @@
         method: "delete",
         success: function(data) {
           ApiActions.receiveUser(data);
-          console.log(data);
           window.location = "/#/users/" + data.id;
         },
         failure: function(error) {
-          console.log(error);
         }
       });
     },
@@ -63,7 +58,6 @@
         data: {professor: image_url},
         success: function(response) {
           ApiActions.receiveProfessor(response);
-          console.log(response);
         }
       });
     },
@@ -75,7 +69,6 @@
         data: {user: image_url},
         success: function(response) {
           ApiActions.receiveUser(response);
-          console.log(response);
         }
       });
     },
@@ -87,7 +80,6 @@
         success: function(response) {
           ApiActions.receiveProfessor(response);
           window.location = "/#/professors/" + response.id;
-          console.log(data);
         }
       });
     },
@@ -97,7 +89,6 @@
         method: "get",
         success: function(response) {
           ApiActions.receiveHouses(response);
-          console.log(response);
         }
       });
     },
@@ -107,7 +98,6 @@
         method: "get",
         success: function(response) {
           ApiActions.receiveHouse(response);
-          console.log(response);
         }
       });
     },
@@ -117,7 +107,6 @@
         method: "get",
         success:function(response) {
           ApiActions.receiveProfessors(response);
-          console.log(response);
         }
       });
     },
@@ -127,7 +116,6 @@
         method: "get",
         success: function(response) {
           ApiActions.receiveUsers(response);
-          console.log(response);
         }
       });
     },
@@ -137,7 +125,6 @@
         method: "get",
         success: function(response) {
           ApiActions.receiveUser(response);
-          console.log(response);
         }
       });
     },
@@ -147,7 +134,6 @@
         method: "get",
         success: function(response) {
           ApiActions.receiveProfessor(response);
-          console.log(response);
         }
       });
     },
