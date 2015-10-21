@@ -5,7 +5,6 @@
     mixins: [React.addons.LinkedStateMixin, ReactRouter.History],
 
     getStateFromStore: function() {
-      debugger;
       var review = ReviewStore.find(parseInt(this.props.params.reviewId));
       return review;
     },
@@ -26,8 +25,7 @@
           review[key] = this.state[key];
         }
       }.bind(this));
-      debugger;
-      ApiUtil.editReview(this.state.user.id, review);
+      ApiUtil.editReview(this.state.id, review);
     },
 
     _onChange: function() {

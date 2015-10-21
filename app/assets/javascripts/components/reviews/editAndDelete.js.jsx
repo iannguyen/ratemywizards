@@ -10,7 +10,6 @@
     },
 
     deleteReview: function(id) {
-      e.preventDefault();
       ApiUtil.deleteReview(this.props.review.id);
     },
 

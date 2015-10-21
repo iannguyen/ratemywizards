@@ -25,9 +25,7 @@
           prof[key] = this.state[key];
         }
       }.bind(this));
-      ApiUtil.createProfessor(prof, function(id) {
-        that.history.pushState(null, "/professors/" + id);
-      });
+      ApiUtil.createProfessor(prof);
     },
 
     render: function() {

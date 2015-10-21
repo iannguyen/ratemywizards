@@ -24,14 +24,12 @@
       });
     },
     editReview: function(id, data) {
-      debugger;
       $.ajax({
         url: "/api/reviews/" + id,
         method: "patch",
         dataType: "json",
         data: {review: data},
         success: function(user) {
-          debugger;
           ApiActions.receiveUser(user);
           console.log(user);
           window.location = "/#/users/" + user.id;
@@ -64,15 +62,15 @@
         }
       });
     },
-    createProfessor :function(data, callback) {
+    createProfessor :function(data) {
       $.ajax({
         url: "/api/professors",
         method: "post",
         data: {professor: data},
         success: function(response) {
           ApiActions.receiveProfessor(response);
+          window.location = "/#/professors/" + response.id;
           console.log(data);
-          callback && callback(response.id);
         }
       });
     },

@@ -22,14 +22,13 @@ class Api::ReviewsController < ApplicationController
   end
 
   def edit
-    @review = Review.includes(:user).find(params[:id])
+    @review = Review.find(params[:id])
   end
 
   def update
-    @review = Review.find(params[:id])
-    @user = User.includes(:reviews).find(current_user.id)
+    @review = Review.includes(:professor).includes(:user).find(params[:id])
+    @user = User.includes(reviews: :professor).find(current_user.id)
     if @review.update(review_params)
-      debugger;
       flash[:errors] = ["Review Edited successfully"]
       render template: 'api/users/show'
     else
