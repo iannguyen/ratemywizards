@@ -1,0 +1,27 @@
+(function(root) {
+  'use strict';
+
+  root.EditAndDelete = React.createClass({
+    mixin: [ReactRouter.History],
+
+    editReview: function(e) {
+      e.preventDefault();
+      window.location = "/#/reviews/" + this.props.review.id + "/edit";
+    },
+
+    deleteReview: function(id) {
+      e.preventDefault();
+      ApiUtil.deleteReview(this.props.review.id);
+    },
+
+    render: function() {
+      return(
+        <div className="edit-and-delete">
+          <button onClick={this.editReview} className="edit-review">Edit Review</button>
+          <button onClick={this.deleteReview} className="delete-review">Delete</button>
+        </div>
+      );
+    }
+  });
+
+}(this));

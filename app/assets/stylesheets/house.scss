@@ -7,7 +7,7 @@ img.crest {
 }
 
 #house-index {
-  padding-top: 10%;
+  padding-top: 5%;
   margin: auto;
   text-align: center;
   z-index: 1;
@@ -50,11 +50,11 @@ ul#house-detail-list {
 }
 
 img.crest {
-    -webkit-transition: all 0.75s ease; /* Safari and Chrome */
-    -moz-transition: all 0.75s ease; /* Firefox */
-    -ms-transition: all 0.75s ease; /* IE 9 */
-    -o-transition: all 0.75s ease; /* Opera */
-    transition: all 0.75s ease;
+    -webkit-transition: all 0.5s ease; /* Safari and Chrome */
+    -moz-transition: all 0.5s ease; /* Firefox */
+    -ms-transition: all 0.5s ease; /* IE 9 */
+    -o-transition: all 0.5s ease; /* Opera */
+    transition: all 0.5s ease;
 }
 
 img.crest:hover {

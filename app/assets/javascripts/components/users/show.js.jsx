@@ -3,7 +3,7 @@
 
   root.UserShow = React.createClass({
     getStateFromStore: function() {
-      var user  = UserStore.find(parseInt(this.props.params.userId));
+      var user = UserStore.find(parseInt(this.props.params.userId));
       return { user: user };
     },
 
@@ -33,25 +33,24 @@
     },
 
     render: function() {
-      var user = this.state.user;
-      if (user.reviews === undefined) { return <div></div>; }
+      if (this.state.user.reviews === undefined) { return <div></div>; }
       return(
         <div className="user-show">
           <div className="user-bio">
 
             <img className="user-pic" src={this.checkUserImage()}></img>
 
-            <h1>{user.username}</h1>
+            <h1>{this.state.user.username}</h1>
 
             {window.CURRENT_USER_ID === this.state.user.id ? <CLW/> : <div></div> }
 
               <br/>
 
-            <h2>Total Reviews: {user.reviews.length}</h2>
+            <h2>Total Reviews: {this.state.user.reviews.length}</h2>
 
           </div>
 
-          <ReviewList reviews={user.reviews}/>
+          <ReviewList reviews={this.state.user.reviews}/>
         </div>
       );
     }

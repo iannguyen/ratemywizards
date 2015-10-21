@@ -41,9 +41,24 @@ div#main {
   z-index: 1;
 }
 
-h1#search-heading {
+.search-heading {
   padding-bottom: 5px;
   color: ivory;
+}
+
+h2.search-heading {
+  padding-top: 5px;
+  width: 25%;
+  margin: auto;
+}
+
+h2.search-heading:hover {
+  -webkit-filter: brightness(200%);
+  -moz-filter:brightness(200%); /* Firefox */
+  -ms-filter:brightness(200%); /* IE 9 */
+  -o-filter:brightness(200%); /* Opera */
+  filter:brightness(200%);
+  text-shadow: 7px 7px 7px white;
 }
 
 div.errors {

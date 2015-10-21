@@ -23,26 +23,32 @@
         },
       });
     },
-    editReview: function(id, data, callback) {
+    editReview: function(id, data) {
+      debugger;
       $.ajax({
         url: "/api/reviews/" + id,
         method: "patch",
         dataType: "json",
         data: {review: data},
-        success: function(data) {
-          ApiActions.receiveReview(data);
-          console.log(data);
-          callback && callback(data.user_id);
+        success: function(user) {
+          debugger;
+          ApiActions.receiveUser(user);
+          console.log(user);
+          window.location = "/#/users/" + user.id;
         }
       });
     },
     deleteReview: function(id, callback) {
       $.ajax({
-        url: "/api/reviews" + id,
+        url: "/api/reviews/" + id,
         method: "delete",
         success: function(data) {
+          ApiActions.receiveUser(data);
           console.log(data);
-          callback && callback(data.user_id);
+          window.location = "/#/users/" + data.id;
+        },
+        failure: function(error) {
+          console.log(error);
         }
       });
     },
@@ -100,9 +106,19 @@
         }
       });
     },
+    fetchAllUsers: function() {
+      $.ajax({
+        url: "/api/users",
+        method: "get",
+        success: function(response) {
+          ApiActions.receiveUsers(response);
+          console.log(response);
+        }
+      });
+    },
     fetchSingleUser: function(id) {
       $.ajax({
-        url: "api/users/" + id,
+        url: "/api/users/" + id,
         method: "get",
         success: function(response) {
           ApiActions.receiveUser(response);

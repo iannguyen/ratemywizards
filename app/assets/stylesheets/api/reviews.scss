@@ -39,20 +39,20 @@ div.review-detail {
   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
   background-color: rgba(0, 0, 0, 0.75);
   vertical-align: inherit;
-  -webkit-transition: all 0.75s ease; /* Safari and Chrome */
-  -moz-transition: all 0.75s ease; /* Firefox */
-  -ms-transition: all 0.75s ease; /* IE 9 */
-  -o-transition: all 0.75s ease; /* Opera */
-  transition: all 0.75s ease;;
+  -webkit-transition: all 0.5s ease; /* Safari and Chrome */
+  -moz-transition: all 0.5s ease; /* Firefox */
+  -ms-transition: all 0.5s ease; /* IE 9 */
+  -o-transition: all 0.5s ease; /* Opera */
+  transition: all 0.5s ease;;
 }
 
 div.review-detail:hover {
   background-color: rgba(255,255,255,0.05);
-  -webkit-filter: brightness(200%);
-  -moz-filter:brightness(200%); /* Firefox */
-  -ms-filter:brightness(200%); /* IE 9 */
-  -o-filter:brightness(200%); /* Opera */
-  filter:brightness(200%);
+  -webkit-filter: brightness(110%);
+  -moz-filter:brightness(110%); /* Firefox */
+  -ms-filter:brightness(110%); /* IE 9 */
+  -o-filter:brightness(110%); /* Opera */
+  filter:brightness(110%);
 }
 div.review-ratings {
   height: 40%;

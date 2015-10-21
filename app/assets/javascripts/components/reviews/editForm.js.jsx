@@ -5,7 +5,8 @@
     mixins: [React.addons.LinkedStateMixin, ReactRouter.History],
 
     getStateFromStore: function() {
-      var review = ReviewStore.find(parseInt(this.props.paramsiewId));
+      debugger;
+      var review = ReviewStore.find(parseInt(this.props.params.reviewId));
       return review;
     },
 
@@ -25,9 +26,8 @@
           review[key] = this.state[key];
         }
       }.bind(this));
-        ApiUtil.editReview(this.state.user.id, review, function() {
-          this.props.history.pushState(null, 'users/' + this.state.user.id, {});
-        }.bind(this));
+      debugger;
+      ApiUtil.editReview(this.state.user.id, review);
     },
 
     _onChange: function() {
@@ -76,7 +76,7 @@
                 <label htmlFor="review-ability">
                   Ability Rating:
                   <select id="ability" name="ability" valueLink={this.linkState('ability')}>
-                    <option selected="selected">{this.state.ability}</option>
+                    <option selected disabled hidden>{this.state.ability}</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -92,7 +92,7 @@
                 <label htmlFor="review-easiness">
                   Easiness Rating:
                   <select id="easiness" name="easiness" valueLink={this.linkState('easiness')}>
-                    <option selected="selected">{this.state.easiness}</option>
+                    <option selected disabled hidden>{this.state.easiness}</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -107,7 +107,7 @@
                 <label htmlFor="review-helpfulness">
                   Helpfulness Rating:
                   <select id="helpfulness" name="helpfulness" valueLink={this.linkState('helpfulness')}>
-                    <option selected="selected">{this.state.helpfulness}</option>
+                    <option selected disabled hidden>{this.state.helpfulness}</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>

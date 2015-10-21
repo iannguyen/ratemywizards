@@ -71,7 +71,7 @@
               <br/>
 
               <label className="professor-description" htmlFor="professor-description">
-                <textarea className="professor-description" placeholder="Tell us about this professor..."
+                <textarea className="professor-description" placeholder="Tell us about this wizard..."
                 valueLink={this.linkState("description")}></textarea>
               </label>
 

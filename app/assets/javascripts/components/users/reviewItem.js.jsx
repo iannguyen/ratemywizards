@@ -2,6 +2,7 @@
   'use strict';
 
   root.ReviewItem = React.createClass({
+
     anonymousCheck: function() {
       var cloak = this.props.review.anonymous ? "blur-text" : "";
       return cloak;
@@ -27,6 +28,7 @@
               <p>{this.props.review.body}</p>
             </div>
           </div>
+          <EditAndDelete review={this.props.review}/>
         </li>
       );
     }

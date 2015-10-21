@@ -2,6 +2,8 @@
   'use strict';
 
   root.SearchBar = React.createClass({
+    mixins: [ReactRouter.History],
+
     getInitialState: function() {
       return { professors: root.ProfessorStore.all(), inputValue: "", focused: false };
     },
@@ -50,13 +52,19 @@
       return results;
     },
 
+    createProfessor: function() {
+      this.history.pushState(null, "/professors/new");
+    },
+
     render: function() {
       var searchResults = this.search();
       return (
         <div id="search-bar">
-          <h1 id="search-heading">Search for a Wizard</h1>
+          <h1 className="search-heading">Search for a Wizard</h1>
 
           <input type="text" onFocus={this.focusedTrue}  onBlur={this.focusedFalse} onChange={this.handleInput} value={this.state.inputValue} />
+
+          <h2 className="search-heading" onClick={this.createProfessor}>..or Add one to Rate!</h2>
 
             <ul id="search-results">
               {
