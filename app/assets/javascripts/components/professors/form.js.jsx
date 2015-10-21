@@ -76,7 +76,7 @@
               <br/>
               <br/>
 
-              <button className="btn">Summon {this.state.name}!</button>
+              <button className="btn create">Summon {this.state.name}!</button>
 
             </form>
 
