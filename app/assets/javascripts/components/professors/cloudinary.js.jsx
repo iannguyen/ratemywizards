@@ -1,27 +1,28 @@
 (function(root) {
   'use strict';
 
-  root.CLW = React.createClass({
+  root.CLWProf = React.createClass({
     upload: function(e) {
       e.preventDefault();
       cloudinary.openUploadWidget({upload_preset: window.CLOUDINARY.upload_preset},
-      this.updateUserPhoto);
+      this.updateProfPhoto);
     },
 
-    updateUserPhoto: function(error, result, callback) {
+    updateProfPhoto: function(error, result, callback) {
+      debugger;
       if(error) { return; }
       var fitted = "w_400,h_400,c_fit";
       var url = result[0].secure_url;
       var splittedUrl = url.split('/');
       var insertPoint = splittedUrl.indexOf('upload') + 1;
       splittedUrl.splice(insertPoint, 0, fitted);
-      ApiUtil.editUserPhoto(window.CURRENT_USER_ID, {image_url: splittedUrl.join('/')});
+      ApiUtil.editProfPhoto(this.props.professor.id, {image_url: splittedUrl.join('/')});
     },
 
     render: function() {
       return(
         <button className="btn upload-button" onClick={this.upload}>
-          Change your Profile Picture
+          Change this Wizard's Photo!
         </button>
       );
     }

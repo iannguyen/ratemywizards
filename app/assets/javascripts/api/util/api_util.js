@@ -50,6 +50,19 @@
         }
       });
     },
+    editProfPhoto: function(id, image_url) {
+      debugger;
+      $.ajax({
+        url: "/api/professors/" + id,
+        method: "patch",
+        dataType: "json",
+        data: {professor: image_url},
+        success: function(response) {
+          ApiActions.receiveProfessor(response);
+          console.log(response);
+        }
+      });
+    },
     editUserPhoto: function(id, image_url) {
       $.ajax({
         url: "/api/users/" + id,

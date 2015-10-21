@@ -42,7 +42,7 @@
 
             <h1>{this.state.user.username}</h1>
 
-            {window.CURRENT_USER_ID === this.state.user.id ? <CLW/> : <div></div> }
+            {window.CURRENT_USER_ID === this.state.user.id ? <CLWUser/> : <div></div> }
 
               <br/>
 

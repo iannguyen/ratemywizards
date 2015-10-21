@@ -24,9 +24,24 @@ class Api::ProfessorsController < ApplicationController
     render :show
   end
 
+  def edit
+    @professor = Professor.find(params[:id])
+  end
+
+  def update
+    @professor = Professor.includes(:house).includes(reviews: :user).find(params[:id])
+    if @professor.update(professor_params)
+      flash[:errors] = ["Wizard successfully Created!"]
+      render :show
+    else
+      flash[:errors] = @professor.errors.full_messages
+      render json: :unprocessable_entity, status: 422
+    end
+  end
+
   private
 
   def professor_params
-    params.require(:professor).permit(:name, :house_id, :description)
+    params.require(:professor).permit(:name, :house_id, :description, :image_url)
   end
 end
