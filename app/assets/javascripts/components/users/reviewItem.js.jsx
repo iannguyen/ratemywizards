@@ -31,9 +31,11 @@
 
             <div className="review-description">
               <p>{this.props.review.body}</p>
-            </div>
-            <div className="options">
-              { this.props.review.user_id === window.CURRENT_USER_ID ? <EditAndDelete review={this.props.review}/> : <div></div> }
+
+              <div className="options">
+                { this.props.review.user_id === window.CURRENT_USER_ID ? <EditAndDelete review={this.props.review}/> : <div></div> }
+              </div>
+              
             </div>
           </div>
         </li>

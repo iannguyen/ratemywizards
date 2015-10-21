@@ -56,6 +56,19 @@ div.user-reviews h2 {
 
 div.professor-thumb {
   float: left;
+  -webkit-transition: all 0.5s ease; /* Safari and Chrome */
+  -moz-transition: all 0.5s ease; /* Firefox */
+  -ms-transition: all 0.5s ease; /* IE 9 */
+  -o-transition: all 0.5s ease; /* Opera */
+  transition: all 0.5s ease;
+}
+
+div.professor-thumb:hover {
+  -webkit-filter: brightness(200%);
+  -moz-filter:brightness(200%); /* Firefox */
+  -ms-filter:brightness(200%); /* IE 9 */
+  -o-filter:brightness(200%); /* Opera */
+  filter:brightness(200%);
 }
 
 div.professor-thumb img {
@@ -66,7 +79,8 @@ div.professor-thumb img {
   border-radius: 100%;
 }
 
-div.review-item {
+
+li.review-item {
   text-align: center;
   margin: auto;
   padding: 5px;
@@ -84,6 +98,12 @@ div.edit-and-delete {
   left: 5%;
   width: 25%;
   color: burlywood;
+}
+
+div.options {
+  padding: 0px;
+  position: relative;
+  bottom: 25px;
 }
 
 button.edit-review:hover {
