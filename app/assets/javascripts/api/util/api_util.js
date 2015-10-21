@@ -46,13 +46,24 @@
         }
       });
     },
+    editUserPhoto: function(id, image_url) {
+      $.ajax({
+        url: "/api/users/" + id,
+        method: "patch",
+        dataType: "json",
+        data: {user: image_url},
+        success: function(response) {
+          ApiActions.receiveUser(response);
+          console.log(response);
+        }
+      });
+    },
     createProfessor :function(data, callback) {
       $.ajax({
         url: "/api/professors",
         method: "post",
         data: {professor: data},
         success: function(response) {
-          debugger;
           ApiActions.receiveProfessor(response);
           console.log(data);
           callback && callback(response.id);

@@ -22,9 +22,22 @@
       <div class="errors"><%= flash[:errors].join("<br>").html_safe if flash[:errors] %></div>
 
 
+
     <div class="container">
       <%= yield %>
     </div>
+
+
+
+    <script src="//widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+      cloudinary.setCloudName("<%= ENV['CLOUD_NAME'] %>")
+      window.CLOUDINARY = {
+        cloud_name: "<%= ENV['CLOUD_NAME'] %>",
+        upload_preset: "<%= ENV['UPLOAD_PRESET'] %>"
+      }
+    </script>
 
   </body>
 </html>

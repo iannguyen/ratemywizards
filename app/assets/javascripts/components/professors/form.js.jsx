@@ -19,14 +19,12 @@
       var that = this;
       var prof = {};
       Object.keys(this.state).forEach(function(key) {
-      debugger;
         if (key === "house_id") {
           prof[key] = parseInt(this.state[key]);
         } else {
           prof[key] = this.state[key];
         }
       }.bind(this));
-        debugger;
       ApiUtil.createProfessor(prof, function(id) {
         that.history.pushState(null, "/professors/" + id);
       });
