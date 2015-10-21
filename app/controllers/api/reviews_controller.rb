@@ -8,11 +8,10 @@ class Api::ReviewsController < ApplicationController
   def create
     @review = current_user.reviews.new(review_params)
     if @review.save
-      flash[:errors] = ["Review created successfully"]
       render json: @review
     else
       flash[:errors] = @review.errors.full_messages
-      render json: :unprocessable_entity, status: 422
+      render json: { failures: @review.errors.full_messages }, status: 422
     end
   end
 
@@ -29,7 +28,6 @@ class Api::ReviewsController < ApplicationController
     @review = Review.includes(:professor).includes(:user).find(params[:id])
     @user = User.includes(reviews: :professor).find(current_user.id)
     if @review.update(review_params)
-      flash[:errors] = ["Review Edited successfully"]
       render template: 'api/users/show'
     else
       flash[:errors] = @review.errors.full_messages

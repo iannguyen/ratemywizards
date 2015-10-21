@@ -17,10 +17,15 @@
         url: "/api/reviews",
         method: "post",
         data: {review: data},
-        success: function(data) {
-          ApiActions.receiveProfessor(data);
-          callback && callback(data.id);
+        success: function(professor) {
+          ApiActions.receiveProfessor(professor);
+          callback && callback(professor.id);
         },
+        // error: function(errors) {
+        //   debugger;
+        //   ApiActions.receiveErrors(errors.responseJSON.failures);
+        //   console.log(errors.responseJSON.failures);
+        // }
       });
     },
     editReview: function(id, data) {

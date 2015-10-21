@@ -2,6 +2,12 @@
   'use strict';
 
   root.ApiActions = {
+    // receiveErrors: function(errors) {
+    //   AppDispatcher.dispatch({
+    //     actionType: ReviewConstants.ERRORS_RECEIVED,
+    //     errors: errors
+    //   });
+    // },
     receiveHouses: function(houses) {
       AppDispatcher.dispatch({
         actionType: HouseConstants.HOUSES_RECEIVED,
