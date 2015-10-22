@@ -12,6 +12,8 @@ json.reviews do
       review,
       :ability, :easiness, :helpfulness
     )
+    json.likes review.likes, :user_id
+    json.likeCount review.likes.length
     end
   end
 end

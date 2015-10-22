@@ -12,7 +12,6 @@
 
     componentDidMount: function() {
       ReviewStore.addReviewChangeListener(this._onChange);
-      ApiUtil.fetchSingleReview(parseInt(this.props.review.id));
     },
 
     componentWillUnmount: function() {
@@ -59,6 +58,7 @@
                 <li>Ability: {review.ability}</li>
                 <li>Easiness: {review.easiness}</li>
                 <li>Helpfulness: {review.helpfulness}</li>
+                <li className="like-count">{this.props.review.likeCount}</li>
               </ul>
             </div>
             <div className="review-description">

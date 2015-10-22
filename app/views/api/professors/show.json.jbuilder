@@ -9,10 +9,12 @@ json.reviews do
   json.array!(@professor.reviews) do |review|
     json.extract!(
       review,
-      :id, :anonymous, :user_id, :professor_id,
+      :id, :anonymous, :professor_id,
       :ability, :easiness, :helpfulness,
-      :body
+      :body, :user_id
     )
   json.user review.user, :username, :image_url
+  json.likes review.likes, :user_id
+  json.likeCount review.likes.length
   end
 end

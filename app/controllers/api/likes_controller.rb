@@ -2,13 +2,15 @@ class Api::LikesController < ApplicationController
   before_action :require_sign_in!
 
   def new
-    @like = current_user.likes.new
+    @like = current_user.likes.new(like_params)
   end
 
   def create
     @like = current_user.likes.new(like_params)
+    @review = Review.find(@like.review_id)
+    @professor = Professor.find(@review.professor_id)
     if @like.save
-      render json: @like
+      render template: "api/professors/show"
     else
       flash.now[:errors] = @like.errors.full_messages
       render json: {}

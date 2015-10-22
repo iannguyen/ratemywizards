@@ -134,6 +134,7 @@
       });
     },
     fetchSingleProfessor: function(id) {
+      console.log("fetching");
       $.ajax({
         url: "/api/professors/" + id,
         method: "get",
@@ -151,14 +152,19 @@
       });
     },
     createLike: function(likeObj) {
+      debugger;
       $.ajax({
         url: "api/reviews/" + likeObj.review_id + "/likes",
         method: "post",
         data: {like: likeObj},
-        success: function(response) {
-          // ApiActions
-          console.log(response);
-        }
+        success: function(professor) {
+          debugger;
+          ApiActions.receiveProfessor(professor);
+          console.log(professor);
+        },
+        error: function(error) {
+          debugger;
+        },
       });
     },
     signIn: function() {

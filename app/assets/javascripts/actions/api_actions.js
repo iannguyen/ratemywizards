@@ -21,6 +21,7 @@
       });
     },
     receiveReview: function(review) {
+      debugger;
       AppDispatcher.dispatch({
         actionType: ReviewConstants.REVIEW_RECEIVED,
         review: review

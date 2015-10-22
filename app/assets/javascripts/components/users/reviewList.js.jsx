@@ -6,6 +6,18 @@
       return { reviews: this.props.reviews };
     },
 
+    _onChange: function() {
+
+    },
+
+    addReviewChangeListener: function() {
+
+    },
+
+    removeReviewChangeListener: function() {
+
+    },
+
     render: function() {
       var that = this;
       return(

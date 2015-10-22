@@ -2,7 +2,7 @@ class Api::ProfessorsController < ApplicationController
   before_action :require_sign_in!, only: [:new, :create, :edit, :update]
 
   def index
-    @professors = Professor.includes(:house).includes(:reviews).all
+    @professors = Professor.includes(:house).includes(reviews: :likes).all
     render :index
   end
 
@@ -21,7 +21,7 @@ class Api::ProfessorsController < ApplicationController
   end
 
   def show
-    @professor = Professor.includes(:house).includes(reviews: :user).find(params[:id])
+    @professor = Professor.includes(:house).includes(reviews: [:user, :likes]).find(params[:id])
     render :show
   end
 
