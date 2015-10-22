@@ -6,10 +6,8 @@ class Api::UsersController < ApplicationController
   def update
     @user = current_user
     if @user.update(user_params)
-      flash[:errors] = ["Image updated successfully."]
       render :show
     else
-      flash[:errors] = ["Image failed to update."]
       render :show
     end
   end

@@ -11,7 +11,7 @@
         }
       });
     },
-    createReview: function(data, callback) {
+    createReview: function(data) {
       $.ajax({
         url: "/api/reviews",
         method: "post",
@@ -40,7 +40,7 @@
         }
       });
     },
-    deleteReview: function(id, callback) {
+    deleteReview: function(id) {
       $.ajax({
         url: "/api/reviews/" + id,
         method: "delete",
@@ -48,7 +48,7 @@
           ApiActions.receiveUser(data);
           window.location = "/#/users/" + data.id;
         },
-        failure: function(error) {
+        error: function(error) {
         }
       });
     },
@@ -84,7 +84,7 @@
           window.location = "/#/professors/" + response.id;
         },
         error: function(errors) {
-          ApiActions.receiveErrors(errors.responseJSON.failures);
+          ApiActions.receiveErrors(errors.responseJSON.failures, ApiUtil.clearErrors);
         }
       });
     },
@@ -139,7 +139,25 @@
         method: "get",
         success: function(professor) {
           ApiActions.receiveProfessor(professor);
-          console.log(professor);
+        }
+      });
+    },
+    clearErrors: function() {
+      $.ajax({
+        url: "",
+        success: function(response) {
+          ApiActions.receiveErrors([]);
+        }
+      });
+    },
+    createLike: function(likeObj) {
+      $.ajax({
+        url: "api/reviews/" + likeObj.review_id + "/likes",
+        method: "post",
+        data: {like: likeObj},
+        success: function(response) {
+          // ApiActions
+          console.log(response);
         }
       });
     },

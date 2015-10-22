@@ -2,6 +2,7 @@
   'use strict';
 
   root.ReviewDetail = React.createClass({
+
     anonymousCheck: function() {
       var hidden = {};
       if (this.props.review.anonymous) {
@@ -21,15 +22,22 @@
       window.location = "/#/users/" + this.props.review.user_id;
     },
 
+    likeReview: function(e) {
+      e.preventDefault();
+      ApiUtil.createLike({review_id: this.props.review.id});
+    },
+
     render: function() {
       var review = this.props.review;
       var showOrHide = this.anonymousCheck();
         return(
-          <div className="review-detail" onClick={this.handleClick}>
+          <div className="review-detail" onClick={this.likeReview}>
             <div className="review-ratings">
               <div className="review-bio">
                 {showOrHide.username}
-                <img className="review-thumb" src={showOrHide.image_url}/>
+                <img className="review-thumb"
+                     src={showOrHide.image_url}
+                     onClick={this.handleClick}/>
               </div>
               <ul>
                 <li>Ability: {review.ability}</li>

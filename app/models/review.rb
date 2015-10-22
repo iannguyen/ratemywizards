@@ -6,4 +6,5 @@ class Review < ActiveRecord::Base
 
   belongs_to :professor
   belongs_to :user
+  has_many :likes
 end

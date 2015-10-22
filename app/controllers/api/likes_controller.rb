@@ -6,10 +6,9 @@ class Api::LikesController < ApplicationController
   end
 
   def create
-    @like = current_user.likes.new
+    @like = current_user.likes.new(like_params)
     if @like.save
-      flash.now[:errors] = "LIKED"
-      render json: {}
+      render json: @like
     else
       flash.now[:errors] = @like.errors.full_messages
       render json: {}
@@ -22,4 +21,9 @@ class Api::LikesController < ApplicationController
     render json: {}
   end
 
+  private
+
+  def like_params
+    params.require(:like).permit(:review_id)
+  end
 end

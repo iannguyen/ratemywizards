@@ -50,6 +50,6 @@ class Api::ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:anonymous, :user_id, :professor_id, :body, :ability, :easiness, :helpfulness)
+    params.require(:review).permit(:anonymous, :user_id, :professor_id, :body, :ability, :easiness, :helpfulness, :is_liked)
   end
 end

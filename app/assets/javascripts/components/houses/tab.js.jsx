@@ -7,7 +7,7 @@
     mixins: [ReactRouter.History],
 
     showDetail: function() {
-      window.scrollTo(0, 400);
+      window.scrollTo(0, 350);
       var url = '/houses/' + this.props.house.id;
       this.history.pushState(null, '/houses/' + this.props.house.id, {});
     },
