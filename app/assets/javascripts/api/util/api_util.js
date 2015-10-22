@@ -34,6 +34,9 @@
         success: function(user) {
           ApiActions.receiveUser(user);
           window.location = "/#/users/" + user.id;
+        },
+        error: function(errors) {
+          ApiActions.receiveErrors(errors.responseJSON.failures);
         }
       });
     },
@@ -81,7 +84,6 @@
           window.location = "/#/professors/" + response.id;
         },
         error: function(errors) {
-          debugger;
           ApiActions.receiveErrors(errors.responseJSON.failures);
         }
       });

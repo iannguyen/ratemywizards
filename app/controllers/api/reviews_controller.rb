@@ -7,8 +7,9 @@ class Api::ReviewsController < ApplicationController
 
   def create
     @review = current_user.reviews.new(review_params)
+    @professor = Professor.find(@review.professor_id)
     if @review.save
-      render json: @review
+      render json: @professor
     else
       render json: { failures: @review.errors.full_messages }, status: 422
     end

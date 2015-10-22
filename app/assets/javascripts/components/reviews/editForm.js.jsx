@@ -6,7 +6,7 @@
 
     getStateFromStore: function() {
       var review = ReviewStore.find(parseInt(this.props.params.reviewId));
-      review.erors = [];
+      review.errors = [];
       return review;
     },
 
@@ -30,7 +30,11 @@
     },
 
     _onChange: function() {
-      this.setState(this.getStateFromStore());
+      if (ErrorStore.all().length !== 0) {
+        this.setState({ errors: ErrorStore.all() });
+      } else {
+        this.setState(this.getStateFromStore());
+      }
     },
 
     componentDidMount: function() {
@@ -52,19 +56,21 @@
       }
       return(
         <div className="review-new">
-          <div className="review-form">
-            <ul className="errors">
+            <ul id="errors">
               {
                 this.state.errors.map(function(error) {
                   return <li>{error}</li>;
                 })
               }
             </ul>
+          <div className="review-form">
+
+            <form onSubmit={this.editReview}>
+            <br/>
+
             <h3>Edit Your Review for {this.state.professor.name}</h3>
 
             <br/>
-
-            <form onSubmit={this.editReview}>
 
               <div>
                 <label htmlFor="review-anonymous">

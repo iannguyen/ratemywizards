@@ -17,7 +17,6 @@
 
     createProfessor: function(e) {
       e.preventDefault();
-      var that = this;
       var prof = {};
       Object.keys(this.state).forEach(function(key) {
         if (key === "house_id") {
@@ -48,20 +47,20 @@
     render: function() {
       return(
         <div className="professor-create">
+          <ul id="errors">
+            {
+              this.state.errors.map(function(error) {
+                return <li>{error}</li>;
+              })
+            }
+          </ul>
           <div className="form-contents">
-            <ul className="errors">
-              {
-                this.state.errors.map(function(error) {
-                  return <li>{error}</li>;
-                })
-              }
-            </ul>
-            <h3>Add a Wizard</h3>
 
-            <br/>
-            <br/>
 
             <form className="professor-form" onSubmit={this.createProfessor}>
+            <br/>
+            <h3>Add a Wizard</h3>
+            <br/>
 
               <label htmlFor="professor-name">
                 What is this Wizard's name?

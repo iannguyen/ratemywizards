@@ -43,21 +43,21 @@
     },
 
     componentDidMount: function() {
-      ProfessorStore.addProfessorChangeListener(this._onChange);
       ErrorStore.addErrorChangeListener(this._onChange);
+      ProfessorStore.addProfessorChangeListener(this._onChange);
       ApiUtil.fetchSingleProfessor(parseInt(this.props.params.professorId));
     },
 
     componentwillUnmount: function() {
-      ProfessorStore.removeProfessorChangeListener(this._onChange);
       ErrorStore.removeErrorChangeListener(this._onChange);
+      ProfessorStore.removeProfessorChangeListener(this._onChange);
     },
 
     render: function() {
       if (this.prof === undefined) {return <div></div>;}
       return(
         <div className="review-new">
-          <ul className="errors">
+          <ul id="errors">
             {
               this.state.errors.map(function(error) {
                 return <li>{error}</li>;
