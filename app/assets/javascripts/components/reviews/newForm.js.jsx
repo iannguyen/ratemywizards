@@ -51,6 +51,7 @@
     componentwillUnmount: function() {
       ErrorStore.removeErrorChangeListener(this._onChange);
       ProfessorStore.removeProfessorChangeListener(this._onChange);
+      ApiUtil.clearErrors();
     },
 
     render: function() {
