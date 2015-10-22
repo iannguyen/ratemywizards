@@ -134,7 +134,6 @@
       });
     },
     fetchSingleProfessor: function(id) {
-      console.log("fetching");
       $.ajax({
         url: "/api/professors/" + id,
         method: "get",
@@ -158,7 +157,6 @@
         data: {like: likeObj},
         success: function(professor) {
           ApiActions.receiveProfessor(professor);
-          console.log(professor);
         },
         error: function(error) {
         },

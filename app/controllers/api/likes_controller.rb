@@ -8,11 +8,10 @@ class Api::LikesController < ApplicationController
   def create
     @like = current_user.likes.new(like_params)
     @review = Review.find(@like.review_id)
-    @professor = Professor.find(@review.professor_id)
     if @like.save
+      @professor = Professor.includes(:house).includes(reviews: [:user, :likes]).find(@review.professor_id)
       render template: "api/professors/show"
     else
-      flash.now[:errors] = @like.errors.full_messages
       render json: {}
     end
   end
