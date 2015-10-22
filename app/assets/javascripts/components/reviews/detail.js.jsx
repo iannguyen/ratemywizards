@@ -2,6 +2,22 @@
   'use strict';
 
   root.ReviewDetail = React.createClass({
+    getInitialState: function() {
+      return {review: this.props.review};
+    },
+
+    _onChange: function() {
+      this.setState({ review: ReviewStore.find(parseInt(this.props.review.id)) });
+    },
+
+    componentDidMount: function() {
+      ReviewStore.addReviewChangeListener(this._onChange);
+      ApiUtil.fetchSingleReview(parseInt(this.props.review.id));
+    },
+
+    componentWillUnmount: function() {
+      ReviewStore.removeReviewChangeListener(this._onChange);
+    },
 
     anonymousCheck: function() {
       var hidden = {};
