@@ -9,7 +9,6 @@
     },
 
     updateProfPhoto: function(error, result, callback) {
-      debugger;
       if(error) { return; }
       var fitted = "w_400,h_400,c_fit";
       var url = result[0].secure_url;

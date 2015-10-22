@@ -8,6 +8,7 @@
       name: "",
       description: "",
       house_id: null,
+      errors: []
     },
 
     getInitialState: function() {
@@ -28,11 +29,33 @@
       ApiUtil.createProfessor(prof);
     },
 
+    _onChange: function() {
+      if (ErrorStore.all().length !== 0) {
+        this.setState({ errors: ErrorStore.all() });
+      } else {
+        this.setState(this.defaultAttributes);
+      }
+    },
+
+    componentDidMount: function() {
+      ErrorStore.addErrorChangeListener(this._onChange);
+    },
+
+    componentwillUnmount: function() {
+      ErrorStore.removeErrorChangeListener(this._onChange);
+    },
+
     render: function() {
       return(
         <div className="professor-create">
           <div className="form-contents">
-
+            <ul className="errors">
+              {
+                this.state.errors.map(function(error) {
+                  return <li>{error}</li>;
+                })
+              }
+            </ul>
             <h3>Add a Wizard</h3>
 
             <br/>

@@ -6,6 +6,7 @@
 
     getStateFromStore: function() {
       var review = ReviewStore.find(parseInt(this.props.params.reviewId));
+      review.erors = [];
       return review;
     },
 
@@ -34,11 +35,13 @@
 
     componentDidMount: function() {
       ReviewStore.addReviewChangeListener(this._onChange);
+      ErrorStore.addErrorChangeListener(this._onChange);
       ApiUtil.fetchSingleReview(parseInt(this.props.params.reviewId));
     },
 
     componentWillReceiveProps: function(newProps) {
       this.setState({rev: ReviewStore.find(parseInt(this.props.params.reviewId))});
+      ErrorStore.removeErrorChangeListener(this._onChange);
       ApiUtil.fetchSingleReview(parseInt(this.props.params.reviewId));
     },
 
@@ -50,6 +53,13 @@
       return(
         <div className="review-new">
           <div className="review-form">
+            <ul className="errors">
+              {
+                this.state.errors.map(function(error) {
+                  return <li>{error}</li>;
+                })
+              }
+            </ul>
             <h3>Edit Your Review for {this.state.professor.name}</h3>
 
             <br/>

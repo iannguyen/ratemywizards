@@ -29,7 +29,7 @@ class Api::ReviewsController < ApplicationController
     if @review.update(review_params)
       render template: 'api/users/show'
     else
-      render json: :unprocessable_entity, status: 422
+      render json: { failures: @review.errors.full_messages }, status: 422
     end
   end
 

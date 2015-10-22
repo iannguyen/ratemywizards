@@ -1,6 +1,6 @@
 class Api::ProfessorsController < ApplicationController
   before_action :require_sign_in!, only: [:new, :create, :edit, :update]
-  
+
   def index
     @professors = Professor.includes(:house).includes(:reviews).all
     render :index
@@ -16,8 +16,7 @@ class Api::ProfessorsController < ApplicationController
       flash[:errors] = ["Professor added successfully"]
       render json: @professor
     else
-      flash[:errors] = @professor.errors.full_messages
-      render json: :unprocessable_entity, status: 422
+      render json: { failures: @professor.errors.full_messages }, status: 422
     end
   end
 
@@ -36,8 +35,7 @@ class Api::ProfessorsController < ApplicationController
       flash[:errors] = ["Wizard successfully Created!"]
       render :show
     else
-      flash[:errors] = @professor.errors.full_messages
-      render json: :unprocessable_entity, status: 422
+      render json: { failures: @professor.errors.full_messages }, status: 422
     end
   end
 

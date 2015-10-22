@@ -79,6 +79,10 @@
         success: function(response) {
           ApiActions.receiveProfessor(response);
           window.location = "/#/professors/" + response.id;
+        },
+        error: function(errors) {
+          debugger;
+          ApiActions.receiveErrors(errors.responseJSON.failures);
         }
       });
     },

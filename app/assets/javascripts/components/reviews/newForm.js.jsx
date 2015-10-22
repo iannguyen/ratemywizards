@@ -53,9 +53,6 @@
       ErrorStore.removeErrorChangeListener(this._onChange);
     },
 
-    // componentWillUpdate: function() {
-    // },
-
     render: function() {
       if (this.prof === undefined) {return <div></div>;}
       return(
