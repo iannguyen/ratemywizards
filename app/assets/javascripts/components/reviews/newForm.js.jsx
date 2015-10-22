@@ -9,7 +9,8 @@
       body: "",
       ability: null,
       easiness: null,
-      helpfulness: null
+      helpfulness: null,
+      errors : []
     },
 
     getInitialState: function() {
@@ -29,32 +30,45 @@
           review[key] = this.state[key];
         }
       }.bind(this));
-        ApiUtil.createReview(review, function() {
-          this.props.history.pushState(null, '/professors/' + this.props.params.professorId, {});
-        }.bind(this));
-        this.setState(this.defaultAttributes);
+      ApiUtil.createReview(review);
     },
 
     _onChange: function() {
-      this.setState({prof: ProfessorStore.find(parseInt(this.props.params.professorId))});
+      this.prof = ProfessorStore.find(parseInt(this.props.params.professorId));
+      if (ErrorStore.all().length !== 0) {
+        this.setState({ errors: ErrorStore.all() });
+      } else {
+        this.setState(this.defaultAttributes);
+      }
     },
 
     componentDidMount: function() {
       ProfessorStore.addProfessorChangeListener(this._onChange);
+      ErrorStore.addErrorChangeListener(this._onChange);
       ApiUtil.fetchSingleProfessor(parseInt(this.props.params.professorId));
     },
 
-    componentWillReceiveProps: function(newProps) {
-      this.setState({prof: ProfessorStore.find(parseInt(this.props.params.professorId))});
-      ApiUtil.fetchSingleProfessor(parseInt(this.props.params.professorId));
+    componentwillUnmount: function() {
+      ProfessorStore.removeProfessorChangeListener(this._onChange);
+      ErrorStore.removeErrorChangeListener(this._onChange);
     },
+
+    // componentWillUpdate: function() {
+    // },
 
     render: function() {
-      if (this.state.prof === undefined) { return <div></div>; }
+      if (this.prof === undefined) {return <div></div>;}
       return(
         <div className="review-new">
+          <ul className="errors">
+            {
+              this.state.errors.map(function(error) {
+                return <li>{error}</li>;
+              })
+            }
+          </ul>
           <div className="review-form">
-            <h3>Create a Review for {this.state.prof.name}</h3>
+            <h3>Create a Review for {this.prof.name}</h3>
 
             <br/>
 

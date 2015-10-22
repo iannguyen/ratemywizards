@@ -18,12 +18,11 @@
         data: {review: data},
         success: function(professor) {
           ApiActions.receiveProfessor(professor);
-          callback && callback(professor.id);
+          window.location = "/#/professors/" + professor.id;
         },
-        // error: function(errors) {
-        //   debugger;
-        //   ApiActions.receiveErrors(errors.responseJSON.failures);
-        // }
+        error: function(errors) {
+          ApiActions.receiveErrors(errors.responseJSON.failures);
+        }
       });
     },
     editReview: function(id, data) {
@@ -132,8 +131,9 @@
       $.ajax({
         url: "/api/professors/" + id,
         method: "get",
-        success: function(response) {
-          ApiActions.receiveProfessor(response);
+        success: function(professor) {
+          ApiActions.receiveProfessor(professor);
+          console.log(professor);
         }
       });
     },

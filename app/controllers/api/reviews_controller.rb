@@ -10,7 +10,6 @@ class Api::ReviewsController < ApplicationController
     if @review.save
       render json: @review
     else
-      flash[:errors] = @review.errors.full_messages
       render json: { failures: @review.errors.full_messages }, status: 422
     end
   end
@@ -30,7 +29,6 @@ class Api::ReviewsController < ApplicationController
     if @review.update(review_params)
       render template: 'api/users/show'
     else
-      flash[:errors] = @review.errors.full_messages
       render json: :unprocessable_entity, status: 422
     end
   end
@@ -43,7 +41,6 @@ class Api::ReviewsController < ApplicationController
   def destroy
     @review = Review.find(params[:id])
     @review.destroy!
-    flash[:errors] = ["Review Deleted successfully"]
     @user = User.includes(:reviews).find(current_user.id)
     # model and db aren't always synched
     render template: 'api/users/show'

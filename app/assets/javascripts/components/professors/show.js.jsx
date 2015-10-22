@@ -67,7 +67,7 @@
         <div id="professor-show">
           <div id="professor-bio" className={this.getHouseBanner()}>
 
-            <img className="professor-pic" src={this.state.prof.image_url} onClick={this.createReview}></img>
+            <img className="professor-pic" src={this.state.prof.image_url} onClick={this.createReview} professor={this.state.prof}></img>
 
             <div className="professor-info">
               <h2>{this.state.prof.name}</h2>
