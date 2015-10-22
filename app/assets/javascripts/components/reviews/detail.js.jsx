@@ -45,6 +45,7 @@
     render: function() {
       var review = this.props.review;
       var showOrHide = this.anonymousCheck();
+      var pluralize = this.props.review.likeCount > 1 ? "s" : "";
         return(
           <div className="review-detail" onClick={this.likeReview}>
             <div className="review-ratings">
@@ -58,7 +59,11 @@
                 <li>Ability: {review.ability}</li>
                 <li>Easiness: {review.easiness}</li>
                 <li>Helpfulness: {review.helpfulness}</li>
-                <li className="like-count">{this.props.review.likeCount}</li>
+                  {
+                    this.props.review.likeCount === 0 ?
+                      <div></div> :
+                        <div className="like-count">{this.props.review.likeCount} wizard{pluralize} found this review helpful.</div>
+                  }
               </ul>
             </div>
             <div className="review-description">

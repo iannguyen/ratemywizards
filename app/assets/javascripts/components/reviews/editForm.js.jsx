@@ -16,6 +16,7 @@
 
     editReview: function(e) {
       e.preventDefault();
+      ApiUtil.clearErrors();
       var review = {};
       Object.keys(this.state).forEach(function(key) {
         if(key === 'anonymous') {

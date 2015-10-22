@@ -17,6 +17,7 @@
 
     createProfessor: function(e) {
       e.preventDefault();
+      ApiUtil.clearErrors();
       var prof = {};
       Object.keys(this.state).forEach(function(key) {
         if (key === "house_id") {

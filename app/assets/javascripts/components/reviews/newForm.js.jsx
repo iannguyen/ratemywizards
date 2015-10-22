@@ -19,6 +19,7 @@
 
     createReview: function(e) {
       e.preventDefault();
+      ApiUtil.clearErrors();
       var review = {};
       review.professor_id = parseInt(this.props.params.professorId);
       Object.keys(this.state).forEach(function(key) {
@@ -51,13 +52,12 @@
     componentwillUnmount: function() {
       ErrorStore.removeErrorChangeListener(this._onChange);
       ProfessorStore.removeProfessorChangeListener(this._onChange);
-      ApiUtil.clearErrors();
     },
 
     render: function() {
       if (this.prof === undefined) {return <div></div>;}
       return(
-        <div className="review-new">
+        <div className="review-new" onClick={this.clearErrors}>
           <ul id="errors">
             {
               this.state.errors.map(function(error) {

@@ -152,18 +152,15 @@
       });
     },
     createLike: function(likeObj) {
-      debugger;
       $.ajax({
         url: "api/reviews/" + likeObj.review_id + "/likes",
         method: "post",
         data: {like: likeObj},
         success: function(professor) {
-          debugger;
           ApiActions.receiveProfessor(professor);
           console.log(professor);
         },
         error: function(error) {
-          debugger;
         },
       });
     },
