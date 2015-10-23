@@ -22,6 +22,21 @@ html *{
   font-family: Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times New Roman”, serif;
 }
 
+body {
+  height: 91vh;
+  width: 100%;
+  overflow-y: auto;
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  display: block;
+  padding-top: 70px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 div.container {
   width: 95%;
 }
@@ -78,16 +93,6 @@ ul#errors {
 ul#errors li{
   display: inline;
   padding: 10px;
-}
-body {
-  height: 91vh;
-  width: 100%;
-  overflow-y: auto;
-  background-size: cover;
-  background-position: bottom;
-  background-attachment: fixed;
-  display: block;
-  padding-top: 70px;
 }
 body.office {
   background-image: url('http://res.cloudinary.com/dms46o1eu/image/upload/v1444806956/Dumbledores-Office_nifxrl.jpg');
