@@ -152,7 +152,7 @@
     },
     createLike: function(likeObj) {
       $.ajax({
-        url: "api/reviews/" + likeObj.review_id + "/likes",
+        url: "/api/reviews/" + likeObj.review_id + "/likes",
         method: "post",
         data: {like: likeObj},
         success: function(professor) {
@@ -161,6 +161,17 @@
         error: function(errors) {
           ApiActions.receiveErrors(errors.responseJSON.failures);
         },
+      });
+    },
+    deleteLike: function(unlikeObj) {
+      debugger;
+      $.ajax({
+        url: "/api/reviews/" + unlikeObj.review_id + "/likes/" + unlikeObj.like_id,
+        method: "delete",
+        success: function(professor) {
+          debugger;
+          ApiActions.receiveProfessor(professor);
+        }
       });
     },
     signIn: function() {

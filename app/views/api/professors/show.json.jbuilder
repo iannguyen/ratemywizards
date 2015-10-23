@@ -14,7 +14,7 @@ json.reviews do
       :body, :user_id
     )
   json.user review.user, :username, :image_url
-  json.likes review.likes, :user_id
+  json.likes review.likes, :id, :user_id, :review_id
   json.likeCount review.likes.length
   end
 end

@@ -10,7 +10,7 @@ json.likes do
   json.array!(@review.likes) do |like|
     json.extract!(
       like,
-      :user_id
+      :id, :user_id, :review_id
     )
   end
 end

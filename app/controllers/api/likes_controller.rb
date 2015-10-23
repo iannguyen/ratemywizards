@@ -18,8 +18,10 @@ class Api::LikesController < ApplicationController
 
   def destroy
     @like = Like.find(params[:id])
+    @review = Review.find(@like.review_id)
     @like.destroy
-    render json: {}
+    @professor = Professor.includes(:house).includes(reviews: [:user, :likes]).find(@review.professor_id)
+    render template: "api/professors/show"
   end
 
   private
