@@ -70,6 +70,7 @@ div.review-ratings li {
 }
 
 div.like-count {
+  font-size: 1vw;
   position: relative;
   float: right;
   bottom: 50%;
@@ -78,6 +79,7 @@ div.like-count {
 div.review-description {
   font-style: normal;
   font-size: 18px;
+  font-size: 1vw;
   margin: 0 auto;
   height: 60%;
   width: 80%;
@@ -95,7 +97,7 @@ div.like-button {
   bottom: 20%;
 }
 button.like.btn {
-  font-size: 16px;
+  font-size: 18px;
   position: relative;
   float: right;
   left: 10%;

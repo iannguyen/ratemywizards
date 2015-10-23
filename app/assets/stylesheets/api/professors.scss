@@ -52,6 +52,9 @@ div.professor-description ul {
   top: 50%;
   transform: translateY(-50%);
 }
+div.professor-description li:first-child {
+  font-size: 1vw;
+}
 div.professor-description li {
   padding: 10px;
 }
@@ -95,6 +98,7 @@ div.professor-item h3 {
 }
 div.professor-item ul.professor-overall{
   font-size: 16px;
+  font-size: 1vw; 
   height: 80%;
   display: block;
   top: 50%;
