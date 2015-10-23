@@ -32,6 +32,7 @@
               return <HouseTab house={house} key={house.id}/>;
             })
           }
+
         </div>
       );
     }

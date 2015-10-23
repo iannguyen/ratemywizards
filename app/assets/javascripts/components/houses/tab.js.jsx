@@ -9,7 +9,17 @@
     showDetail: function() {
       var url = '/houses/' + this.props.house.id;
       this.history.pushState(null, '/houses/' + this.props.house.id, {});
+      this.scrollNow();
     },
+
+    scrollNow: function() {
+        $.smoothScroll({
+          scrollElement: $('div.child'),
+          scrollTarget: 'div.house-tab',
+          offset: -25
+        });
+    },
+
 
     render: function() {
       return (
