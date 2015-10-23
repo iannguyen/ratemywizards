@@ -79,7 +79,7 @@ div.professor-item {
 }
 
 div.professor-item:hover {
-  background-color: rgba(255,255,255,0.05);
+  background-color: rgba(255,255,255,0.01);
   -webkit-filter: brightness(110%);
   -moz-filter:brightness(110%); /* Firefox */
   -ms-filter:brightness(110%); /* IE 9 */
@@ -98,7 +98,7 @@ div.professor-item h3 {
 }
 div.professor-item ul.professor-overall{
   font-size: 16px;
-  font-size: 1vw; 
+  font-size: 1vw;
   height: 80%;
   display: block;
   top: 50%;
@@ -155,6 +155,10 @@ img.professor-pic:hover {
 
 button.create:hover {
   background-color: rgba(255,255,255,0.05);
+}
+button.upload-button:hover {
+  cursor: inherit;
+  color: rgb(125, 255, 0);
 }
 
 .gryffindor {

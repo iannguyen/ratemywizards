@@ -46,7 +46,7 @@ div.review-detail {
   transition: all 0.5s ease;;
 }
 div.review-detail:hover {
-  background-color: rgba(255,255,255,0.05);
+  background-color: rgba(255,255,255,0.1);
   -webkit-filter: brightness(110%);
   -moz-filter:brightness(110%); /* Firefox */
   -ms-filter:brightness(110%); /* IE 9 */
@@ -96,12 +96,23 @@ div.like-button {
   position: relative;
   bottom: 20%;
 }
-button.like.btn {
+button.like {
   font-size: 18px;
   position: relative;
   float: right;
   left: 10%;
   padding: 3px;
+  font-size: 18px;
+  color: ivory;
+  cursor: inherit;
+}
+button.like:hover {
+  color: rgb(125, 255, 0);
+  cursor: inherit;
+}
+button.unlike:hover {
+  color: rgb(255, 50, 0);
+  cursor: inherit;
 }
 div.blur-text *{
   color: transparent;

@@ -20,7 +20,7 @@
 
     render: function() {
       return(
-        <button className="btn upload-button" onClick={this.upload}>
+        <button className="upload-button" onClick={this.upload}>
           Change this Wizard's Photo!
         </button>
       );

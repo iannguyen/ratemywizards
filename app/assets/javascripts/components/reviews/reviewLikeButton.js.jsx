@@ -53,9 +53,9 @@
     displayOrHide: function() {
       var display;
       if (window.CURRENT_USER_ID && !this.state.liked) {
-        display =  (<button className="like btn" onClick={this.likeReview}>Like!</button>);
+        display =  (<button className="like" onClick={this.likeReview}>Like!</button>);
       } else if (window.CURRENT_USER_ID && this.state.liked){
-        display = (<button className="like btn" onClick={this.unlikeReview}>Unlike!</button>);
+        display = (<button className="unlike" onClick={this.unlikeReview}>Unlike!</button>);
       }
       return display;
     },
