@@ -6,17 +6,17 @@
       return {review: this.props.review};
     },
 
-    _onChange: function() {
-      this.setState({ review: ReviewStore.find(parseInt(this.props.review.id)) });
-    },
-
-    componentDidMount: function() {
-      ReviewStore.addReviewChangeListener(this._onChange);
-    },
-
-    componentWillUnmount: function() {
-      ReviewStore.removeReviewChangeListener(this._onChange);
-    },
+    // _onChange: function() {
+    //   this.setState({ review: ReviewStore.find(parseInt(this.props.review.id)) });
+    // },
+    //
+    // componentDidMount: function() {
+    //   ReviewStore.addReviewChangeListener(this._onChange);
+    // },
+    //
+    // componentWillUnmount: function() {
+    //   ReviewStore.removeReviewChangeListener(this._onChange);
+    // },
 
     anonymousCheck: function() {
       var hidden = {};

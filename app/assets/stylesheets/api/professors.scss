@@ -58,6 +58,9 @@ div.professor-description li:first-child {
 div.professor-description li {
   padding: 10px;
 }
+div.professor-description li.rate-this {
+  font-style: italic;
+}
 
 div.professor-item {
   height: 95%;
@@ -155,6 +158,9 @@ img.professor-pic:hover {
 
 button.create:hover {
   background-color: rgba(255,255,255,0.05);
+}
+button.upload-button {
+  font-style: italic;
 }
 button.upload-button:hover {
   cursor: inherit;

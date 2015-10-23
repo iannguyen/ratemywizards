@@ -20,7 +20,7 @@
 
     render: function() {
       return(
-        <button className="upload-button" onClick={this.upload}>
+        <button className="animated infinite pulse upload-button" onClick={this.upload}>
           Change this Wizard's Photo!
         </button>
       );

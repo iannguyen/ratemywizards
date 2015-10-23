@@ -68,9 +68,9 @@
 
           <input type="text" onFocus={this.focusedTrue}  onBlur={this.focusedFalse} onChange={this.handleInput} value={this.state.inputValue} />
 
-          <h2 className="search-heading" onClick={this.createProfessor}>..or Add one to Rate!</h2>
+          <h2 className="animated infinite pulse search-heading" onClick={this.createProfessor}>..or Add one to Rate!</h2>
 
-            <ul id="search-results">
+            <ul id="search-results" className="animated slideInUp">
               {
                 searchResults.map(function(result) {
                   if (typeof result === "string")
@@ -79,7 +79,7 @@
                   } else
                   {
                     return (
-                      <li className={result.house.name.toLowerCase() + " search-result"}>
+                      <li className={result.house.name.toLowerCase() + " search-result animated fadeIn"}>
                         <ProfessorItem key={result.id} professor={result}/>
                       </li>
                     );

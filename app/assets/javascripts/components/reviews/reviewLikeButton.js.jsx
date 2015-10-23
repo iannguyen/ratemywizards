@@ -9,22 +9,26 @@
     _onChange: function() {
       this.setState({liked: this.hasLiked()});
     },
-
-    componentDidMount: function() {
-      ProfessorStore.addProfessorChangeListener(this._onChange);
-    },
-
-    componentWillUnmount: function() {
-      ProfessorStore.addProfessorChangeListener(this._onChange);
-    },
+    //
+    // componentDidMount: function() {
+    //   ProfessorStore.addProfessorChangeListener(this._onChange);
+    // },
+    //
+    // componentWillUnmount: function() {
+    //   ProfessorStore.addProfessorChangeListener(this._onChange);
+    // },
 
     likeReview: function(e) {
       e.preventDefault();
-      ApiUtil.createLike({review_id: this.props.review.id});
+      var that = this;
+      ApiUtil.createLike({review_id: this.props.review.id}, function() {
+        that._onChange();
+      });
     },
 
     unlikeReview: function(e) {
       e.preventDefault();
+      var that = this;
       var userLike;
       this.props.review.likes.forEach(function(like) {
         if(like.user_id === window.CURRENT_USER_ID) {
@@ -36,7 +40,9 @@
         like_id: userLike.id
       };
       if (userLike) {
-        ApiUtil.deleteLike(unlikeObj);
+        ApiUtil.deleteLike(unlikeObj, function() {
+          that._onChange();
+        });
       }
     },
 

@@ -18,7 +18,7 @@
         toggleStatus = ApiUtil.signIn;
       } else {
         welcome = "You're a wizard,  " + window.CURRENT_USER + " ! ";
-        userShow = "";
+        userShow = "/#/users/" + window.CURRENT_USER_ID;
         status = 'Sign Out';
         toggleStatus = ApiUtil.signOut;
       }
@@ -34,9 +34,6 @@
       var myAudio = document.getElementById("hpmusic");
       myAudio.volume = 0.3;
       myAudio.autoplay = false;
-    },
-    currentUserShow: function() {
-      this.history.pushState(null, "/users/" + window.CURRENT_USER_ID);
     },
 
     render: function() {

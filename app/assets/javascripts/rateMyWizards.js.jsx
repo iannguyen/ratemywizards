@@ -4,12 +4,16 @@
   var Route = ReactRouter.Route;
   var IndexRoute = ReactRouter.IndexRoute;
 
+  var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
+
   var App = React.createClass ({
     render: function() {
       return (
-        <div id='app'>
-          {this.props.children}
-        </div>
+        <ReactCSSTransitionGroup transitionName="example" transitionAppear={true} transitionAppearTimeout={500}>
+          <div id='app'>
+            {this.props.children}
+          </div>
+        </ReactCSSTransitionGroup>
       );
     }
   });

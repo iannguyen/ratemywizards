@@ -65,7 +65,7 @@
       var averages = this.getProfAverage();
       return (
         <div id="professor-show">
-          <div id="professor-bio" className={this.getHouseBanner()}>
+          <div id="professor-bio" className={"animated slideInDown " + this.getHouseBanner()}>
 
             <img className="professor-pic" src={this.state.prof.image_url} onClick={this.createReview} professor={this.state.prof}></img>
 
@@ -86,12 +86,12 @@
             <div className="professor-description">
               <ul>
                 <li className="description">{this.state.prof.description}</li>
-                <li className="rate-this">Rate {this.state.prof.name} by casting lumos on their face.</li>
+                <li className="animated infinite pulse rate-this">Rate {this.state.prof.name} by casting lumos on their face.</li>
               </ul>
             </div>
 
           </div>
-          <ul id={averages.ability === 0 ? 'blank' : 'review-list'}>
+          <ul id={averages.ability === 0 ? 'blank' : 'review-list'} className="animated fadeInUp">
             {
               this.state.reviews.map(function(review) {
                 return(

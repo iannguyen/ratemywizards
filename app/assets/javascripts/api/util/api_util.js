@@ -150,25 +150,27 @@
         }
       });
     },
-    createLike: function(likeObj) {
+    createLike: function(likeObj, callback) {
       $.ajax({
         url: "/api/reviews/" + likeObj.review_id + "/likes",
         method: "post",
         data: {like: likeObj},
         success: function(professor) {
           ApiActions.receiveProfessor(professor);
+          callback & callback();
         },
         error: function(errors) {
           ApiActions.receiveErrors(errors.responseJSON.failures);
         },
       });
     },
-    deleteLike: function(unlikeObj) {
+    deleteLike: function(unlikeObj, callback) {
       $.ajax({
         url: "/api/reviews/" + unlikeObj.review_id + "/likes/" + unlikeObj.like_id,
         method: "delete",
         success: function(professor) {
           ApiActions.receiveProfessor(professor);
+          callback & callback();
         }
       });
     },
