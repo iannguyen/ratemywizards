@@ -164,12 +164,10 @@
       });
     },
     deleteLike: function(unlikeObj) {
-      debugger;
       $.ajax({
         url: "/api/reviews/" + unlikeObj.review_id + "/likes/" + unlikeObj.like_id,
         method: "delete",
         success: function(professor) {
-          debugger;
           ApiActions.receiveProfessor(professor);
         }
       });

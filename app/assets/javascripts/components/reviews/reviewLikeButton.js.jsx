@@ -25,7 +25,6 @@
 
     unlikeReview: function(e) {
       e.preventDefault();
-      debugger;
       var userLike;
       this.props.review.likes.forEach(function(like) {
         if(like.user_id === window.CURRENT_USER_ID) {
@@ -55,7 +54,7 @@
       var display;
       if (window.CURRENT_USER_ID && !this.state.liked) {
         display =  (<button className="like btn" onClick={this.likeReview}>Like!</button>);
-      } else {
+      } else if (window.CURRENT_USER_ID && this.state.liked){
         display = (<button className="like btn" onClick={this.unlikeReview}>Unlike!</button>);
       }
       return display;
