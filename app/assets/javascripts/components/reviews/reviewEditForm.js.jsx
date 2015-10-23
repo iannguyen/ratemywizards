@@ -44,11 +44,16 @@
       ApiUtil.fetchSingleReview(parseInt(this.props.params.reviewId));
     },
 
+    componentWillUnmount: function() {
+      ReviewStore.addReviewChangeListener(this._onChange);
+      ErrorStore.addErrorChangeListener(this._onChange);
+      ApiUtil.clearErrors();
+    },
+
     componentWillReceiveProps: function(newProps) {
       this.setState({rev: ReviewStore.find(parseInt(this.props.params.reviewId))});
       ErrorStore.removeErrorChangeListener(this._onChange);
       ApiUtil.fetchSingleReview(parseInt(this.props.params.reviewId));
-      ApiUtil.clearErrors();
     },
 
     render: function() {

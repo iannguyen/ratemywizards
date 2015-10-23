@@ -49,15 +49,16 @@
       ApiUtil.fetchSingleProfessor(parseInt(this.props.params.professorId));
     },
 
-    componentwillUnmount: function() {
+    componentWillUnmount: function() {
       ErrorStore.removeErrorChangeListener(this._onChange);
       ProfessorStore.removeProfessorChangeListener(this._onChange);
+      ApiUtil.clearErrors();
     },
 
     render: function() {
       if (this.prof === undefined) {return <div></div>;}
       return(
-        <div className="review-new" onClick={this.clearErrors}>
+        <div className="review-new">
           <ul id="errors">
             {
               this.state.errors.map(function(error) {

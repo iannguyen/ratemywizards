@@ -41,7 +41,7 @@
       ErrorStore.addErrorChangeListener(this._onChange);
     },
 
-    componentwillUnmount: function() {
+    componentWillUnmount: function() {
       ErrorStore.removeErrorChangeListener(this._onChange);
       ApiUtil.clearErrors();
     },
