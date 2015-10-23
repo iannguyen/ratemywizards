@@ -4,7 +4,7 @@
   root.Main = React.createClass({
     render: function() {
       return(
-        <div id="main">
+        <div id="main" className="">
           <SearchBar />
           <HouseIndex />
         </div>

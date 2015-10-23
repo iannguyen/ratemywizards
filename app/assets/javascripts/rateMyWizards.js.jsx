@@ -9,7 +9,7 @@
   var App = React.createClass ({
     render: function() {
       return (
-        <ReactCSSTransitionGroup transitionName="example" transitionAppear={true} transitionAppearTimeout={500}>
+        <ReactCSSTransitionGroup transitionName="homeFade" transitionAppear={true} transitionAppearTimeout={500}>
           <div id='app'>
             {this.props.children}
           </div>
