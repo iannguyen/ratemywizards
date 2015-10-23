@@ -96,102 +96,102 @@ Slytherin = House.create!({
 Professor.create!({
   name: 'Albus Dumbledore',
   house_id: 1,
-  image_url: 'http://res.cloudinary.com/dms46o1eu/image/upload/v1444785684/ratemywizards/dumbledore_h2z9vq.jpg',
+  image_url: 'http://res.cloudinary.com/dms46o1eu/image/upload/c_scale,w_400/v1444785684/ratemywizards/dumbledore_h2z9vq.jpg',
   description: "Professor Albus Percival Wulfric Brian Dumbledore began as a transfiguration professor at Hogwarts School of Witchcraft and Wizardry, and later became headmaster. He was considered to be the most powerful wizard of his time, and is most famous for his defeat of Gellert Grindelwald, the discovery of the twelve uses of dragon's blood, and his work on alchemy with Nicolas Flamel."
   })
 Professor.create!({
   name: 'Minerva McGonagall',
-  house_id: 1, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/v1444785685/ratemywizards/mcgonagall_wgdx67.jpg',
+  house_id: 1, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/c_scale,w_400/v1444785685/ratemywizards/mcgonagall_wgdx67.jpg',
   description: "Professor Minerva McGonagall is a registered animagus and worked for the Ministry of Magic for two years before becoming a transfiguration professor at Hogwarts School of Witchcraft and Wizardry. She is also the head of Gryffindor house and Deputy Headmistress at Hogwarts."
   })
 Professor.create!({
   name: 'Severus Snape',
-   house_id: 4, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/v1444785689/ratemywizards/snape_tgccxm.jpg',
+   house_id: 4, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/c_scale,w_400/v1444785689/ratemywizards/snape_tgccxm.jpg',
    description: "During his time at Hogwarts Witchcraft and Wizardry, Professor Severus Snape was a Potions Master, Defense Against the Dark Arts professor, and head of Slytherin house. He played a very important role in the First and Second Wizarding Wars against Lord Voldemort."
    })
 Professor.create!({
   name: 'Pomona Sprout',
-   house_id: 3, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/v1444785692/ratemywizards/sprout_ubjjhe.png',
+   house_id: 3, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/c_scale,w_400/v1444785692/ratemywizards/sprout_ubjjhe.png',
    description: "Professor Pomona Sprout returned to Hogwarts School of Witchcraft and Wizardry after graduation to pursue her love of herbology. She is now head of Hufflepuff house and the herbology department."
    })
 Professor.create!({
   name: 'Rolanda Hooch',
-  house_id: 2, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/v1444785689/ratemywizards/hooch_giydvl.jpg',
+  house_id: 2, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/c_scale,w_400/v1444785689/ratemywizards/hooch_giydvl.jpg',
   description: "Madam Rolanda Hooch works as the flying instructor and quidditch referee and coach at Hogwarts School of Witchcraft and Wizardry. She was a member of her House's quidditch team during her years at school."
   })
 Professor.create!({
   name: 'Quirinus Quirrel',
-  house_id: 2, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/v1444785687/ratemywizards/quirrel_hlu1sd.jpg',
+  house_id: 2, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/c_scale,w_400/v1444785687/ratemywizards/quirrel_hlu1sd.jpg',
   description: "Quirinus Quirrell was a muggle studies professor at Hogwarts School of Witchcraft and Wizardry and later taught Defense Against the Dark Arts."
   })
 Professor.create!({
   name: 'Filius Flitwick',
-  house_id: 2, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/v1444785684/ratemywizards/flitwick_xn9seq.jpg',
+  house_id: 2, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/c_scale,w_400/v1444785684/ratemywizards/flitwick_xn9seq.jpg',
   description: "Professor Filius Flitwick is Charms Master and head of Ravenclaw house at Hogwarts School of Witchcraft and Wizardry. He is part-goblin."
   })
 Professor.create!({
   name: 'Gilderoy Lockhart',
-  house_id: 2, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/v1444785685/ratemywizards/lockhart_tpaxhh.jpg',
+  house_id: 2, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/c_scale,w_400/v1444785685/ratemywizards/lockhart_tpaxhh.jpg',
   description: "Gilderoy Lockhart was a professor of Defense Against the Dark Arts at Hogwarts School of Witchcraft and Wizardry. He has authored many books, most of which are autobiographies. Lockhart has also received many prestigious awards, such as Order of Merlin: Third Class, Honorary Member of the Dark Force Defense League, and five-time winner of Witch Weekly's Most Charming Smile Award. His favorite color is lilac."
   })
 Professor.create!({
   name: 'Remus Lupin',
-  house_id: 1, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/v1444785685/ratemywizards/lupin_ykdwii.jpg',
+  house_id: 1, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/c_scale,w_400/v1444785685/ratemywizards/lupin_ykdwii.jpg',
   description: "Professor Remus John Lupin taught Defense Against the Darks Arts at Hogwarts School of Witchcraft and Wizardry. He was afflicted with lycanthropy during his childhood, and is one of the creators of the Marauder's Map."
   })
 Professor.create!({
   name: 'Alastor Moody',
-  house_id: 3, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/v1444785686/ratemywizards/moody_msbs9x.jpg',
+  house_id: 3, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/c_scale,w_400/v1444785686/ratemywizards/moody_msbs9x.jpg',
   description: "Alastor 'Mad-Eye' Moody is considered to be the most famous Auror of modern time. He is a member of the Order of the Phoenix and taught Defense Against the Dark Arts at Hogwarts School of Witchcraft and Wizardry in 1994."
   })
 Professor.create!({
   name: 'Argus Filch',
-  house_id: 3, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/v1444785687/ratemywizards/filch_kicepz.jpg',
+  house_id: 3, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/c_scale,w_400/v1444785687/ratemywizards/filch_kicepz.jpg',
   description: "Argus Filch has been the caretaker of Hogwarts School of Witchcraft and Wizardry since 1973. He is a squib."
   })
 Professor.create!({
   name: 'Dolores Umbridge',
-  house_id: 4, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/v1444785684/ratemywizards/umbridge_n0w6lo.jpg',
+  house_id: 4, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/c_scale,w_400/v1444785684/ratemywizards/umbridge_n0w6lo.jpg',
   description: "Dolores Jane Umbridge became profesor of Defense Against the Dark Arts at Hogwarts School of Witchcraft and Wizardry in 1995 by order of the Ministry of Magic. Prior, she served as Senior Undersecretary to Minister for Magic under Ministers Cornelius Fudge, Rufus Scrimgeour, and Pius Thicknesse."
   })
 Professor.create!({
   name: 'Horace Slughorn',
-  house_id: 4, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/c_scale,w_472/v1444785696/ratemywizards/slughorn_i9kdj2.jpg',
+  house_id: 4, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/c_scale,w_400/c_scale,w_472/v1444785696/ratemywizards/slughorn_i9kdj2.jpg',
   description: "Professor Horace Slughorn was the Potions Master and head of Slytherin house at Hogwarts School of Witchcraft and Wizardry for 50 years before retiring in 1981. He was convinced to return to his post in 1996 by Albus Dumbledore."
   })
 Professor.create!({
   name: 'Sybill Trelawny',
-  house_id: 2, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/c_scale,w_460/v1444785684/ratemywizards/trelawny_fn9iol.jpg',
+  house_id: 2, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/c_scale,w_400/c_scale,w_460/v1444785684/ratemywizards/trelawny_fn9iol.jpg',
   description: "Sybill Trelawney is a seer and professor of divination at Hogwarts School of Witchcraft and Wizardry. She accurately predicted the escape of Peter Pettigrew and return of Lord Voldemort during the 1993-1994 school year."
   })
 Professor.create!({
   name: 'Rubeus Hagrid',
-  house_id: 1, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/v1444785685/ratemywizards/hagrid_mhu1j5.png',
+  house_id: 1, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/c_scale,w_400/v1444785685/ratemywizards/hagrid_mhu1j5.png',
   description: "Rubeus Hagrid is the gamekeeper at Hogwarts School of Witchcraft and Wizardry, and later assumed the post of Care of Magical Creatures professor in 1993. He is a half-giant."
   })
 Professor.create!({
   name: 'Charity Burbage',
-  house_id: 3, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/v1444785374/ratemywizards/Burbage_cxndnh.jpg',
+  house_id: 3, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/c_scale,w_400/v1444785374/ratemywizards/Burbage_cxndnh.jpg',
   description: "Charity Burbage was the professor of muggle studies at Hogwarts School of Witchcraft and Wizardry. She was murdered for her views during the Second Wizarding War."
   })
 Professor.create!({
   name: 'Poppy Pomfrey',
-  house_id: 3, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/c_scale,w_562/v1444785699/ratemywizards/pomfrey_tf0pxf.png',
+  house_id: 3, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/c_scale,w_400/c_scale,w_562/v1444785699/ratemywizards/pomfrey_tf0pxf.png',
   description: "Madam Pomfrey is the matron at Hogwarts School of Witchcraft and Wizardry and has been helping students for over 25 years."
   })
 Professor.create!({
   name: 'Septima Vector',
-  house_id: 2, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/v1444785684/ratemywizards/vector_clpxz9.jpg',
+  house_id: 2, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/c_scale,w_400/v1444785684/ratemywizards/vector_clpxz9.jpg',
   description: "Professor Vector is the Arithmancy professor at Hogwarts School of Witchcraft and Wizardry."
   })
 Professor.create!({
   name: 'Aurora Sinistra',
-  house_id: 2, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/v1444785687/ratemywizards/sinistra_tc4vrs.jpg',
+  house_id: 2, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/c_scale,w_400/v1444785687/ratemywizards/sinistra_tc4vrs.jpg',
   description: "Professor Sinistra teaches Astronomy at Hogwarts School of Witchcraft and Wizardry. Her classes are held on Wednesday nights."
   })
 Professor.create!({
   name: 'Irma Pince',
-  house_id: 2, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/v1444785687/ratemywizards/pince_pmci4e.png',
+  house_id: 2, image_url:'http://res.cloudinary.com/dms46o1eu/image/upload/c_scale,w_400/v1444785687/ratemywizards/pince_pmci4e.png',
   description: "Madam Pince is the librarian at Hogwarts School of Witchcraft and Wizardry."
   })
 
