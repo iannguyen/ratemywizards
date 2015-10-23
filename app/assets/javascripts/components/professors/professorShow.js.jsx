@@ -95,7 +95,7 @@
             {
               this.state.reviews.map(function(review) {
                 return(
-                  <li>
+                  <li className="review-detail-master">
                     <ReviewDetail key={review.id} review={review}/>
                   </li>
                 );

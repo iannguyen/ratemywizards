@@ -45,7 +45,6 @@ div.review-detail {
   -o-transition: all 0.5s ease; /* Opera */
   transition: all 0.5s ease;;
 }
-
 div.review-detail:hover {
   background-color: rgba(255,255,255,0.05);
   -webkit-filter: brightness(110%);
@@ -86,8 +85,14 @@ div.review-description {
 div.review-description p{
   padding: 5px;
   top: 50%;
-  transform: translateY(-25%);
+  transform: translateY(-40%);
   position: relative;
+}
+div.like-button {
+  height: 5px;
+  float: right;
+  position: relative;
+  bottom: 20%;
 }
 button.like.btn {
   font-size: 16px;
@@ -95,7 +100,6 @@ button.like.btn {
   float: right;
   left: 10%;
   padding: 3px;
-  z-index: 500;
 }
 div.blur-text *{
   color: transparent;

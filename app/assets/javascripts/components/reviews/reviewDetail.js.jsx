@@ -68,8 +68,8 @@
               <p>
                 {review.body}
               </p>
-              <LikeButton review={this.props.review}/>
             </div>
+              <LikeButton review={this.props.review}/>
           </div>
         );
     }

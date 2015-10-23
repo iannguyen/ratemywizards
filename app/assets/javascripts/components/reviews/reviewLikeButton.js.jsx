@@ -45,7 +45,7 @@
 
     render: function() {
       return(
-        <div>
+        <div className="like-button">
           {this.displayOrHide()}
         </div>
       );
