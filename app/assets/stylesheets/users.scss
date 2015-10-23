@@ -48,11 +48,22 @@ div.user-reviews {
   background-color: rgba(25,25,25,0.75);
   border-radius: 10px;
   box-shadow: 5px 5px 5px 5px black;
+  width: 70%;
+  overflow: hidden;
+  position: relative;
 }
-
 div.user-reviews h2 {
   text-align: center;
   width: 95%;
+}
+div.reviews-list {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: -20px; /* Decrease this value for cross-browser compatibility */
+  overflow: auto;
 }
 
 div.professor-thumb {

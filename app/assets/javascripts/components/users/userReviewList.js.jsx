@@ -9,7 +9,9 @@
     render: function() {
       var that = this;
       return(
-        <div className="user-reviews">
+        <div className="animated fadeInDown user-reviews">
+          <div className="reviews-list">
+
           <h2>My Reviews</h2>
           <ul className="review-list">
             {
@@ -18,6 +20,8 @@
               })
             }
           </ul>
+
+          </div>
         </div>
       );
     }

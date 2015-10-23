@@ -36,7 +36,7 @@
       if (this.state.user.reviews === undefined) { return <div></div>; }
       return(
         <div className="user-show">
-          <div className="user-bio">
+          <div className="animated fadeInUp user-bio">
 
             <img className="user-pic" src={this.checkUserImage()}></img>
 
