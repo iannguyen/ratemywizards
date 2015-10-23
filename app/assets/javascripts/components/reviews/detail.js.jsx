@@ -37,17 +37,12 @@
       window.location = "/#/users/" + this.props.review.user_id;
     },
 
-    likeReview: function(e) {
-      e.preventDefault();
-      ApiUtil.createLike({review_id: this.props.review.id});
-    },
-
     render: function() {
       var review = this.props.review;
       var showOrHide = this.anonymousCheck();
       var pluralize = this.props.review.likeCount > 1 ? "s" : "";
         return(
-          <div className="review-detail" onClick={this.likeReview}>
+          <div className="review-detail">
             <div className="review-ratings">
               <div className="review-bio">
                 {showOrHide.username}
@@ -59,17 +54,21 @@
                 <li>Ability: {review.ability}</li>
                 <li>Easiness: {review.easiness}</li>
                 <li>Helpfulness: {review.helpfulness}</li>
-                  {
-                    this.props.review.likeCount === 0 ?
-                      <div></div> :
-                        <div className="like-count">{this.props.review.likeCount} wizard{pluralize} found this review helpful.</div>
-                  }
+
               </ul>
+            {
+              this.props.review.likeCount === 0 ?
+                <div></div> :
+                  <div className="like-count">
+                        {this.props.review.likeCount} wizard{pluralize} found this review helpful.
+                  </div>
+            }
             </div>
             <div className="review-description">
               <p>
                 {review.body}
               </p>
+              <LikeButton review={this.props.review}/>
             </div>
           </div>
         );

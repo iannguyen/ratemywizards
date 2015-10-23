@@ -158,7 +158,8 @@
         success: function(professor) {
           ApiActions.receiveProfessor(professor);
         },
-        error: function(error) {
+        error: function(errors) {
+          ApiActions.receiveErrors(errors.responseJSON.failures);
         },
       });
     },

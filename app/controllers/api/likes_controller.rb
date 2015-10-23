@@ -12,7 +12,7 @@ class Api::LikesController < ApplicationController
       @professor = Professor.includes(:house).includes(reviews: [:user, :likes]).find(@review.professor_id)
       render template: "api/professors/show"
     else
-      render json: {}
+      render json: { failures: @like.errors.full_messages }, status: 422
     end
   end
 

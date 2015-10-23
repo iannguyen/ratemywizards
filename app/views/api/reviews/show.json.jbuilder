@@ -3,6 +3,7 @@ json.extract!(
   :id, :body, :ability, :easiness, :helpfulness, :anonymous
 )
 
+json.likeCount @review.likes.length
 json.user @review.user, :id, :username, :image_url
 json.professor @review.professor, :id, :name
 json.likes do
@@ -13,4 +14,3 @@ json.likes do
     )
   end
 end
-json.likeCount @review.likes.length

@@ -20,7 +20,7 @@ img.review-thumb {
 }
 
 ul#review-list {
-  font-size: 16px;
+  font-size: 18px;
   font-style: italic;
   position: relative;
   width: 90%;
@@ -55,13 +55,14 @@ div.review-detail:hover {
   filter:brightness(110%);
 }
 div.review-ratings {
+  width: 95%;
   height: 40%;
+  margin: auto;
 }
 div.review-ratings ul {
   top: 50%;
   transform: translateY(-50%);
   position: relative;
-  right: 1%;
 }
 div.review-ratings li {
   padding-left: 50px;
@@ -69,14 +70,15 @@ div.review-ratings li {
   display: inline;
 }
 
-div.review-ratings div.like-count {
-  right: 0;
-  top: 0;
-  position: absolute;
+div.like-count {
+  position: relative;
+  float: right;
+  bottom: 50%;
+  transform: translateY(50%);
 }
 div.review-description {
   font-style: normal;
-  font-size: 14px;
+  font-size: 18px;
   margin: 0 auto;
   height: 60%;
   width: 80%;
@@ -86,6 +88,14 @@ div.review-description p{
   top: 50%;
   transform: translateY(-50%);
   position: relative;
+}
+button.like.btn {
+  font-size: 16px;
+  position: relative;
+  float: right;
+  left: 10%;
+  padding: 3px;
+  z-index: 500;
 }
 div.blur-text *{
   color: transparent;
