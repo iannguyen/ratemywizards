@@ -48,7 +48,7 @@
 
     render: function() {
       return(
-        <div className="professor-create">
+        <div className="animated fadeInDownBig professor-create">
           <ul id="errors">
             {
               this.state.errors.map(function(error) {

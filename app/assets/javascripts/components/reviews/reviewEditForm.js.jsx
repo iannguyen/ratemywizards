@@ -62,7 +62,7 @@
         return <div></div>;
       }
       return(
-        <div className="review-new">
+        <div className="animated fadeInDownBig review-new">
             <ul id="errors">
               {
                 this.state.errors.map(function(error) {

@@ -104,12 +104,13 @@ div.review-content {
 }
 
 div.edit-and-delete {
+  font-style: italic;
   padding: 0;
   margin: auto;
   position: relative;
   left: 5%;
   width: 25%;
-  color: burlywood;
+  color: ivory;
 }
 
 div.options {
@@ -118,6 +119,16 @@ div.options {
   bottom: 25px;
 }
 
+button.edit-review {
+  color: ivory;
+  cursor: inherit;
+  text-shadow: 1px 1px 3px black;
+}
+button.delete-review {
+  color: ivory;
+  cursor: inherit;
+  text-shadow: 1px 1px 3px black;
+}
 button.edit-review:hover {
   color: rgb(255, 184, 0);
   cursor: inherit;
