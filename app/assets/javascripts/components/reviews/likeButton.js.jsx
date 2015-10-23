@@ -6,10 +6,6 @@
       return {liked: this.hasLiked()};
     },
 
-    componentWillReceiveProps: function(newProps) {
-      this.setState({liked: this.hasLiked()});
-    },
-
     _onChange: function() {
       this.setState({liked: this.hasLiked()});
     },
