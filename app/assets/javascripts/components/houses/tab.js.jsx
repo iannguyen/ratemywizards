@@ -20,7 +20,6 @@
         });
     },
 
-
     render: function() {
       return (
         <div className="house-tab" onClick={this.showDetail}>

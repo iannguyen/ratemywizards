@@ -26,7 +26,7 @@
           average.overall += review.easiness;
           average.overall += review.helpfulness;
         });
-        average.overall = Math.round((average.overall / average.count * 3)) / 10;
+        average.overall = Math.round((average.overall / average.count) / 10 * 3);
       }
       return average;
     },
