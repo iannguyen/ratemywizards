@@ -17,7 +17,7 @@
         switched = true;
       }
     });
-    if (!switched) { _house.push(house); }
+    if (!switched) { _houses.push(house); }
   };
 
   root.HouseStore = $.extend({}, EventEmitter.prototype, {

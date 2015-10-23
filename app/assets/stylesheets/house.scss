@@ -12,6 +12,7 @@ img.crest {
   text-align: center;
   z-index: 1;
   color: ivory;
+  z-index: 20;
 }
 
 .house-tab {
@@ -23,10 +24,11 @@ img.crest {
   margin: auto;
   text-align: center;
   color: ivory;
+  z-index: 0;
 }
 
 ul#house-detail-list {
-  padding-bottom: 10%;
+  padding-bottom: 20%;
   display: inherit;
   width: 50%;
   text-align: center;

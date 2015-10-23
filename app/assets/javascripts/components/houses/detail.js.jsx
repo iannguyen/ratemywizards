@@ -1,8 +1,6 @@
 (function(root) {
   'use strict';
 
-  var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
-
   root.HouseDetail = React.createClass({
     getStatefromStore: function() {
       var house  = HouseStore.find(parseInt(this.props.params.houseId));
@@ -39,7 +37,7 @@
 
       return(
         <div id="house-detail">
-          <ul id="house-detail-list" className="animated slideInUp">
+          <ul id="house-detail-list" className="animated fadeInUp">
             {
               this.state.house.professors.map(function(professor) {
                 return (
