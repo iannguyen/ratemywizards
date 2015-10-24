@@ -68,7 +68,7 @@
 
           <input type="text" onFocus={this.focusedTrue}  onBlur={this.focusedFalse} onChange={this.handleInput} value={this.state.inputValue} />
 
-          <h2 className="animated swing search-heading" onClick={this.createProfessor}>..or Add one to Rate!</h2>
+          <h2 className="animated swing search-heading" onClick={this.createProfessor}>...or Add one to Rate!</h2>
 
             <ul id="search-results" className="animated slideInUp">
               {

@@ -55,7 +55,8 @@ body {
   background-size: cover;
 }
 
-div.container {
+div#mainbody {
+  height: 95vh;
   width: 95%;
 }
 
@@ -130,6 +131,10 @@ body.great-hall-day {
 }
 
 /* Start http://www.cursors-4u.com */ body, a:hover {cursor: url(http://cur.cursors-4u.net/user/use-1/use160.cur), progress !important;} /* End http://www.cursors-4u.com */
+
+div.offsetter {
+  height: 1%;
+}
 
 span {
   color: ivory;

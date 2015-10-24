@@ -50,6 +50,8 @@
             {window.CURRENT_USER_ID === this.state.user.id ? <CLWUser/> : <div></div> }
 
             <br/>
+            <br/>
+            <br/>
 
             <h2>Total Reviews: {this.state.user.reviews.length}</h2>
 

@@ -3,10 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 div.user-show {
-  width: 100%;
+  width: 92%;
   height: 80vh;
   color: ivory;
   text-shadow: 1px 1px 3px black;
+  position: fixed;
 }
 
 div.user-show * {
@@ -104,6 +105,7 @@ div.review-content {
 }
 
 div.edit-and-delete {
+  float: right;
   font-style: italic;
   padding: 0;
   margin: auto;

@@ -1,11 +1,5 @@
 (function(root) {
   'use strict';
-  //
-  // var toggleStatus;
-  // var status;
-  // var welcome;
-  // var userShow;
-  // var back;
 
   root.NavBar = React.createClass ({
     mixins: [ReactRouter.History],
