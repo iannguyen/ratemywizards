@@ -44,7 +44,7 @@
     componentDidMount: function() {
       var myAudio = document.getElementById("hpmusic");
       myAudio.volume = 0.3;
-      myAudio.autoplay = false;
+      myAudio.autoplay = true;
     },
 
     playMusic: function () {
