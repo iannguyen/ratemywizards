@@ -14,12 +14,13 @@
     },
 
     getInitialState: function() {
+      debugger;
       return this.defaultAttributes;
     },
 
     createReview: function(e) {
       e.preventDefault();
-      ApiUtil.clearErrors();
+      debugger;
       var review = {};
       review.professor_id = parseInt(this.props.params.professorId);
       Object.keys(this.state).forEach(function(key) {
@@ -80,7 +81,7 @@
                   <select id="anonymous" name="anonymous" valueLink={this.linkState('anonymous')}>
                     <option selected disabled hidden value=''></option>
                     <option value="false">I don't care who sees!</option>
-                    <option value='true'>Put on Invisibility Cloak.</option>
+                    <option value="true">Put on Invisibility Cloak.</option>
                   </select>
                 </label>
               </div>
