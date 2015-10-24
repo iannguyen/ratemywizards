@@ -14,7 +14,6 @@ class UsersController < ApplicationController
     end
 
     if @user.save
-      flash[:errors] = ['Account created successfully!']
       sign_in!(@user)
     else
       flash.now[:errors] = @user.errors.full_messages

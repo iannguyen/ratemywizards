@@ -1,4 +1,7 @@
 <div class="animated fadeIn signin">
+  <ul id="errors">
+    <%= flash[:errors].join("<br>").html_safe if flash[:errors] %>
+  </ul>
   <div class="session-form">
     <h1 class="">Sign In</h1>
 

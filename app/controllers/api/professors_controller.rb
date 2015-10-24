@@ -13,7 +13,6 @@ class Api::ProfessorsController < ApplicationController
   def create
     @professor = Professor.new(professor_params)
     if @professor.save
-      flash[:errors] = ["Professor added successfully"]
       render json: @professor
     else
       render json: { failures: @professor.errors.full_messages }, status: 422
@@ -32,7 +31,6 @@ class Api::ProfessorsController < ApplicationController
   def update
     @professor = Professor.includes(:house).includes(reviews: :user).find(params[:id])
     if @professor.update(professor_params)
-      flash[:errors] = ["Wizard successfully Created!"]
       render :show
     else
       render json: { failures: @professor.errors.full_messages }, status: 422
