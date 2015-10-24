@@ -2,6 +2,8 @@ json.extract!(
   @user,
   :id, :username, :image_url
 )
+json.likes @user.likes
+json.likeCount @user.likes.length
 json.reviews do
   json.array!(@user.reviews) do |review|
     json.extract!(

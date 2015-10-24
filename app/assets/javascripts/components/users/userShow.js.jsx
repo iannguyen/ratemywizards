@@ -44,9 +44,13 @@
 
             {window.CURRENT_USER_ID === this.state.user.id ? <CLWUser/> : <div></div> }
 
-              <br/>
+            <br/>
 
             <h2>Total Reviews: {this.state.user.reviews.length}</h2>
+
+            <br/>
+
+            <h2>Total Likes: {this.state.user.likeCount}</h2>
 
           </div>
 
