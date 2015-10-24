@@ -38,11 +38,11 @@
       this.removeListener(USER_CHANGED, callback);
     },
 
-    addUserSChangeListener: function(callback) {
+    addUsersChangeListener: function(callback) {
       this.on(USERS_CHANGED, callback);
     },
 
-    removeUserSChangeListener: function(callback) {
+    removeUsersChangeListener: function(callback) {
       this.removeListener(USERS_CHANGED, callback);
     },
 

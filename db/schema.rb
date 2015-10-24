@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151021181833) do
+ActiveRecord::Schema.define(version: 20151024184525) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,15 +46,15 @@ ActiveRecord::Schema.define(version: 20151021181833) do
   add_index "professors", ["house_id"], name: "index_professors_on_house_id", using: :btree
 
   create_table "reviews", force: :cascade do |t|
-    t.text     "body",         null: false
-    t.boolean  "anonymous",    null: false
-    t.integer  "user_id",      null: false
-    t.integer  "professor_id", null: false
-    t.integer  "ability",      null: false
-    t.integer  "easiness",     null: false
-    t.integer  "helpfulness",  null: false
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.text     "body",                         null: false
+    t.integer  "user_id",                      null: false
+    t.integer  "professor_id",                 null: false
+    t.integer  "ability",                      null: false
+    t.integer  "easiness",                     null: false
+    t.integer  "helpfulness",                  null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.boolean  "anonymous",    default: false
   end
 
   add_index "reviews", ["ability"], name: "index_reviews_on_ability", using: :btree

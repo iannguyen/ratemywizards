@@ -1,33 +1,44 @@
 (function(root) {
   'use strict';
-
-  var toggleStatus;
-  var status;
-  var welcome;
-  var userShow;
-  var back;
+  //
+  // var toggleStatus;
+  // var status;
+  // var welcome;
+  // var userShow;
+  // var back;
 
   root.NavBar = React.createClass ({
     mixins: [ReactRouter.History],
 
-    getStatus: function() {
-      if (window.CURRENT_USER_ID === undefined) {
-        welcome = "Create an account, squib!";
-        userShow = "/users/new";
-        status = 'Sign In';
-        toggleStatus = ApiUtil.signIn;
-      } else {
-        welcome = "You're a wizard,  " + window.CURRENT_USER + " ! ";
-        userShow = "/#/users/" + window.CURRENT_USER_ID;
-        status = 'Sign Out';
-        toggleStatus = ApiUtil.signOut;
-      }
+    links: {
+      toggleStatus: "",
+      status: "",
+      welcome: "",
+      usershow: "",
+      back: ""
     },
 
-    playMusic: function () {
-      var tune = new Audio();
-      var myAudio = document.getElementById("hpmusic");
-      myAudio.volume = 0.3;
+    getInitialState: function() {
+      return (this.getStatus());
+    },
+
+    getStatus: function() {
+      if (window.CURRENT_USER_ID === undefined) {
+        this.links.welcome = "Create an account, squib!";
+        this.links.userShow = "/users/new";
+        this.links.status = 'Sign In';
+        this.links.toggleStatus = ApiUtil.signIn;
+      } else {
+        this.links.welcome = "You're a wizard,  " + window.CURRENT_USER + " ! ";
+        this.links.userShow = "/#/users/" + window.CURRENT_USER_ID;
+        this.links.status = 'Sign Out';
+        this.links.toggleStatus = ApiUtil.signOut;
+      }
+      return this.links;
+    },
+
+    _onChange: function() {
+      this.setState(this.getStatus());
     },
 
     componentDidMount: function() {
@@ -36,8 +47,13 @@
       myAudio.autoplay = false;
     },
 
+    playMusic: function () {
+      var tune = new Audio();
+      var myAudio = document.getElementById("hpmusic");
+      myAudio.volume = 0.3;
+    },
+
     render: function() {
-      this.getStatus();
       return (
         <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div id="navbar-brand" className="container">
@@ -57,17 +73,17 @@
                         <li>
                         </li>
                         <li>
-                          <a href="#" className="audio"><audio id="hpmusic" controls>
+                          <a href="#" className="audio"><audio id="hpmusic" controls autoplay>
                             <source  src="http://res.cloudinary.com/dms46o1eu/video/upload/v1445058621/hptheme_ac7dzk.mp3">
                             </source>
                           </audio>
                         </a>
                         </li>
                         <li>
-                            <a href={userShow}>{welcome}</a>
+                            <a href={this.links.userShow}>{this.links.welcome}</a>
                         </li>
                         <li>
-                            <a href="" onClick={toggleStatus}>{status}</a>
+                            <a href="" onClick={this.links.toggleStatus}>{this.links.status}</a>
                         </li>
                     </ul>
                 </div>

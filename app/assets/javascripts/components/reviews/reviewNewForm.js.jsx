@@ -77,8 +77,10 @@
                   Anonymous Review?
                   <br/>
                   <select id="anonymous" name="anonymous" valueLink={this.linkState('anonymous')}>
-                    <option selected value="false">I don't care who sees!</option>
-                    <option value="true">Put on Invisibility Cloak.</option>
+                    <option selected disabled hidden value=''></option>
+                    <option value="false">I don't care who sees!</option>
+                    <option value="true">Put on Invisibility Cloak.
+                    </option>
                   </select>
                 </label>
               </div>

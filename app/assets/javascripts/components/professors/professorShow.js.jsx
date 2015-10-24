@@ -79,6 +79,7 @@
                   }
                   <br />
                   <li>Total Reviews: {this.state.reviews.length}</li>
+                  <br/>
               </ul>
               { window.CURRENT_USER_ID ? <CLWProf professor={this.state.prof}/> : <div></div>}
             </div>
