@@ -123,11 +123,13 @@ button.edit-review {
   color: ivory;
   cursor: inherit;
   text-shadow: 1px 1px 3px black;
+  text-decoration: underline;
 }
 button.delete-review {
   color: ivory;
   cursor: inherit;
   text-shadow: 1px 1px 3px black;
+  text-decoration: underline;
 }
 button.edit-review:hover {
   color: rgb(255, 184, 0);
