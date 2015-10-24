@@ -96,7 +96,7 @@ input#professor-name:focus {
   outline: 0;
   background-color: rgba(0,0,0,0.1);
 }
-div.professor-create input.btn {
+div.professor-create button.create {
   background-color: rgba(0,0,0,0.9);
   border-bottom: none;
   box-shadow: 0 0 1pt 1pt gray;
@@ -104,8 +104,9 @@ div.professor-create input.btn {
   height: 35px;
   font-size: 18px;
 }
-div.professor-create input.btn:hover {
-  background-color: rgba(255,255,255,1);
+div.professor-create button.create:hover {
+  cursor: inherit;
+  background-color: rgba(255,255,255,.05);
   border-bottom: none;
   color: black;
 }

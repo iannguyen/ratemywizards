@@ -86,7 +86,7 @@
             <div className="professor-description">
               <ul>
                 <li className="description">{this.state.prof.description}</li>
-                <li className="animated infinite pulse rate-this">Rate {this.state.prof.name} by casting lumos on their face.</li>
+                <li className="animated infinite swing rate-this">Rate {this.state.prof.name} by casting lumos on their face.</li>
               </ul>
             </div>
 

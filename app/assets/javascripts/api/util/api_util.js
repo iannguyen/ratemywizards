@@ -12,18 +12,15 @@
       });
     },
     createReview: function(data) {
-      debugger;
       $.ajax({
         url: "/api/reviews",
         method: "post",
         data: {review: data},
         success: function(professor) {
-          debugger;
           ApiActions.receiveProfessor(professor);
           window.location = "/#/professors/" + professor.id;
         },
         error: function(errors) {
-          debugger;
           ApiActions.receiveErrors(errors.responseJSON.failures);
         }
       });
@@ -189,6 +186,8 @@
         url: "/session",
         method: "delete",
         success: function() {
+          window.CURRENT_USER = null;
+          window.CURRENT_USER_ID = null;
           window.location = "/";
         }
       });

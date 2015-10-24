@@ -40,7 +40,7 @@ div.signin input:focus {
   outline: 0;
   background-color: rgba(0,0,0,0.1);
 }
-div.signin input.btn {
+div.signin input.signin {
   background-color: rgba(0,0,0,0.5);
   border-bottom: none;
   box-shadow: 0 0 1pt 1pt gray;
@@ -49,11 +49,11 @@ div.signin input.btn {
   font-size: 18px;
   color: ivory;
 }
-div.signin input.btn:hover {
+div.signin input.signin:hover {
   color: ivory;
   border-bottom: none;
   cursor: inherit;
-  background-color: rgba(255,255,255,0.25);
+  background-color: rgba(255,255,255,0.05);
 }
 
 a.demo-signin-link {
