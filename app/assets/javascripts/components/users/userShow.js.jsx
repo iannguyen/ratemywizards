@@ -15,6 +15,11 @@
       this.setState(this.getStateFromStore());
     },
 
+    componentWillReceiveProps: function(newProps) {
+      this.setState({user: UserStore.find(parseInt(newProps.params.userId))});
+      ApiUtil.fetchSingleUser(newProps.params.userId);
+    },
+
     componentDidMount: function() {
       UserStore.addUserChangeListener(this._onChange);
       ApiUtil.fetchSingleUser(parseInt(this.props.params.userId));
