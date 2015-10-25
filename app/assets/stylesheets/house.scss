@@ -18,6 +18,57 @@ img.crest {
   padding: 10px;
 }
 
+.house-decoration {
+  height: 150px;
+  margin: auto;
+  background-color: rgba(0,0,0,0.6);
+  box-shadow: 5px 5px 5px 5px rgba(25, 25, 25, 0.5);
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  width: 75%;
+}
+
+.highest-rated a{
+  color: ivory;
+  text-shadow: 1px 1px 5px white;
+}
+.highest-rated a:hover{
+  color: white;
+  text-decoration: underline;
+  text-shadow: 3px 3px 10px white;
+}
+
+div.left {
+  float: left;
+  position: relative;
+  margin-left: 50px;
+  font-size: 30px;
+  text-shadow: 1px 1px 3px black;
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
+}
+div.right {
+  float: right;
+  position: relative;
+  margin-right: 50px;
+  font-size: 30px;
+  text-shadow: 1px 1px 3px black;
+  bottom: 50%;
+  transform: translateY(50%);
+  position: relative;
+}
+
+h1.house-name {
+  font-size: 60px;
+  text-shadow: 1px 1px 3px black;
+  top: 45%;
+  transform: translateY(-50%);
+  position: relative;
+  width: 25%;
+  margin: auto;
+}
+
 #house-detail {
   margin: auto;
   text-align: center;
@@ -33,6 +84,7 @@ ul#house-detail-list {
   color: ivory;
   list-style-type: none;
   position: absolute;
+  margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
   left: 0;
