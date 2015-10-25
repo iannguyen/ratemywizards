@@ -42,14 +42,13 @@ div.user-bio {
 
 div.user-reviews {
   font-size: 18px;
-  width: 70%;
   height: 100%;
   float: right;
   overflow-y: auto;
   background-color: rgba(25,25,25,0.75);
   border-radius: 10px;
   box-shadow: 5px 5px 5px 5px black;
-  width: 70%;
+  width: 69%;
   overflow: hidden;
   position: relative;
 }
@@ -74,6 +73,12 @@ div.professor-thumb {
   -ms-transition: all 0.5s ease; /* IE 9 */
   -o-transition: all 0.5s ease; /* Opera */
   transition: all 0.5s ease;
+}
+
+div.professor-thumb h5 {
+  position: relative;
+  padding: 0;
+  margin: 0;
 }
 
 div.professor-thumb:hover {
@@ -122,22 +127,22 @@ div.options {
 }
 
 button.edit-review {
-  color: ivory;
+  color: rgb(255, 184, 0);
   cursor: inherit;
   text-shadow: 1px 1px 3px black;
   text-decoration: underline;
 }
 button.delete-review {
-  color: ivory;
+  color: rgb(255, 59, 59);
   cursor: inherit;
   text-shadow: 1px 1px 3px black;
   text-decoration: underline;
 }
 button.edit-review:hover {
-  color: rgb(255, 184, 0);
+  text-shadow: 3px 3px 10px white;
   cursor: inherit;
 }
 button.delete-review:hover {
-  color: rgb(255, 59, 59);
+  text-shadow: 3px 3px 10px white; //glow
   cursor: inherit;
 }

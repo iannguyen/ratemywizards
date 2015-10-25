@@ -2,8 +2,20 @@
   height: 5%;
 }
 
+nav.navbar-inverse {
+  background-color: rgba(43,43,43,0.9);
+  border-color: #090909;
+}
+
+.nav-logo {
+  height: 45px;
+  width: auto;
+}
+
 a.navbar-brand {
   height: 100%;
+  margin: auto;
+  padding: 5px;
 }
 
 div.navbar-header {
@@ -16,4 +28,15 @@ div#navbar-brand {
 
 .audio {
   top: -5px;
+}
+
+nav.navbar-inverse ul.navbar-nav > li > a {
+  font-size: 18px;
+  color: ivory;
+  text-shadow: 3px 3px 5px grey;
+}
+
+nav.navbar-inverse ul.navbar-nav > li > a:hover {
+  color: white;
+  text-shadow: 5px 5px 10px white;
 }

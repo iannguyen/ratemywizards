@@ -2,10 +2,13 @@
   <ul id="errors">
     <%= flash[:errors].join("<br>").html_safe if flash[:errors] %>
   </ul>
+
   <div class=session-form>
+
+    <img class="logo-big" src="http://res.cloudinary.com/dms46o1eu/image/upload/v1445739296/Drawing2_oqv9vs.png">
+
     <h1>Create a New Account</h1>
 
-    <br/>
     <br/>
 
     <form action='<%= users_url %>' method="post" class="form">
@@ -30,7 +33,6 @@
       <br/>
       <br/>
 
-      <br/>
       <br/>
 
       <input class="signin" type="submit" value="Sign Up!">

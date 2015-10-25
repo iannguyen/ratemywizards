@@ -2,10 +2,13 @@
   <ul id="errors">
     <%= flash[:errors].join("<br>").html_safe if flash[:errors] %>
   </ul>
+
   <div class="session-form">
+
+    <img class="logo-big" src="http://res.cloudinary.com/dms46o1eu/image/upload/v1445739296/Drawing2_oqv9vs.png">
+
     <h1 class="">Sign In</h1>
 
-    <br/>
     <br/>
 
     <form action='<%= session_url %>' class="form" method="post">
@@ -27,9 +30,12 @@
       <br/>
 
       <input class="signin" type="submit" value="Sign In!">
+
       <br/>
       <br/>
-      <a class="demo-signin-link" href="/session/demo">...Or Sign In as a Guest!</a>
+      <br/>
+
+      <a class="animated infinite pulse demo-signin-link" href="/session/demo">...Or Sign In as a Guest!</a>
     </form>
 
   </div>

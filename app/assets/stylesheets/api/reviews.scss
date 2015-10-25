@@ -25,7 +25,7 @@ ul#review-list {
   position: relative;
   width: 90%;
   text-align: center;
-  margin: 15% auto;
+  margin: 200px auto;
   border-radius: 10px;
   border: #2b2b2b solid 1px;
   height: 75%;
@@ -62,6 +62,7 @@ div.review-ratings ul {
   top: 50%;
   transform: translateY(-50%);
   position: relative;
+  color: khaki;
 }
 div.review-ratings li {
   padding-left: 50px;
@@ -103,7 +104,11 @@ button.like {
   left: 10%;
   padding: 3px;
   font-size: 18px;
-  color: ivory;
+  color: bisque;
+  cursor: inherit;
+}
+button.unlike {
+  color: bisque;
   cursor: inherit;
 }
 button.like:hover {

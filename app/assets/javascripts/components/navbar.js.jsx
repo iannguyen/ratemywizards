@@ -59,7 +59,9 @@
                         <span className="icon-bar"></span>
                         <span className="icon-bar"></span>
                     </button>
-                      <a className="navbar-brand" href="/#">RateMyWizards</a>
+                      <a className="navbar-brand" href="/#">
+                        <img className="nav-logo" src="http://res.cloudinary.com/dms46o1eu/image/upload/v1445743616/logo_grey_tnazoe.png"></img>
+                      </a>
                 </div>
                 <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 

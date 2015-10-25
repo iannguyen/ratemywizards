@@ -17,6 +17,7 @@
         <li className="review-item">
           <div className={this.anonymousCheck() + " review-content"}>
             <div className="professor-thumb">
+              <h5>{this.props.review.professor.name}</h5>
               <img onClick={this.showProfessor}src={this.props.review.professor.image_url}>
               </img>
             </div>
@@ -35,7 +36,7 @@
               <div className="options">
                 { this.props.review.user_id === window.CURRENT_USER_ID ? <EditAndDelete review={this.props.review}/> : <div></div> }
               </div>
-              
+
             </div>
           </div>
         </li>

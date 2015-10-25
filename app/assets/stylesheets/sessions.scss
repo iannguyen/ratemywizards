@@ -14,17 +14,19 @@ div.signin {
 }
 div.signin h1 {
   font-size: 50px;
+  margin: 20px;
 }
 div.session-form {
+  height: 85%;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 div.signin label {
-  width: 40%;
+  width: 35%;
   display: inline-flex;
   max-width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-weight: bold;
   padding: 5px;
   height: 50px;
@@ -54,12 +56,20 @@ div.signin input.signin:hover {
   border-bottom: none;
   cursor: inherit;
   background-color: rgba(255,255,255,0.05);
+  box-shadow: 0 0 5pt 5pt white;
+}
+
+img.logo-big {
+  height: 100px;
+  width: auto;
+  margin: 20px auto;
 }
 
 a.demo-signin-link {
-  color: ivory;
+  font-size: 20px;
+  color: bisque;
 }
 a.demo-signin-link:hover {
   text-shadow: 10px 10px 10px white;
-  color: ivory;
+  color: white;
 }

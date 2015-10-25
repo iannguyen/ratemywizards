@@ -93,7 +93,7 @@ h2.search-heading:hover {
   -ms-filter:brightness(200%); /* IE 9 */
   -o-filter:brightness(200%); /* Opera */
   filter:brightness(200%);
-  text-shadow: 7px 7px 7px white;
+  text-shadow: 3px 3px 10px white;
 }
 
 ul#errors {
@@ -130,15 +130,17 @@ body.great-hall-day {
   background-image: url('http://res.cloudinary.com/dms46o1eu/image/upload/e_brightness:-50/v1445139843/Great_hall_tnhaif.jpg');
 }
 
-/* Start http://www.cursors-4u.com */ body, a:hover {cursor: url(http://cur.cursors-4u.net/user/use-1/use160.cur), progress !important;} /* End http://www.cursors-4u.com */
+/* Start http://www.cursors-4u.com */
+html, a:hover {cursor: url(http://cur.cursors-4u.net/user/use-1/use160.cur), progress !important;}
+ /* End http://www.cursors-4u.com */
+/* Start http://www.cursors-4u.com */
+html, button:hover {cursor: url(http://cur.cursors-4u.net/user/use-1/use160.cur), progress !important;}
+ /* End http://www.cursors-4u.com */
 
 div.offsetter {
   height: 1%;
 }
 
-span {
-  color: ivory;
-}
 .group:after {
 	visibility: hidden;
 	display: block;
