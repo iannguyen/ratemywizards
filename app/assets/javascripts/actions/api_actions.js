@@ -2,6 +2,12 @@
   'use strict';
 
   root.ApiActions = {
+    receiveMessage: function(message) {
+      AppDispatcher.dispatch({
+        actionType: MessageConstants.MESSAGE_RECEIVED,
+        message: message
+      });
+    },
     receiveErrors: function(errors) {
       AppDispatcher.dispatch({
         actionType: ErrorConstants.ERRORS_RECEIVED,

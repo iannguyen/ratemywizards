@@ -17,6 +17,7 @@
         method: "post",
         data: {review: data},
         success: function(professor) {
+          ApiActions.receiveMessage("Review successfully created!");
           ApiActions.receiveProfessor(professor);
           window.location = "/#/professors/" + professor.id;
         },
@@ -147,6 +148,14 @@
         url: "",
         success: function(response) {
           ApiActions.receiveErrors([]);
+        }
+      });
+    },
+    clearMessage: function() {
+      $.ajax({
+        url: "",
+        success: function(response) {
+          ApiActions.receiveMessage("");
         }
       });
     },

@@ -91,6 +91,18 @@ h2.search-heading:hover {
   text-shadow: 1px 1px 10px white;
 }
 
+li.success {
+  top: -50px;
+  color: white;
+  text-shadow: 1px 1px 3px green;
+  font-size: 24px;
+  transform: translateY(-100%);
+  position: absolute;
+  background-color: transparent;
+  right: 0;
+  left: 0;
+}
+
 ul#errors {
   padding-top: 5px;
   left: 0;
