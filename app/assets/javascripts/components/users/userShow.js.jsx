@@ -41,6 +41,7 @@
       if (this.state.user.reviews === undefined) { return <div></div>; }
       return(
         <div className="user-show">
+
           <div className="animated fadeInUp user-bio">
 
             <img className="user-pic" src={this.checkUserImage()}></img>
@@ -49,19 +50,16 @@
 
             {window.CURRENT_USER_ID === this.state.user.id ? <CLWUser/> : <div></div> }
 
-            <br/>
-            <br/>
-            <br/>
+            <div className="totals">
+              <h2>Total Reviews: {this.state.user.reviews.length}</h2>
 
-            <h2>Total Reviews: {this.state.user.reviews.length}</h2>
-
-            <br/>
-
-            <h2>Total Likes: {this.state.user.likeCount}</h2>
+              <h2>Total Likes: {this.state.user.likeCount}</h2>
+            </div>
 
           </div>
 
           <ReviewList reviews={this.state.user.reviews}/>
+
         </div>
       );
     }
