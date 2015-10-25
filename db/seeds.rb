@@ -71,6 +71,9 @@ User.create!({
 User.create!({
   username: 'ian',
   password: 'password'})
+User.create!({
+  username: 'Guest',
+  password: 'password'})
 
 # House
 

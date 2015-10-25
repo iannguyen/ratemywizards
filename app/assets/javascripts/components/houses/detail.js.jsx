@@ -37,14 +37,16 @@
       var average = {
         overall: 0,
         count: this.state.house.professors.length,
-        highest: null
+        highest: null,
+        highestRated: null
       };
       var professors = this.state.house.professors;
       professors.forEach(function(prof) {
         var profAverage = that.professorAverage(prof);
         average.overall += profAverage;
         if (average.highest === null || average.highest < profAverage) {
-          average.highest = prof;
+          average.highest = profAverage;
+          average.highestRated = prof;
         }
       });
       average.overall = Math.round(average.overall * 10/ professors.length) /10;
@@ -64,7 +66,7 @@
 
     render: function() {
       if (this.state.house === undefined) { return <div></div>; }
-        var ratings = this.houseRatings();
+      var ratings = this.houseRatings();
       return(
         <div id="house-detail" className="animated fadeInUp">
           <div className={this.state.house.name.toLowerCase() + " house-decoration"}>
@@ -74,13 +76,13 @@
                 <li>House Average: {ratings.overall}</li>
               </ul>
             </div>
-            <h1 className="house-name">{this.state.house.name}</h1>
             <div className="right">
               <ul>
                 <li>Higest Rated:</li>
-                <li className="highest-rated"><a href={"/#/professors/"  + ratings.highest.id}>{ratings.highest.name}</a></li>
+                <li className="highest-rated"><a href={"/#/professors/"  + ratings.highestRated.id}>{ratings.highestRated.name}</a></li>
               </ul>
             </div>
+            <h1 className="house-name">{this.state.house.name}</h1>
           </div>
           <ul id="house-detail-list" className="">
             {

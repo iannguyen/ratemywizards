@@ -47,15 +47,16 @@ div.left {
   top: 50%;
   transform: translateY(-50%);
   position: relative;
+  font-size: 2vw;
 }
 div.right {
+  font-size: 2vw;
   float: right;
   position: relative;
   margin-right: 50px;
-  font-size: 30px;
   text-shadow: 1px 1px 3px black;
-  bottom: 50%;
-  transform: translateY(50%);
+  top: 50%;
+  transform: translateY(-50%);
   position: relative;
 }
 

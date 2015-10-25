@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   end
 
   def demo
-    @user = User.find(1)
+    @user = User.find(17)
     sign_in!(@user)
   end
 
