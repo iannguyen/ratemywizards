@@ -81,6 +81,7 @@
         method: "post",
         data: {professor: data},
         success: function(response) {
+          ApiActions.receiveMessage("Professor successfully created!");
           ApiActions.receiveProfessor(response);
           window.location = "/#/professors/" + response.id;
         },
