@@ -1019,3 +1019,33 @@ Review.create!({
   helpfulness: 5,
   body: "Madame Pince is very helpful whenever I need to find books for research."
   })
+
+Review.create!({
+anonymous: false,
+user_id: 17,
+professor_id: 18,
+ability: 3,
+easiness: 3,
+helpfulness: 3,
+body: "I mean I guess she's alright."
+})
+
+Review.create!({
+anonymous: false,
+user_id: 17,
+professor_id: 19,
+ability: 3,
+easiness: 3,
+helpfulness: 3,
+body: "Yeah seriously, who is this?"
+})
+
+Review.create!({
+anonymous: false,
+user_id: 17,
+professor_id: 20,
+ability: 3,
+easiness: 3,
+helpfulness: 3,
+body: "Great librarian, I just wish I knew how to read."
+})

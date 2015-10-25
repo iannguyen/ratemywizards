@@ -41,8 +41,7 @@ img.crest {
 div.left {
   float: left;
   position: relative;
-  margin-left: 50px;
-  font-size: 30px;
+  margin-left: 25px;
   text-shadow: 1px 1px 3px black;
   top: 50%;
   transform: translateY(-50%);
@@ -53,7 +52,7 @@ div.right {
   font-size: 2vw;
   float: right;
   position: relative;
-  margin-right: 50px;
+  margin-right: 25px;
   text-shadow: 1px 1px 3px black;
   top: 50%;
   transform: translateY(-50%);
@@ -61,7 +60,8 @@ div.right {
 }
 
 h1.house-name {
-  font-size: 60px;
+  // font-size: 60px;
+  font-size: 4vw;
   text-shadow: 1px 1px 3px black;
   top: 45%;
   transform: translateY(-50%);
