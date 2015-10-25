@@ -61,13 +61,11 @@
                     </button>
                       <a className="navbar-brand" href="/#">
                         <img className="nav-logo" src="http://res.cloudinary.com/dms46o1eu/image/upload/v1445743616/logo_grey_tnazoe.png"></img>
-                      </a>
+                      </a>                          
                 </div>
                 <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                     <ul className="nav navbar-nav pull-right">
-                        <li>
-                        </li>
                         <li>
                           <a href="#" className="audio"><audio id="hpmusic" controls autoplay>
                             <source  src="http://res.cloudinary.com/dms46o1eu/video/upload/v1445058621/hptheme_ac7dzk.mp3">
@@ -75,6 +73,8 @@
                           </audio>
                         </a>
                         </li>
+
+
                         <li>
                             <a href={this.links.userShow}>{this.links.welcome}</a>
                         </li>
