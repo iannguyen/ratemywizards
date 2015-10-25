@@ -64,7 +64,6 @@ div#root {
 }
 
 div#app {
-  // height: 105%; //this is giving problems cutoff on user show
   padding: 10px;
 }
 
@@ -88,12 +87,7 @@ h2.search-heading {
 }
 
 h2.search-heading:hover {
-  -webkit-filter: brightness(200%);
-  -moz-filter:brightness(200%); /* Firefox */
-  -ms-filter:brightness(200%); /* IE 9 */
-  -o-filter:brightness(200%); /* Opera */
-  filter:brightness(200%);
-  text-shadow: 3px 3px 10px white;
+  text-shadow: 1px 1px 10px white;
 }
 
 ul#errors {
