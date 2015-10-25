@@ -79,7 +79,7 @@
                             <a href={this.links.userShow}>{this.links.welcome}</a>
                         </li>
                         <li>
-                            <a href="" onClick={this.links.toggleStatus}>{this.links.status}</a>
+                            <a href="/session/new" onClick={this.links.toggleStatus}>{this.links.status}</a>
                         </li>
                     </ul>
                 </div>
