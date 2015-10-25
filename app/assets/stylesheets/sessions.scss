@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 div.signin {
-  height: 80vh;
+  height: 90%;
   text-align: center;
   color: ivory;
   text-shadow: 1px 1px 3px black;
@@ -17,7 +17,7 @@ div.signin h1 {
   margin: 20px;
 }
 div.session-form {
-  height: 85%;
+  height: 90%;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -43,6 +43,7 @@ div.signin input:focus {
   background-color: rgba(0,0,0,0.1);
 }
 div.signin input.signin {
+  margin: 50px;
   background-color: rgba(0,0,0,0.5);
   border-bottom: none;
   box-shadow: 0 0 1pt 1pt gray;

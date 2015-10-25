@@ -68,12 +68,12 @@
       if (this.state.house === undefined) { return <div></div>; }
       var ratings = this.houseRatings();
       return(
-        <div id="house-detail" className="animated fadeInUp">
+        <div id="house-detail" className="animated fadeInDown">
           <div className={this.state.house.name.toLowerCase() + " house-decoration"}>
             <div className="left">
               <ul>
-                <li>Total Wizards: {ratings.count}</li>
-                <li>House Average: {ratings.overall}</li>
+                <li>Total Wizards:  {ratings.count}</li>
+                <li>House Rating:  {ratings.overall}</li>
               </ul>
             </div>
             <div className="right">
@@ -84,7 +84,7 @@
             </div>
             <h1 className="house-name">{this.state.house.name}</h1>
           </div>
-          <ul id="house-detail-list" className="">
+          <ul id="house-detail-list" className="animated fadeInUp">
             {
               this.state.house.professors.map(function(professor) {
                 return (

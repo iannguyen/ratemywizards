@@ -7,6 +7,18 @@ nav.navbar-inverse {
   border-color: #090909;
 }
 
+div#navbar-brand {
+  height: 50px;
+}
+
+ul.nav {
+  background-color: rgba(43,43,43,0.9);
+  border-color: #090909;
+}
+ul.nav li{
+  height: 50px;
+}
+
 .nav-logo {
   height: 45px;
   width: auto;

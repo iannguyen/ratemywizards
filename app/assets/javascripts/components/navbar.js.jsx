@@ -38,7 +38,9 @@
     componentDidMount: function() {
       var myAudio = document.getElementById("hpmusic");
       myAudio.volume = 0.3;
-      myAudio.autoplay = true;
+      if (window.location.pathname === '/') {
+        myAudio.autoplay = true;
+      }
     },
 
     playMusic: function () {
@@ -61,7 +63,7 @@
                     </button>
                       <a className="navbar-brand" href="/#">
                         <img className="nav-logo" src="http://res.cloudinary.com/dms46o1eu/image/upload/v1445743616/logo_grey_tnazoe.png"></img>
-                      </a>                          
+                      </a>
                 </div>
                 <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
