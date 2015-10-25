@@ -72,6 +72,12 @@ User.create!({
   username: 'ian',
   password: 'password'})
 User.create!({
+  username: 'don',
+  password: 'password'})
+User.create!({
+  username: 'Demo',
+  password: 'password'})
+User.create!({
   username: 'Guest',
   password: 'password'})
 
