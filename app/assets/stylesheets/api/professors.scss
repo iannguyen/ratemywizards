@@ -60,6 +60,8 @@ div.professor-description li {
   padding: 10px;
 }
 div.professor-description li.rate-this {
+  color: rgb(125,255,0);
+  text-shadow: 1px 1px 10px white;
   font-style: italic;
 }
 
@@ -163,11 +165,12 @@ button.create:hover {
 }
 button.upload-button {
   font-style: italic;
-  text-decoration: underline;
+  color: rgb(125,255,0);
+  text-shadow: 1px 1px 10px white;
 }
 button.upload-button:hover {
-  cursor: inherit;
   color: rgb(125, 255, 0);
+  text-decoration: underline;
 }
 
 .gryffindor {

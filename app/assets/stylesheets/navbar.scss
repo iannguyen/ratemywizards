@@ -49,6 +49,8 @@ nav.navbar-inverse ul.navbar-nav > li > a {
 }
 
 nav.navbar-inverse ul.navbar-nav > li > a:hover {
+  cursor: pointer;
   color: white;
+  text-decoration: underline;
   text-shadow: 5px 5px 10px white;
 }

@@ -1,8 +1,6 @@
 (function(root) {
   'use strict';
 
-// remove reviews from state, put averages in.
-
   root.ProfessorShow = React.createClass({
     getStateFromStore: function() {
       var prof  = ProfessorStore.find(parseInt(this.props.params.professorId));
@@ -86,7 +84,7 @@
                   <li>Total Reviews: {this.state.reviews.length}</li>
                   <br/>
               </ul>
-              { window.CURRENT_USER_ID ? <CLWProf professor={this.state.prof}/> : <div></div>}
+              { window.CURRENT_USER_ID && this.state.prof.image_url === null ? <CLWProf professor={this.state.prof}/> : <div></div>}
             </div>
 
             <div className="professor-description">

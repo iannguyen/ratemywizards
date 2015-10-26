@@ -9,14 +9,6 @@
     _onChange: function() {
       this.setState({liked: this.hasLiked()});
     },
-    //
-    // componentDidMount: function() {
-    //   ProfessorStore.addProfessorChangeListener(this._onChange);
-    // },
-    //
-    // componentWillUnmount: function() {
-    //   ProfessorStore.addProfessorChangeListener(this._onChange);
-    // },
 
     likeReview: function(e) {
       e.preventDefault();
@@ -59,7 +51,7 @@
     displayOrHide: function() {
       var display;
       if (window.CURRENT_USER_ID && !this.state.liked) {
-        display =  (<button className="like" onClick={this.likeReview}>Like!</button>);
+        display =  (<button className="like" onClick={this.likeReview}>Like this review?</button>);
       } else if (window.CURRENT_USER_ID && this.state.liked){
         display = (<button className="unlike" onClick={this.unlikeReview}>Unlike!</button>);
       }

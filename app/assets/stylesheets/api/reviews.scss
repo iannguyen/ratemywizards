@@ -17,6 +17,19 @@ img.review-thumb {
   top: 50%;
   transform: translateY(-50%);
   position: relative;
+  -webkit-transition: all 0.5s ease; /* Safari and Chrome */
+  -moz-transition: all 0.5s ease; /* Firefox */
+  -ms-transition: all 0.5s ease; /* IE 9 */
+  -o-transition: all 0.5s ease; /* Opera */
+  transition: all 0.5s ease;;
+}
+img.review-thumb:hover {
+  cursor: pointer;
+  -webkit-filter: brightness(200%);
+  -moz-filter:brightness(200%); /* Firefox */
+  -ms-filter:brightness(200%); /* IE 9 */
+  -o-filter:brightness(200%); /* Opera */
+  filter:brightness(200%);
 }
 
 ul#review-list {
@@ -45,7 +58,7 @@ div.review-detail {
   transition: all 0.5s ease;;
 }
 div.review-detail:hover {
-  background-color: rgba(255,255,255,0.1);
+  // background-color: rgba(255,255,255,0.1);
   -webkit-filter: brightness(110%);
   -moz-filter:brightness(110%); /* Firefox */
   -ms-filter:brightness(110%); /* IE 9 */
@@ -102,23 +115,25 @@ button.like {
   font-size: 18px;
   position: relative;
   float: right;
-  left: 10%;
+  left: 5%;
   padding: 3px;
   font-size: 18px;
-  color: bisque;
-  cursor: inherit;
-}
-button.unlike {
-  color: bisque;
-  cursor: inherit;
-}
-button.like:hover {
   color: rgb(125, 255, 0);
   cursor: inherit;
 }
-button.unlike:hover {
+button.unlike {
   color: rgb(255, 50, 0);
   cursor: inherit;
+}
+button.like:hover {
+  text-shadow: 3px 3px 10px white;
+  cursor: inherit;
+  text-decoration: underline;
+}
+button.unlike:hover {
+  text-shadow: 3px 3px 10px white;
+  cursor: inherit;
+  text-decoration: underline;
 }
 div.blur-text *{
   color: transparent;

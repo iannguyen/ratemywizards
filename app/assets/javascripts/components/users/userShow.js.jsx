@@ -58,7 +58,7 @@
 
           </div>
 
-          <ReviewList reviews={this.state.user.reviews}/>
+          <ReviewList user={this.state.user} reviews={this.state.user.reviews}/>
 
         </div>
       );
