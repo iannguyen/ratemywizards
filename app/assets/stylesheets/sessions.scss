@@ -14,13 +14,16 @@ div.signin {
 }
 div.signin h1 {
   font-size: 50px;
-  margin: 20px;
+  margin: 25px;
 }
 div.session-form {
   height: 90%;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
+div.session-form label{
+  padding: 20px;
 }
 div.signin label {
   width: 35%;
@@ -64,6 +67,7 @@ img.logo-big {
   height: 100px;
   width: auto;
   margin: 20px auto;
+  padding: 20px;
 }
 
 a.demo-signin-link {

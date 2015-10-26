@@ -80,6 +80,10 @@ User.create!({
 User.create!({
   username: 'Guest',
   password: 'password'})
+User.create!({
+  username: 'Voldemort',
+  password: 'password',
+  image_url: "http://res.cloudinary.com/dms46o1eu/image/upload/v1445890038/3181731-big_voldy_smile_gy37wu.jpg"})
 
 # House
 
