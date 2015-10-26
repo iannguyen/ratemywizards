@@ -32,8 +32,18 @@
       HouseStore.removeHouseDetailChangeListener(this._onChange);
     },
 
+    scrollNow: function() {
+        $.smoothScroll({
+          scrollElement: $('div.child'),
+          scrollTarget: 'div.house-tab',
+          offset: -25
+        });
+    },
+
     render: function() {
       if (this.state.house === undefined) { return <div></div>; }
+
+      this.scrollNow();
 
       var rating = this.state.house.house_average;
       var highestRated = this.state.house.highest_rated;
