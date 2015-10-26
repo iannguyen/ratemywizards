@@ -17,6 +17,7 @@
     componentDidMount: function() {
       HouseStore.addHouseChangeListener(this._onChange);
       ApiUtil.fetchAllHouses();
+      ApiUtil.fetchAllProfessors();
     },
 
     componentWillUnmount: function() {
@@ -26,6 +27,7 @@
     render: function() {
       return (
         <div id="house-index">
+
           <h2>Browse By House</h2>
           {
             this.state.houses.map(function (house) {

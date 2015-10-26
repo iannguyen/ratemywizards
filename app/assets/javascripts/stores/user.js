@@ -19,14 +19,8 @@
     all: function() {
       return _users;
     },
+    
     find: function(id) {
-      // var found;
-      // _users.forEach(function(user) {
-      //   if (user.id === id) {
-      //     found = user;
-      //   }
-      // });
-      // return found;
       return _user;
     },
 

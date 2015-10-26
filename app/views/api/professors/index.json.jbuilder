@@ -1,7 +1,7 @@
 json.array!(@professors) do |professor|
   json.extract!(
   professor,
-    :id, :name, :image_url, :house_id,
+    :id, :name, :image_url, :house_id, :averages, :overall_average
   )
 
 json.house professor.house, :name

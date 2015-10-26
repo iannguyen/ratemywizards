@@ -63,6 +63,7 @@
       }
       return(
         <div className="animated fadeInDownBig review-new">
+
             <ul id="errors">
               {
                 this.state.errors.map(function(error) {
@@ -70,9 +71,11 @@
                 })
               }
             </ul>
+
           <div className="review-form">
 
             <form onSubmit={this.editReview}>
+
             <br/>
 
             <h3>Edit Your Review for {this.state.professor.name}</h3>
@@ -80,70 +83,85 @@
             <br/>
 
               <div>
+
                 <label htmlFor="review-anonymous">
                   Anonymous Review?
                   <br/>
-                  <select id="anonymous" name="anonymous" valueLink={this.linkState('anonymous')}>
+                  <select id="anonymous"
+                          name="anonymous" valueLink={this.linkState('anonymous')}>
                     <option value="false">I don't care who sees!</option>
                     <option value="true">Put on Invisibility Cloak</option>
                   </select>
                 </label>
+
               </div>
 
               <br/>
 
               <ul className="ratings">
-              <li>
-                <label htmlFor="review-ability">
-                  Ability Rating:
-                  <select id="ability" name="ability" valueLink={this.linkState('ability')}>
-                    <option selected disabled hidden>{this.state.ability}</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                  </select>
-                </label>
-              </li>
 
-              <br/>
+                <li>
+                  <label htmlFor="review-ability">
+                    Ability Rating:
+                    <select id="ability"
+                            name="ability" valueLink={this.linkState('ability')}>
+                      <option selected
+                              disabled
+                              hidden>{this.state.ability}</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </label>
+                </li>
 
-              <li>
-                <label htmlFor="review-easiness">
-                  Easiness Rating:
-                  <select id="easiness" name="easiness" valueLink={this.linkState('easiness')}>
-                    <option selected disabled hidden>{this.state.easiness}</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                  </select>
-                </label>
-              </li>
+                <br/>
 
-              <br/>
-              <li>
-                <label htmlFor="review-helpfulness">
-                  Helpfulness Rating:
-                  <select id="helpfulness" name="helpfulness" valueLink={this.linkState('helpfulness')}>
-                    <option selected disabled hidden>{this.state.helpfulness}</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                  </select>
-                </label>
-              </li>
+                <li>
+                  <label htmlFor="review-easiness">
+                    Easiness Rating:
+                    <select id="easiness" name="easiness" valueLink={this.linkState('easiness')}>
+                      <option selected
+                              disabled
+                              hidden>{this.state.easiness}</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </label>
+                </li>
+
+                <br/>
+
+                <li>
+                  <label htmlFor="review-helpfulness">
+                    Helpfulness Rating:
+                    <select id="helpfulness"
+                            name="helpfulness" valueLink={this.linkState('helpfulness')}>
+                      <option selected
+                              disabled
+                              hidden>{this.state.helpfulness}</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </label>
+                </li>
               </ul>
 
               <br/>
               <div>
+
                 <label id="review-body" htmlFor="review-body">
                   <textarea id="review-body" placeholder="Write your review here..." valueLink={this.linkState('body')}>{this.state.body}</textarea>
                 </label>
+
               </div>
 
               <br/>

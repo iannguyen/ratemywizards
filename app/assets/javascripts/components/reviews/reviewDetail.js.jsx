@@ -33,14 +33,21 @@
       var pluralize = this.props.review.likeCount > 1 ? "s" : "";
         return(
           <div className="review-detail">
+
             <div className="review-ratings">
+
               <div className="review-bio">
+
                 {showOrHide.username}
+
                 <img className="review-thumb"
                      src={showOrHide.image_url}
                      onClick={this.handleClick}/>
+
               </div>
+
               <ul>
+
                 <li>Ability: {review.ability}</li>
                 <li>Easiness: {review.easiness}</li>
                 <li>Helpfulness: {review.helpfulness}</li>
@@ -54,12 +61,15 @@
                   </div>
             }
             </div>
+
             <div className="review-description">
               <p>
                 {review.body}
               </p>
             </div>
+
               <LikeButton review={this.props.review}/>
+              
           </div>
         );
     }

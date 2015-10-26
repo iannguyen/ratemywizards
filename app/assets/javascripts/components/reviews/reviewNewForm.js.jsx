@@ -76,7 +76,8 @@
                 <label htmlFor="review-anonymous">
                   Anonymous Review?
                   <br/>
-                  <select id="anonymous" name="anonymous" valueLink={this.linkState('anonymous')}>
+                  <select id="anonymous"
+                          name="anonymous" valueLink={this.linkState('anonymous')}>
                     <option selected disabled hidden value=''></option>
                     <option value="false">I don't care who sees!</option>
                     <option value="true">Put on Invisibility Cloak.
@@ -91,7 +92,9 @@
               <li>
                 <label htmlFor="review-ability">
                   Ability Rating:
-                  <select id="ability" name="ability" valueLink={this.linkState('ability')}>
+                  <select id="ability"
+                          name="ability"
+                          valueLink={this.linkState('ability')}>
                     <option selected disabled hidden value=''></option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -107,7 +110,8 @@
               <li>
                 <label htmlFor="review-easiness">
                   Easiness Rating:
-                  <select id="easiness" name="easiness" valueLink={this.linkState('easiness')}>
+                  <select id="easiness"
+                          name="easiness" valueLink={this.linkState('easiness')}>
                     <option selected disabled hidden value=''></option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -122,7 +126,8 @@
               <li>
                 <label htmlFor="review-helpfulness">
                   Helpfulness Rating:
-                  <select id="helpfulness" name="helpfulness" valueLink={this.linkState('helpfulness')}>
+                  <select id="helpfulness"
+                          name="helpfulness" valueLink={this.linkState('helpfulness')}>
                     <option selected disabled hidden value=''></option>
                     <option value="1">1</option>
                     <option value="2">2</option>

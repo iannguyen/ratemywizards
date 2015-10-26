@@ -16,8 +16,15 @@
     render: function() {
       return(
         <div className="edit-and-delete">
-          <button onClick={this.editReview} className="animated swing edit-review">Edit Review</button>
-          <button onClick={this.deleteReview} className="animated swing delete-review">Delete</button>
+
+          <button onClick={this.editReview}
+                  className="animated swing edit-review">
+                  Edit Review
+          </button>
+          <button onClick={this.deleteReview}
+                  className="animated swing delete-review">
+                  Delete
+          </button>
         </div>
       );
     }
