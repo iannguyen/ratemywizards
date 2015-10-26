@@ -34,6 +34,7 @@
 
     houseRatings: function() {
       var that = this;
+      var excludedProfs = 0;
       var average = {
         overall: 0,
         count: this.state.house.professors.length,
@@ -43,18 +44,20 @@
       var professors = this.state.house.professors;
       professors.forEach(function(prof) {
         var profAverage = that.professorAverage(prof);
+        if (profAverage === 0) { excludedProfs += 1; }
         average.overall += profAverage;
         if (average.highest === null || average.highest < profAverage) {
           average.highest = profAverage;
           average.highestRated = prof;
         }
       });
-      average.overall = Math.round(average.overall * 10/ professors.length) /10;
+      average.overall = Math.round(average.overall * 10/ (professors.length - excludedProfs)) /10;
       return average;
     },
 
     professorAverage: function(prof) {
       var average = 0;
+      if (prof.reviews.length === 0) { return average; }
       prof.reviews.forEach(function(review) {
         average += review.ability;
         average += review.easiness;
