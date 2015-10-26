@@ -8,8 +8,8 @@
 
     showDetail: function() {
       var url = '/houses/' + this.props.house.id;
-      this.scrollNow();
       this.history.pushState(null, '/houses/' + this.props.house.id, {});
+      this.scrollNow();
     },
 
     scrollNow: function() {
