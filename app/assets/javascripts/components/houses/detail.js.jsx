@@ -3,7 +3,7 @@
 
   root.HouseDetail = React.createClass({
     getStatefromStore: function() {
-      var house  = HouseStore.find(parseInt(this.props.params.houseId));
+      var house = HouseStore.find(parseInt(this.props.params.houseId));
       return { house: house };
     },
 
