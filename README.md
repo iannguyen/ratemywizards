@@ -1,7 +1,7 @@
 # RateMyWizards
 
 [RateMyWizards][heroku]
-[heroku]: www.ratemywizards.xyz
+[heroku]: http://www.ratemywizards.xyz/
 
 RateMyWizards is a web application inspired by RateMyProfessors...but much more magical.
 
