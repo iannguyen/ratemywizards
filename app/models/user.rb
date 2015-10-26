@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :reviews
   has_many :likes
+  has_many :liked_reviews, through: :likes, source: :review
 
   attr_reader :password, :confirmation
 

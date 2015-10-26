@@ -13,7 +13,7 @@ class Api::UsersController < ApplicationController
   end
 
   def show
-    @user = User.includes(reviews: :professor).find(params[:id])
+    @user = User.includes(:likes).includes(liked_reviews: :user).includes(reviews: [:professor, :user]).find(params[:id])
     render :show
   end
 
