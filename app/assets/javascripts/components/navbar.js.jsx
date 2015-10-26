@@ -38,9 +38,9 @@
     componentDidMount: function() {
       var myAudio = document.getElementById("hpmusic");
       myAudio.volume = 0.3;
-      if (window.location.pathname === '/') {
-        myAudio.autoplay = true;
-      }
+      // if (window.location.pathname === '/') {
+      //   myAudio.autoplay = true;
+      // }
     },
 
     playMusic: function () {
