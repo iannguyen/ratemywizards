@@ -53,7 +53,7 @@
 
             <div className="right">
               <ul>
-                <li>Higest Rated:</li>
+                <li>Highest Rated:</li>
                 <li className="highest-rated"><a href={"/#/professors/"  + highestRated.id}>{highestRated.name}</a></li>
               </ul>
             </div>
@@ -73,7 +73,7 @@
               }.bind(this))
             }
           </ul>
-          
+
         </div>
       );
     }
