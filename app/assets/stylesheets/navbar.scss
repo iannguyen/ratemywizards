@@ -3,7 +3,7 @@
 }
 
 nav.navbar-inverse {
-  background-color: rgba(43,43,43,0.9);
+  background-color: rgba(43,43,43,1);
   border-color: #090909;
 }
 
@@ -17,6 +17,19 @@ ul.nav {
 }
 ul.nav li{
   height: 50px;
+}
+span.site-description{
+  color: ivory;
+  font-style: italic;
+  font-size: 12px;
+  position: absolute;
+  top: 35%;
+  left: 15%;
+}
+
+span.site-description:hover {
+  text-decoration: none;
+  text-shadow: none;
 }
 
 .nav-logo {

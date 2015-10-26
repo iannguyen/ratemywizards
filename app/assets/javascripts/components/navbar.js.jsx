@@ -64,10 +64,17 @@
                       <a className="navbar-brand" href="/#">
                         <img className="nav-logo" src="http://res.cloudinary.com/dms46o1eu/image/upload/v1445743616/logo_grey_tnazoe.png"></img>
                       </a>
+                            <span className="site-description">
+                              Rate Wizards, Like Reviews, and Create Wizards, with a flick of your wand.
+                            </span>
                 </div>
                 <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                     <ul className="nav navbar-nav pull-right">
+                        <li>
+                          <a >
+                          </a>
+                        </li>
                         <li>
                           <a href="#" className="audio"><audio id="hpmusic" controls autoplay>
                             <source  src="http://res.cloudinary.com/dms46o1eu/video/upload/v1445058621/hptheme_ac7dzk.mp3">
