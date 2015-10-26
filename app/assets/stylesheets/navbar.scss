@@ -18,13 +18,16 @@ ul.nav {
 ul.nav li{
   height: 50px;
 }
+div.header-area {
+  height: 50px;
+}
 span.site-description{
   color: ivory;
   font-style: italic;
   font-size: 12px;
-  position: absolute;
-  top: 35%;
-  left: 15%;
+  position: relative;
+  top: 15px;
+  margin: 3px;
 }
 
 span.site-description:hover {
@@ -48,7 +51,7 @@ div.navbar-header {
 }
 
 div#navbar-brand {
-  width: 90%;
+  width: 95%;
 }
 
 .audio {
