@@ -11,13 +11,5 @@ json.professors do
     )
 
     json.review_count professor.reviews.count
-  # json.reviews do
-  #   json.array!(professor.reviews) do |review|
-  #     json.extract!(
-  #       review,
-  #       :ability, :easiness, :helpfulness
-  #     )
-  #     end
-  #   end
   end
 end
