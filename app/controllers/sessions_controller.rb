@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   end
 
   def demo
-    id = [18, 19, 17].sample
+    id = [18, 19].sample
     @user = User.find(id)
     sign_in!(@user)
   end
