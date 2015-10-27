@@ -5,7 +5,7 @@ class Professor < ActiveRecord::Base
   validates :house_id, inclusion: { in: (1..4).to_a }
 
   belongs_to :house
-  has_many :reviews
+  has_many :reviews, dependent: :destroy
 
   def overall_average
     overall = 0

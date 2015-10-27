@@ -21,10 +21,10 @@
             <ul className="professor-overall">
 
               <li>Overall Rating: {professor.overall_average}</li>
-              <li>Total Reviews: {professor.reviews.length}</li>
+              <li>Total Reviews: {professor.review_count}</li>
 
             </ul>
-            
+
           </div>
         );
     }

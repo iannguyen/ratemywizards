@@ -10,13 +10,14 @@ json.professors do
       :id, :name, :house_id, :image_url, :overall_average
     )
 
-  json.reviews do
-    json.array!(professor.reviews) do |review|
-      json.extract!(
-        review,
-        :ability, :easiness, :helpfulness
-      )
-      end
-    end
+    json.review_count professor.reviews.count
+  # json.reviews do
+  #   json.array!(professor.reviews) do |review|
+  #     json.extract!(
+  #       review,
+  #       :ability, :easiness, :helpfulness
+  #     )
+  #     end
+  #   end
   end
 end
