@@ -20,8 +20,8 @@
 
     render: function() {
       return(
-        <button className="animated swing upload-button" onClick={this.upload}>
-          Change this Wizard's Photo!
+        <button className="animated infinite swing upload-button" onClick={this.upload}>
+          This Wizard Needs A Photo!
         </button>
       );
     }
