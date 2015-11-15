@@ -11,7 +11,7 @@ RateMyWizards is a web application inspired by RateMyProfessors...but much more 
 
 ## Features
 
-- Single-page web application built on `Rails`, Facebook's `FLUX`, `React.js`, and `React-Router`
+- Single-page web application built on `Rails`, `React.js/FLUX`, and `React-Router`
 - Secure User Authentication
 - Users can search for Wizards, or browse by House
 - Create, Read, Update, and Delete reviews for multiple Wizards
