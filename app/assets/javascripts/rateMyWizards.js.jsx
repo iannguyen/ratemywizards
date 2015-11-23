@@ -9,7 +9,8 @@
   var App = React.createClass ({
     render: function() {
       return (
-        <ReactCSSTransitionGroup transitionName="homeFade" transitionAppear={true} transitionAppearTimeout={500}>
+        <ReactCSSTransitionGroup transitionName="homeFade"
+                                 transitionAppear={true} transitionAppearTimeout={500}>
           <div id='app'>
             {this.props.children}
           </div>
@@ -21,12 +22,18 @@
   var routes = (
     <Route path="/" component={App}>
       <IndexRoute component={Main}/>
-      <Route path="houses/:houseId" components={{main: Main, house: HouseDetail}}/>
-      <Route path="professors/new" component={ProfessorForm} />
-      <Route path="professors/:professorId" component={ProfessorShow}/>
-      <Route path="professors/:professorId/new" component={ReviewForm}/>
-      <Route path="users/:userId" component={UserShow} />
-      <Route path="reviews/:reviewId/edit" component={EditReviewForm} />
+      <Route path="houses/:houseId"
+             components={{main: Main, house: HouseDetail}}/>
+      <Route path="professors/new"
+             component={ProfessorForm} />
+      <Route path="professors/:professorId"
+             component={ProfessorShow}/>
+      <Route path="professors/:professorId/new"
+             component={ReviewForm}/>
+      <Route path="users/:userId"
+             component={UserShow} />
+      <Route path="reviews/:reviewId/edit"
+             component={EditReviewForm} />
     </Route>
   );
 
