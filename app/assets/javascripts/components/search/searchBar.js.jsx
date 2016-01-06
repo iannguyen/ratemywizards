@@ -49,7 +49,7 @@
           results.push("No Wizards found..Perhaps you'd like to add this Wizard?");
         }
       }
-      return results;
+      return results.slice(0,5);
     },
 
     createProfessor: function() {
