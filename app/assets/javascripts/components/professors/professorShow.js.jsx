@@ -3,7 +3,7 @@
 
   root.ProfessorShow = React.createClass({
     getStateFromStore: function() {
-      var prof  = ProfessorStore.find(parseInt(this.props.params.professorId));
+      var prof = ProfessorStore.find(parseInt(this.props.params.professorId));
       return { prof: prof, reviews: prof.reviews, message: MessageStore.all() };
     },
 
@@ -14,6 +14,14 @@
     _onChange: function() {
       this.setState(this.getStateFromStore());
     },
+
+    // componentWillReceiveProps: function(newProps) {
+    //   var prof = ProfessorStore.find(parseInt(newProps.params.professorId));
+    //   debugger;
+    //   this.setState({
+    //     prof: prof, reviews: prof.reviews, message: MessageStore.all()
+    //   });
+    // },
 
     componentDidMount: function() {
       ProfessorStore.addProfessorChangeListener(this._onChange);
