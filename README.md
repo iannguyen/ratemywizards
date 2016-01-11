@@ -1,4 +1,4 @@
-# RateMyWizards
+# [RateMyWizards][site]
 
 [Live][site]
 [site]: http://www.ratemywizards.xyz/
